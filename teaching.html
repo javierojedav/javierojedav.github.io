@@ -1,247 +1,595 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Javier Ojeda</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="assets/img/icon_bg2.png" type="image/x-icon">		
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">		
-	</head>
-	<body class="left-sidebar is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teaching & Advising — Javier Ojeda Vargas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--bg2:#edeae2;--bg3:#fff;--text:#1a1814;--text2:#5a5650;--text3:#9a9590;--red:#c0392b;--redbg:#fdf0ef;--teal:#0e6b5a;--tealbg:#e8f5f1;--blue:#1a5276;--bluebg:#eaf0f6;--gold:#7d6008;--goldbg:#fef9e7;--border:rgba(26,24,20,.10);--border2:rgba(26,24,20,.18);--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.07);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;}
+a{color:inherit;text-decoration:none;}
 
-			<!-- Header -->
-				<div id="header">
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(247,245,240,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem;}
+.nav-brand{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--text);letter-spacing:-.02em;white-space:nowrap;}
+.nav-brand .r{color:var(--red);}
+.nav-links{display:flex;gap:1.1rem;list-style:none;flex-wrap:wrap;}
+.nav-links a{font-size:.8rem;font-weight:400;color:var(--text2);transition:color .2s;}
+.nav-links a:hover{color:var(--red);}
+.nav-links a.active{color:var(--red);font-weight:500;}
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Teaching & Advising</a></h1>
-							</header>
-						</div>
+/* PAGE HEADER */
+.page-header{background:var(--text);padding:4rem 2rem 3rem;}
+.page-header-inner{max-width:1100px;margin:0 auto;}
+.page-eyebrow{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.14em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:.6rem;}
+.page-header h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;letter-spacing:-.02em;line-height:1.1;margin-bottom:.8rem;}
+.page-header h1 .r{color:var(--red);}
+.page-header p{font-size:.95rem;color:rgba(255,255,255,.55);max-width:680px;line-height:1.8;}
+.header-stats{display:flex;gap:2.5rem;margin-top:2rem;flex-wrap:wrap;}
+.hs-item .hs-val{font-family:'DM Serif Display',serif;font-size:1.8rem;color:#fff;line-height:1;}
+.hs-item .hs-label{font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-top:.2rem;}
 
-		<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="publications.html">Publications</a></li>
-								<li><a href="teaching.html">Teaching & Advising</a></li>
-								<li><a href="outreach.html">Media & Outreach</a></li>
-								<li><a href="docs/CV_OJEDA_short.pdf">Mon CV</a></li>
-								<!--<li><a href="links.html">Links</a></li>-->
-							</ul>
-						</nav>
+/* SECTIONS */
+section{padding:4rem 2rem;}
+.alt-bg{background:var(--bg2);}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-label{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:.5rem;}
+h2{font-family:'DM Serif Display',serif;font-size:1.75rem;letter-spacing:-.02em;margin-bottom:1.8rem;color:var(--text);line-height:1.1;}
+h3{font-family:'DM Serif Display',serif;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:1rem;color:var(--text);}
 
-				</div>
+/* INSTITUTION BLOCK */
+.inst-block{margin-bottom:3rem;}
+.inst-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;padding-bottom:.7rem;border-bottom:2px solid var(--border);}
+.inst-logo{height:32px;opacity:.7;filter:grayscale(1);}
+.inst-name{font-weight:600;font-size:1rem;}
+.inst-period{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);margin-left:auto;}
 
+/* COURSE TABLE */
+.course-list{display:flex;flex-direction:column;gap:.6rem;}
+.course-item{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.2rem;display:grid;grid-template-columns:1fr auto;gap:.5rem;align-items:start;transition:box-shadow .2s;}
+.course-item:hover{box-shadow:var(--shadow);}
+.course-name{font-size:.93rem;font-weight:600;}
+.course-code{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);}
+.course-desc{font-size:.83rem;color:var(--text2);margin-top:.2rem;grid-column:1/-1;}
+.course-year{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);text-align:right;white-space:nowrap;}
+.badge{display:inline-block;font-size:.68rem;padding:2px 8px;border-radius:4px;font-weight:500;margin-right:.3rem;margin-top:.3rem;vertical-align:middle;}
+.badge-grad{background:var(--redbg);color:var(--red);}
+.badge-ug{background:var(--bluebg);color:var(--blue);}
+.badge-postit{background:var(--goldbg);color:var(--gold);}
+.badge-ta{background:var(--tealbg);color:var(--teal);}
+.badge-curr{background:var(--tealbg);color:var(--teal);}
 
-				<!-- Main -->
-		<section class="wrapper style1">
-			<div class="container">
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
 
-				<div class="row gtr-200">
-					<div class="col-8 col-12-mobile" id="content">
-						<article id="main">
+/* STUDENT CARDS */
+.students-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1rem;}
+.student-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.4rem;transition:box-shadow .2s,transform .2s;position:relative;overflow:hidden;}
+.student-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.student-card.current{border-left:3px solid var(--red);}
+.student-card.past{border-left:3px solid var(--teal);}
+.student-status{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem;}
+.student-status.curr-lbl{color:var(--red);}
+.student-status.past-lbl{color:var(--teal);}
+.student-name{font-size:1rem;font-weight:600;margin-bottom:.15rem;}
+.student-name a{color:var(--text);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--border2);transition:text-decoration-color .2s;}
+.student-name a:hover{text-decoration-color:var(--red);}
+.student-degree{font-size:.82rem;color:var(--text2);margin-bottom:.3rem;}
+.student-thesis{font-size:.83rem;color:var(--text2);font-style:italic;line-height:1.5;margin-bottom:.4rem;}
+.student-now{font-size:.8rem;color:var(--text3);}
+.student-now span{color:var(--teal);font-weight:500;}
+.role-tag{display:inline-block;font-size:.67rem;padding:2px 7px;border-radius:4px;font-weight:500;margin-bottom:.5rem;}
+.role-guide{background:var(--redbg);color:var(--red);}
+.role-coguide{background:#fff0e8;color:#c0600a;}
+.role-comm{background:var(--bluebg);color:var(--blue);}
 
-							<section>
-								<header>
-									<h3>Lecturer at Universidad de Concepción:</h3>
-								</header>
-								<p>
-								<ul align="justify" style="list-style-type: '&#x22C4; ';">
-									<li><strong>Applied Seismology (2025)</strong>
-									<br />Graduate-level course for Professionals (Engineers, Geophysicists, Geologists).
-									</li>
-									<li><strong>Applied Seismology to Engineering (2025)</strong>
-									<br />Graduate-level course for the program: Master's degree in Engineering Sciences.
-									</li>
-									<li><strong>Natural Hazards Assessment (2025)</strong>
-									<br />Graduate-level course for the program: Master's degree in Geographic Analysis.
-									</li>
-									<li><strong>Earthquake-resistant design (2025)</strong>
-									<br />Undergraduate-level course for Civil Engineering (8 hours).
-									</li>
-									<li><strong>Geomatics (2025)</strong>
-									<br />Undergraduate-level course for Civil Engineering (4 hours).
-									</li>
-								</ul>
-								</p>
-							</section>
+/* TIMELINE (education) */
+.timeline{position:relative;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:1.5px;background:var(--border2);}
+.ti{position:relative;padding-left:2.2rem;margin-bottom:1.6rem;}
+.td{position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg3);border:2px solid var(--border2);}
+.ti:hover .td{border-color:var(--red);}
+.ti .date{font-family:'DM Mono',monospace;font-size:.71rem;color:var(--text3);margin-bottom:.1rem;}
+.ti h4{font-size:.93rem;font-weight:600;}
+.ti p{font-size:.83rem;color:var(--text2);margin-top:.1rem;}
 
-							
-							<section>
-								<header>
-									<h3>Lecturer at Universidad de Chile:</h3>
-								</header>
-								<p>
-								<ul align="justify" style="list-style-type: '&#x22C4; ';">
-									<li><strong>GF7001: Postgraduate Geophysics Workshop (2023)</strong>
-									<br />Graduate-level course for the program: Master's degree in Geophysics.
-									</li>
-									</ul>
-								</p>
-							</section>
+/* SCHOOL PROJECTS */
+.school-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.85rem;}
+.school-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;border-left:3px solid var(--gold);}
+.school-year{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text3);}
+.school-title{font-size:.9rem;font-weight:600;margin:.15rem 0;}
+.school-where{font-size:.82rem;color:var(--text2);}
 
-							<section>
-								<header>
-									<h3>As a Ph.D. student at U. Chile, I have been a teaching assistant (TA) in 5 courses:</h3>
-								</header>
-								<p>
-								<ul align="justify" style="list-style-type: '&#x22C4; ';">
-									<li><strong>GF731: Theoretical Seismology I (2020, 2021, 2023 & 2024)</strong>
-									<br />Graduate-level course for M2 students. Lecturer: S. Ruiz and R. Madariaga
-									<li><strong>GF5018: GNSS and its applications to earthquake research (2021)</strong>
-									<br />Graduate-level course for M2 students. Lecturer: J.C. Báez, F. Leyton, and S. Ruiz
-									<li><strong>DPDGF00001: Seismology Graduate Diploma (2020, 2021 & 2022)</strong>
-									<li><strong>GF4101: Applied Seismology (2022 & 2023)</strong>
-									<li><strong>GF4001: Seismology (2020 & 2021)</strong>
-									</li>
-									</ul>
-								</p>
-							</section>
+/* PHILOSOPHY */
+.philosophy-box{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;border-left:4px solid var(--red);max-width:760px;}
+.philosophy-box p{font-size:.95rem;color:var(--text2);line-height:1.8;}
+.philosophy-box p+p{margin-top:.8rem;}
 
-							<section>
-								<header>
-									<h3>During my B.S. and M.Sc. studies at U. Chile, I was a TA in 6 courses:</h3>
-								</header>
-								<ul style="list-style-type: '&#x22C4; ';">
-								<li><strong>DPDGF00001: Seismology Graduate Diploma (2016, 2017 & 2018)</strong>
-								<br />Graduate-level course for Professionals. Class manager: S. Ruiz
-								<li><strong>GF5012: Earthquakes in Chile (2017 & 2018)</strong>
-								<br />Graduate-level course for M1 students. Lecturer: S. Ruiz
-								<li><strong>GF4101: Applied Seismology (2017 & 2018)</strong>
-								<br />Undergraduate-level course for L3 students. Lecturer: S. Ruiz & F. Leyton
-								<li><strong>GF4001: Seismology (2015, 2016, 2017 & 2018)</strong>
-								<br />Undergraduate-level course for L3 students. Lecturer: S. Ruiz
-								<li><strong>GF3101: Introduction to Meteorology (2015)</strong>
-								<br />Undergraduate-level course for L3 students. Lecturer: R. Garreaud
-								<li><strong>MA2601: Ordinary Differential Equations (2014)</strong>
-								<br />Undergraduate-level course for L2 students. Lecturer: E. Topp
-								</li>
-								</ul>
-							</section>
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease;}
+.reveal.visible{opacity:1;transform:none;}
 
-							<section>
-								<header>
-									<h3>Additional teaching experience:</h3>
-								</header>
-								<ul align="justify" style="list-style-type: '&#x22C4; ';">
-								<li><strong>Maths teacher, Universidad Abierta de Recoleta (2020)</strong>
-								<br />Preparation for undergraduate studies
-								<li><strong>Maths teacher, Internado Nacional Barros Arana (2014)</strong>
-								<br />Induction program for new students
-								<li><strong>Maths and Physics teacher, Internado Nacional Barros Arana (2013 & 2014)</strong>
-								<br />AEI program, comprehensive school support<br /><br /></li>
-								</ul>
-							</section>
-							</article>
-					</div>
+footer{background:var(--text);border-top:1px solid rgba(255,255,255,.07);padding:1.3rem 2rem;text-align:center;font-size:.76rem;color:rgba(255,255,255,.32);}
+footer a{color:rgba(255,255,255,.4);}
 
-					<div class="col-4 col-12-mobile" id="sidebar">
-							<!--<hr class="first" />-->
-							<article id="main">
+@media(max-width:800px){
+  .two-col{grid-template-columns:1fr;}
+  nav{padding:0 1rem;}
+  .nav-links{gap:.6rem;}
+  section{padding:2.8rem 1.2rem;}
+  .page-header{padding:3rem 1.2rem 2rem;}
+}
+</style>
+</head>
+<body>
 
-							<section>
-									<header>
-										<h3>Thesis supervisor</h3>
-									</header>
-									<ul align="justify" style="list-style-type: '&#x22C4; ';">
-									<li><strong><font color="#0"><a href="https://www.linkedin.com/in/kimarayaespinosa/" target="_blank"><font color="#0">Kim Araya</font></a></font> 
-										(2024) Universidad de Chile, <font color="#0"><a href="https://repositorio.uchile.cl/handle/2250/203382" target="_blank"><font color="#0">Honors thesis in Civil Engineering</font></a></font>.</strong> Now at Stantec Engineering Consulting.
-									</ul>
-							</section>
+<nav>
+  <a class="nav-brand" href="index.html">Javier <span class="r">Ojeda Vargas</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="index.html#talks">Talks</a></li>
+    <li><a href="teaching.html" class="active">Teaching</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+    <li><a href="conferences.html">Conferences</a></li>
+    <li><a href="docs/CV_OJEDA_short.pdf">CV ↗</a></li>
+  </ul>
+</nav>
 
-							<section>
-									<header>
-										<h3>Thesis committee</h3>
-									</header>
-									<ul align="justify" style="list-style-type: '&#x22C4; ';">
-									<li><strong><font color="#0"><a href="https://www.dgeo.udec.cl/blog/2026/04/02/ano-lectivo-de-geofisica-udec-comienza-con-4-defensas-de-tesis/" target="_blank"><font color="#0">Florencia Valenzuela</font></a></font> 
-										(2026) Universidad de Concepción, <font color="#0"><a href="" target="_blank"><font color="#0">Honors thesis in Geophysics</font></a></font>.</strong> Now at GFDas Drones y Minería.
-									<li><strong><font color="#0"><a href="https://www.linkedin.com/in/andr%C3%A9s-barrientos-v%C3%A1squez-8a1422335/" target="_blank"><font color="#0">Andrés Barrientos</font></a></font> 
-										(2025) Universidad de Chile, <font color="#0"><a href="" target="_blank"><font color="#0">Honors thesis in Civil Engineering</font></a></font>.</strong> Now at UChile pursuing his Master degree.
-									<li><strong><font color="#0"><a href="https://www.linkedin.com/in/maximiliano-osses/" target="_blank"><font color="#0">Maximiliano Osses</font></a></font> 
-										(2025) Universidad de Concepción, <font color="#0"><a href="" target="_blank"><font color="#0">Master thesis in Civil Engineering</font></a></font>.</strong> Now at Gestiona Environmental management.
-									</ul>
-							</section>
-								
-							<section>
-									<header>
-										<h3>Advisor in School Projects (Iniciativa de Investigación Escolar Explora ANID):</h3>
-									</header>
-									<ul align="justify" style="list-style-type: '&#x22C4; ';">
-									<li><strong>Ascensión Nicol School, Estación Central (2023). Nuclear reactor safety in case of earthquakes.</strong>
-									<li><strong>Cristobal Colón School, Melipilla (2022). Diminishing water resources with zeolite.</strong>
-									<li><strong>Nocedal School, La Pintana (2018). Seismology Science Academy.</strong>
-									</ul>
-							</section>
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Formación universitaria</p>
+    <h1>Teaching &amp; <span class="r">Advising</span></h1>
+    <p>Over 10 years of university teaching at all levels — undergraduate, graduate, postgraduate diplomas — across geophysics, seismology, civil engineering, and geography programs.</p>
+    <div class="header-stats">
+      <div class="hs-item"><div class="hs-val">10+</div><div class="hs-label">Years teaching</div></div>
+      <div class="hs-item"><div class="hs-val">15+</div><div class="hs-label">Courses taught</div></div>
+      <div class="hs-item"><div class="hs-val">8</div><div class="hs-label">Students mentored</div></div>
+      <div class="hs-item"><div class="hs-val">3</div><div class="hs-label">School projects advised</div></div>
+    </div>
+  </div>
+</div>
 
-							<a class="image featured"><img src="images/logo/logo_udec_azul.png"/></a>
-							<a class="image featured"><img src="images/logo/logo_fcfmdgf.png"/></a>
+<!-- TEACHING PHILOSOPHY -->
+<section>
+  <div class="section-inner reveal">
+    <p class="section-label">Approach</p>
+    <h2>Teaching Philosophy</h2>
+    <div class="philosophy-box">
+      <p>I believe seismology becomes most meaningful when students can connect physical theory to real-world hazards — especially in a country like Chile, the world's most seismically active. My courses integrate observational data, computational tools, and applied case studies to bridge the gap between academic research, geoscience backgrounds and engineering practice.</p>
+      <p>Across my experience as lecturer, teaching assistant, and thesis supervisor, I aim to build students' capacity to work independently with seismic data, critically assess uncertainty in hazard estimates, and communicate findings to both specialist and non-specialist audiences.</p>
+    </div>
+  </div>
+</section>
 
-						</article>
+<!-- CURRENT POSITIONS -->
+<section class="alt-bg">
+  <div class="section-inner reveal">
+    <p class="section-label">Universidad de Concepción · Since 2025</p>
+    <h2>Lecturer — Current Position</h2>
 
-					</div>
+    <div class="inst-block">
+      <div class="inst-header">
+        <div class="inst-name">🏛️ Department of Civil Engineering &amp; Department of Geography</div>
+        <div class="inst-period">Aug 2025 — Present</div>
+      </div>
+      <div class="course-list">
 
+        <div class="course-item">
+          <div>
+            <div class="course-name">Sismología Aplicada a la Ingeniería</div>
+            <div class="course-code">Applied Seismology to Engineering</div>
+            <div class="course-desc">Graduate-level course (85 hrs) for the Master's degree in Engineering Sciences. Covers seismic source, wave propagation, site effects, ground motion characterization, and hazard applications to civil infrastructure.</div>
+            <span class="badge badge-grad">Graduate</span><span class="badge badge-curr">Current</span>
+          </div>
+          <div class="course-year">2025</div>
+        </div>
 
-		</div>
-	</div>
-	</section>
+        <div class="course-item">
+          <div>
+            <div class="course-name">Evaluación de Riesgos Naturales</div>
+            <div class="course-code">Natural Hazards Assessment</div>
+            <div class="course-desc">Graduate-level course (16 hrs) for the Master's degree in Geographic Analysis (FAUG). Multi-hazard framework with emphasis on seismic and tsunami risk in Chile. Main Lecturer: D. Farías-Barahona.</div>
+            <span class="badge badge-grad">Graduate</span><span class="badge badge-curr">Current</span>
+          </div>
+          <div class="course-year">2025</div>
+        </div>
 
+        <div class="course-item">
+          <div>
+            <div class="course-name">Sismología Aplicada</div>
+            <div class="course-code">Applied Seismology — Postgraduate Diploma</div>
+            <div class="course-desc">Postgraduate diploma course (12 hrs) for engineers, geophysicists and geologists. Practical seismology for professional development.</div>
+            <span class="badge badge-postit">Diploma</span><span class="badge badge-curr">Current</span>
+          </div>
+          <div class="course-year">2025</div>
+        </div>
 
-	<!-- Footer -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<!-- Contact -->
-									<section class="contact">
-										<ul class="icons">
-											<li><a href="https://orcid.org/0000-0002-7188-8356" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid" style="font-size: 1.5em;"></i></a></li>
-											<li><a href="https://www.webofscience.com/wos/author/record/862622" target="_blank" rel="noopener noreferrer" class="icon solid fa-database"><span class="label">Web of Science</span></a></li>
-											<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57207963457" target="_blank" rel="noopener noreferrer"><i class="ai ai-scopus" style="font-size: 1.5em;"></i></a></li>											
-											<li><a href="https://scholar.google.com/citations?hl=es&user=HqIUR4sAAAAJ" target="_blank" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a>
-											<li><a href="https://www.researchgate.net/profile/Javier-Ojeda-5" target="_blank" class="icon brands fa-researchgate"><span class="label">Researchgate</span></a></li>
-											<li><a href="https://investigadores.anid.cl/es/public_search/researcher?id=39718" target="_blank" rel="noopener noreferrer" class="icon solid fa-id-badge"><span class="label">ANID</span></a></li>
-											<li><a href="https://www.linkedin.com/in/javierojedav/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-											<!--<li><a href="https://x.com/laviedej" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://www.instagram.com/laviedej/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://www.facebook.com/laviedej" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-										</ul>
-									</section>
+        <div class="course-item">
+          <div>
+            <div class="course-name">Diseño Sismorresistente</div>
+            <div class="course-code">Earthquake-Resistant Design</div>
+            <div class="course-desc">Undergraduate-level contribution (8 hrs) to the Civil Engineering program. Focus on Chilean seismic codes and design spectra. Main Lecturer: S. Calderón.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-curr">Current</span>
+          </div>
+          <div class="course-year">2025</div>
+        </div>
 
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>2026 Javier Ojeda. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="course-item">
+          <div>
+            <div class="course-name">Geomática</div>
+            <div class="course-code">Geomatics</div>
+            <div class="course-desc">Undergraduate-level contribution (4 hrs) to the Civil Engineering program covering geospatial data fundamentals. Main Lecturer: F. Orellana.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-curr">Current</span>
+          </div>
+          <div class="course-year">2025</div>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
 
-	</body>
+<!-- UCHILE LECTURER -->
+<section>
+  <div class="section-inner reveal">
+    <p class="section-label">Universidad de Chile · 2014 – 2024</p>
+    <h2>Lecturer &amp; Teaching Assistant</h2>
+
+    <!-- Lecturer -->
+    <div class="inst-block">
+      <div class="inst-header">
+        <div class="inst-name">🏛️ Department of Geophysics — Lecturer</div>
+        <div class="inst-period">2023</div>
+      </div>
+      <div class="course-list">
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF7001: Jornada de Postgrado en Geofísica</div>
+            <div class="course-code">Postgraduate Geophysics Workshop</div>
+            <div class="course-desc">Graduate-level course (81 hrs) for the Master's degree in Geophysics. Full semester lecturer responsible for planning and teaching the annual postgraduate workshop.</div>
+            <span class="badge badge-grad">Graduate</span>
+          </div>
+          <div class="course-year">2023</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TA PhD period -->
+    <div class="inst-block">
+      <div class="inst-header">
+        <div class="inst-name">🎓 Teaching Assistant — Ph.D. Period</div>
+        <div class="inst-period">2020 – 2024</div>
+      </div>
+      <div class="course-list">
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF731: Sismología Teórica I</div>
+            <div class="course-code">Theoretical Seismology I</div>
+            <div class="course-desc">Graduate-level course for M2 students. Lecturers: S. Ruiz and R. Madariaga. Topics: seismic wave theory, focal mechanisms, source models.</div>
+            <span class="badge badge-grad">Graduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2020, 2021, 2023, 2024</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF5018: GNSS y su Aplicación al Estudio de Terremotos</div>
+            <div class="course-code">GNSS and its applications to earthquake research</div>
+            <div class="course-desc">Graduate-level course for M2 students. Lecturers: J.C. Báez, F. Leyton and S. Ruiz.</div>
+            <span class="badge badge-grad">Graduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2021</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">DPDGF00001: Diploma de Postítulo en Sismología</div>
+            <div class="course-code">Seismology Graduate Diploma</div>
+            <div class="course-desc">Postgraduate diploma for professionals (engineers, geologists). Class manager: S. Ruiz.</div>
+            <span class="badge badge-postit">Diploma</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2020, 2021, 2022</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF4101: Sismología Aplicada</div>
+            <div class="course-code">Applied Seismology</div>
+            <div class="course-desc">Undergraduate-level course for L3 students. Lecturers: S. Ruiz &amp; F. Leyton.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2022, 2023</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF4001: Sismología</div>
+            <div class="course-code">Seismology</div>
+            <div class="course-desc">Undergraduate-level course for L3 students. Lecturer: S. Ruiz.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2020, 2021</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TA BSc/MSc period -->
+    <div class="inst-block">
+      <div class="inst-header">
+        <div class="inst-name">🎓 Teaching Assistant — B.S. &amp; M.Sc. Period</div>
+        <div class="inst-period">2014 – 2018</div>
+      </div>
+      <div class="course-list">
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">DPDGF00001: Diploma de Postítulo en Sismología</div>
+            <div class="course-desc">Postgraduate diploma for professionals. Class manager: S. Ruiz.</div>
+            <span class="badge badge-postit">Diploma</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2016, 2017, 2018</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF5012: Terremotos en Chile</div>
+            <div class="course-code">Earthquakes in Chile</div>
+            <div class="course-desc">Graduate-level course for M1 students. Lecturer: S. Ruiz.</div>
+            <span class="badge badge-grad">Graduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2017, 2018</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF4101: Sismología Aplicada</div>
+            <div class="course-desc">Undergraduate-level course. Lecturers: S. Ruiz &amp; F. Leyton.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2017, 2018</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF4001: Sismología</div>
+            <div class="course-desc">Undergraduate-level course. Lecturer: S. Ruiz.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2015, 2016, 2017, 2018</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">GF3101: Introducción a la Meteorología y Oceanografía</div>
+            <div class="course-desc">Undergraduate-level course. Lecturer: R. Garreaud.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2015</div>
+        </div>
+
+        <div class="course-item">
+          <div>
+            <div class="course-name">MA2601: Ecuaciones Diferenciales Ordinarias</div>
+            <div class="course-code">Ordinary Differential Equations</div>
+            <div class="course-desc">Undergraduate-level course for L2 students. Lecturer: E. Topp.</div>
+            <span class="badge badge-ug">Undergraduate</span><span class="badge badge-ta">TA</span>
+          </div>
+          <div class="course-year">2014</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Additional teaching -->
+    <div class="inst-block">
+      <div class="inst-header">
+        <div class="inst-name">📐 Additional Teaching Experience</div>
+        <div class="inst-period">2013 – 2020</div>
+      </div>
+      <div class="course-list">
+        <div class="course-item">
+          <div>
+            <div class="course-name">Mathematics — Universidad Abierta de Recoleta</div>
+            <div class="course-desc">Preparation course for undergraduate studies.</div>
+          </div>
+          <div class="course-year">2020</div>
+        </div>
+        <div class="course-item">
+          <div>
+            <div class="course-name">Mathematics — Internado Nacional Barros Arana</div>
+            <div class="course-desc">Induction program for new students.</div>
+          </div>
+          <div class="course-year">2014</div>
+        </div>
+        <div class="course-item">
+          <div>
+            <div class="course-name">Mathematics &amp; Physics — Internado Nacional Barros Arana</div>
+            <div class="course-desc">AEI comprehensive school support program.</div>
+          </div>
+          <div class="course-year">2013, 2014</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STUDENT ADVISING -->
+<section class="alt-bg" id="students">
+  <div class="section-inner reveal">
+    <p class="section-label">Mentorship</p>
+    <h2>Student Advising &amp; Mentorship</h2>
+
+    <!-- CURRENT -->
+    <h3>Current Students</h3>
+    <div class="students-grid" style="margin-bottom:2.5rem;">
+
+      <div class="student-card current">
+        <div class="student-status curr-lbl">● Current · Expected 2026</div>
+        <div class="student-name">Joaquín Jara</div>
+        <span class="role-tag role-comm">Committee Member</span>
+        <div class="student-degree">M.Sc. in Engineering Sciences · Universidad de Concepción</div>
+        <div class="student-thesis">Modelamiento numérico de la respuesta sísmica de sitio de la cuenca de Concepción</div>
+      </div>
+
+      <div class="student-card current">
+        <div class="student-status curr-lbl">● Current · Expected 2026</div>
+        <div class="student-name">Diego Santa María</div>
+        <span class="role-tag role-comm">Committee Member</span>
+        <div class="student-degree">M.Sc. in Engineering Sciences · Universidad de Concepción</div>
+        <div class="student-thesis">Análisis del Puente Ferroviario Antiguo sobre el río Biobío bajo amenazas sísmicas e hidráulicas extremas históricas</div>
+      </div>
+
+      <div class="student-card current">
+        <div class="student-status curr-lbl">● Current · Expected 2026</div>
+        <div class="student-name">Fabián Villalobos</div>
+        <span class="role-tag role-comm">Committee Member</span>
+        <div class="student-degree">B.Sc. in Civil Engineering · Universidad de Concepción</div>
+        <div class="student-thesis">Análisis de estado límite de servicio para edificios de albañilería considerando distintas fuentes y condiciones de sitio</div>
+      </div>
+
+      <div class="student-card current">
+        <div class="student-status curr-lbl">● Current · 2026</div>
+        <div class="student-name">Émilie Sanoner</div>
+        <span class="role-tag role-guide">Supervisor</span>
+        <div class="student-degree">CPES Sciences, Environnement, Société · Université de Rennes, France</div>
+        <div class="student-thesis">Seismicity in the Concepción basin detected by the ORSCA network</div>
+        <div class="student-now">International student exchange project</div>
+      </div>
+
+    </div>
+
+    <!-- PAST -->
+    <h3>Past Students</h3>
+    <div class="students-grid">
+
+      <div class="student-card past">
+        <div class="student-status past-lbl">✓ Graduated 2026</div>
+        <div class="student-name">Florencia Valenzuela</div>
+        <span class="role-tag role-comm">Committee Member</span>
+        <div class="student-degree">B.Sc. in Geophysics · Universidad de Concepción</div>
+        <div class="student-thesis">Evaluación de modelos de aprendizaje automático para el pronóstico eruptivo del volcán Villarrica</div>
+        <div class="student-now">Now: <span>GFDas Drones y Minería</span></div>
+      </div>
+
+      <div class="student-card past">
+        <div class="student-status past-lbl">✓ Graduated 2025</div>
+        <div class="student-name">Maximiliano Osses</div>
+        <span class="role-tag role-comm">Committee Member</span>
+        <div class="student-degree">M.Sc. in Engineering Sciences · Universidad de Concepción</div>
+        <div class="student-thesis">Generation of synthetic ground motions based on coupling and slip model</div>
+        <div class="student-now">Now: <span>Gestiona Environmental Management Consultores</span></div>
+      </div>
+
+      <div class="student-card past">
+        <div class="student-status past-lbl">✓ Graduated 2025</div>
+        <div class="student-name">Andrés Barrientos</div>
+        <a href="https://www.linkedin.com/in/andr%C3%A9s-barrientos-v%C3%A1squez-8a1422335/" target="_blank" class="student-name" style="display:block;font-size:.75rem;color:var(--red);font-style:normal;margin-top:-.3rem;margin-bottom:.4rem;">LinkedIn ↗</a>
+        <span class="role-tag role-comm">Committee Member</span>
+        <div class="student-degree">B.Sc. in Civil Engineering · Universidad de Chile</div>
+        <div class="student-thesis">Desplazamientos de tranques de relaves sometidos a acelerogramas artificiales y registros semilla escalados</div>
+        <div class="student-now">Now: <span>Master's degree in Engineering, Universidad de Chile</span></div>
+      </div>
+
+      <div class="student-card past">
+        <div class="student-status past-lbl">✓ Graduated 2024</div>
+        <div class="student-name">Kim Araya</div>
+        <a href="https://www.linkedin.com/in/kimarayaespinosa/" target="_blank" class="student-name" style="display:block;font-size:.75rem;color:var(--red);font-style:normal;margin-top:-.3rem;margin-bottom:.4rem;">LinkedIn ↗</a>
+        <span class="role-tag role-guide">Co-supervisor</span>
+        <div class="student-degree">B.Sc. in Civil Engineering · Universidad de Chile</div>
+        <div class="student-thesis"><a href="https://repositorio.uchile.cl/handle/2250/203382" target="_blank" style="color:var(--text);text-decoration:underline;text-underline-offset:2px;">Generación de acelerogramas artificiales para sismos de magnitud moderada ↗</a></div>
+        <div class="student-now">Now: <span>Stantec Engineering Consulting</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GRADUATE PROGRAMS PARTICIPATION -->
+<section>
+  <div class="section-inner reveal">
+    <p class="section-label">Programme involvement</p>
+    <h2>Graduate Program Participation</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:.8rem;">🏛️ Universidad de Concepción <span style="font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);font-weight:400;margin-left:.5rem;">since Jul 2025</span></h3>
+        <div class="course-list">
+          <div class="course-item">
+            <div>
+              <div class="course-name">Magíster en Ciencias de la Ingeniería con Mención en Ingeniería Civil</div>
+              <div class="course-desc">Facultad de Ingeniería. Academic collaborator.</div>
+              <span class="badge badge-grad">Graduate</span>
+            </div>
+          </div>
+          <div class="course-item">
+            <div>
+              <div class="course-name">Magíster en Análisis Geográfico</div>
+              <div class="course-desc">Facultad de Arquitectura, Urbanismo y Geografía. Academic collaborator.</div>
+              <span class="badge badge-grad">Graduate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;margin-bottom:.8rem;">🏛️ Universidad de Chile <span style="font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);font-weight:400;margin-left:.5rem;">2014 – 2024</span></h3>
+        <div class="course-list">
+          <div class="course-item">
+            <div>
+              <div class="course-name">Magíster en Ciencias mención Geofísica</div>
+              <div class="course-desc">Departamento de Geofísica. TA and advisor in multiple courses.</div>
+              <span class="badge badge-grad">Graduate</span>
+            </div>
+          </div>
+          <div class="course-item">
+            <div>
+              <div class="course-name">Diploma de Postítulo en Sismología</div>
+              <div class="course-desc">For engineers and geoscience professionals. TA and class manager collaboration.</div>
+              <span class="badge badge-postit">Diploma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOL PROJECTS EXPLORA -->
+<section class="alt-bg" id="school-projects">
+  <div class="section-inner reveal">
+    <p class="section-label">Science education · Explora ANID</p>
+    <h2>School Research Projects</h2>
+    <p style="color:var(--text2);font-size:.9rem;margin-bottom:1.5rem;">As advisor for <em>Iniciativas de Investigación Escolar</em> (IIE) through Explora ANID, I guided school students in designing and developing their own scientific research projects.</p>
+    <div class="school-grid">
+      <div class="school-card">
+        <div class="school-year">2023</div>
+        <div class="school-title">Nuclear reactor safety in case of earthquakes</div>
+        <div class="school-where">Ascensión Nicol School, Estación Central, Santiago</div>
+      </div>
+      <div class="school-card">
+        <div class="school-year">2022</div>
+        <div class="school-title">Diminishing water resources with zeolite</div>
+        <div class="school-where">Cristóbal Colón School, Melipilla, Santiago</div>
+      </div>
+      <div class="school-card">
+        <div class="school-year">2018</div>
+        <div class="school-title">Seismology Science Academy</div>
+        <div class="school-where">Nocedal School, La Pintana, Santiago</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Javier Alejandro Ojeda Vargas · <a href="index.html">javierojedav.github.io</a> · Updated May 2026</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.06});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
 </html>
-
-
-
-
-

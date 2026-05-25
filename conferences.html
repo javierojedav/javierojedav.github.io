@@ -1,298 +1,1032 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Javier Ojeda</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="assets/img/icon_bg2.png" type="image/x-icon">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">		
-	</head>
-	<body class="left-sidebar is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conferences — Javier Ojeda Vargas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--bg2:#edeae2;--bg3:#fff;--text:#1a1814;--text2:#5a5650;--text3:#9a9590;--red:#c0392b;--redbg:#fdf0ef;--teal:#0e6b5a;--tealbg:#e8f5f1;--blue:#1a5276;--bluebg:#eaf0f6;--gold:#7d6008;--goldbg:#fef9e7;--border:rgba(26,24,20,.10);--border2:rgba(26,24,20,.18);--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.07);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;}
+a{color:inherit;text-decoration:none;}
 
-			<!-- Header -->
-				<div id="header">
+nav{position:sticky;top:0;z-index:100;background:rgba(247,245,240,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem;}
+.nav-brand{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--text);letter-spacing:-.02em;white-space:nowrap;}
+.nav-brand .r{color:var(--red);}
+.nav-links{display:flex;gap:1.1rem;list-style:none;flex-wrap:wrap;}
+.nav-links a{font-size:.8rem;font-weight:400;color:var(--text2);transition:color .2s;letter-spacing:.02em;}
+.nav-links a:hover{color:var(--red);}
+.nav-links a.active{color:var(--red);font-weight:500;}
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Conference Presentations</a></h1>
-							</header>
-						</div>
+/* PAGE HEADER */
+.page-header{background:var(--text);padding:4rem 2rem 3rem;}
+.page-header-inner{max-width:1100px;margin:0 auto;}
+.page-eyebrow{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.14em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:.6rem;}
+.page-header h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;letter-spacing:-.02em;line-height:1.1;margin-bottom:1rem;}
+.page-header h1 .r{color:var(--red);}
+.page-header p{font-size:.95rem;color:rgba(255,255,255,.55);max-width:640px;line-height:1.8;}
+.page-stats{display:flex;gap:2.5rem;margin-top:2rem;flex-wrap:wrap;}
+.ps-item{text-align:center;}
+.ps-val{font-family:'DM Serif Display',serif;font-size:1.8rem;color:#fff;line-height:1;}
+.ps-label{font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-top:.25rem;}
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="publications.html">Publications</a></li>
-								<li><a href="teaching.html">Teaching & Advising</a></li>
-								<li><a href="outreach.html">Media & Outreach</a></li>
-								<li><a href="docs/CV_OJEDA_short.pdf">Mon CV</a></li>
-								<!--<li><a href="links.html">Links</a></li>-->
-							</ul>
-						</nav>
+/* MAIN */
+section{padding:3.5rem 2rem;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-label{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:.5rem;}
+h2{font-family:'DM Serif Display',serif;font-size:1.7rem;letter-spacing:-.02em;margin-bottom:1.8rem;color:var(--text);line-height:1.1;}
 
-				</div>
+/* CONTROLS */
+.controls{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin-bottom:2rem;}
+.filter-btn{padding:.38rem .95rem;border-radius:100px;font-size:.78rem;font-weight:500;cursor:pointer;border:1.5px solid var(--border);background:transparent;color:var(--text2);transition:all .2s;font-family:inherit;}
+.filter-btn.active{background:var(--text);color:#fff;border-color:var(--text);}
+.filter-btn:hover:not(.active){border-color:var(--red);color:var(--red);}
+.search-box{margin-left:auto;padding:.38rem .9rem;border-radius:100px;border:1.5px solid var(--border2);background:var(--bg3);font-family:inherit;font-size:.82rem;color:var(--text);outline:none;min-width:220px;}
+.search-box:focus{border-color:var(--red);}
+.results-count{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);margin-left:.5rem;}
 
-					<!-- Main -->
-						<section class="wrapper style1">
-							<div class="container">
-								<div class="row gtr-200">
-									<div class="col-4 col-12-narrower">
-										<div id="sidebar">
+/* ACRONYMS */
+.acronyms{background:var(--bg2);border-radius:var(--radius);padding:1.2rem 1.5rem;margin-bottom:2rem;display:flex;gap:1.5rem;flex-wrap:wrap;}
+.ac-item{font-size:.8rem;color:var(--text2);}
+.ac-item strong{color:var(--text);font-weight:600;}
 
-											<!-- Sidebar -->
-											<section>
+/* YEAR GROUP */
+.year-group{margin-bottom:2.5rem;}
+.year-heading{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--text);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:1rem;}
+.year-count{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);font-weight:400;}
 
-											<header>
-												<h3>Conference acronym</h3>
-											</header>
-											<ul style="list-style-type: '&#x2756; ';">
-											<li><font color="#0">AGU: American Geophysical Union</font></li>
-											<p></p>
-											<li><font color="#0">EGU: European Geosciences Union</font></li>
-											<p></p>
-											<li><font color="#0">LACSC: Latin American and Caribbean Seismological Commission</font></li>
-											<p></p>
-											<li><font color="#0">ESC: European Seismological Commission</font></li>
-											<p></p>
-											<li><font color="#0">GSEV: Geophysical Signatures of Earthquakes and Volcanoes</font></li>
-											<p></p>
-											<li><font color="#0">CGCh: Congreso Geológico Chileno</font></li>
-											<p></p>
-											<li><font color="#0">JpGU: Japan Geoscience Union</font></li>
-											<p></p>
-											<li><font color="#0">SSA: Seismological Society of America</font></li>
-										</ul>
+/* CONF ITEM */
+.conf-list{display:flex;flex-direction:column;gap:.7rem;}
+.conf-item{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;display:flex;gap:1rem;align-items:flex-start;transition:box-shadow .2s;position:relative;}
+.conf-item:hover{box-shadow:var(--shadow);}
+.conf-item.my-talk{border-left:3px solid var(--red);}
+.conf-item.invited{border-left:3px solid var(--gold);}
+.conf-item.hidden{display:none;}
+.conf-num{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text3);min-width:32px;flex-shrink:0;padding-top:2px;}
+.conf-body{flex:1;}
+.conf-authors{font-size:.82rem;color:var(--text2);margin-bottom:.25rem;line-height:1.5;}
+.conf-authors strong{color:var(--text);font-weight:600;}
+.conf-title{font-size:.92rem;font-weight:500;line-height:1.45;margin-bottom:.3rem;font-style:italic;}
+.conf-meta{font-size:.79rem;color:var(--text3);display:flex;gap:.75rem;flex-wrap:wrap;}
+.conf-venue{font-weight:500;color:var(--text2);}
+.conf-loc{}
+.conf-badges{display:flex;gap:.4rem;margin-top:.45rem;flex-wrap:wrap;}
+.badge{display:inline-block;font-size:.68rem;padding:2px 8px;border-radius:4px;font-weight:500;}
+.badge-talk{background:var(--redbg);color:var(--red);}
+.badge-poster{background:var(--bluebg);color:var(--blue);}
+.badge-invited{background:var(--goldbg);color:var(--gold);}
+.badge-link{background:var(--tealbg);color:var(--teal);}
+.conf-link{font-size:.72rem;font-family:'DM Mono',monospace;color:var(--teal);text-decoration:underline;text-underline-offset:2px;}
 
+/* LEGEND */
+.legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.5rem;font-size:.78rem;color:var(--text2);}
+.leg{display:flex;align-items:center;gap:.35rem;}
+.leg-bar{width:10px;height:16px;border-radius:2px;flex-shrink:0;}
 
-											</section>
-										</div>
-									</div>
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;}
+.reveal.visible{opacity:1;transform:none;}
 
-									<div class="col-8  col-12-narrower imp-narrower">
-										<div id="content">
-											<!-- Content -->
-												<article>
-													<header>
-														<h3>This is a comprehensive list of my work and collaborations presented at various conferences, congresses, and workshops. My talks or poster presentations are <font color="#008000">highlighted</font>. Some of these can also be found on <font color="#008000"><a href="http://dgf.uchile.cl/~jojeda/data/Conferences/" target="_blank">my ftp</a></font>.</h3>
-													</header>
-													<ol align="justify" class="fancy-numbered" reversed>
-													<li>Ruiz, S., De la Peña-Silva, J.T., Brodsky, E., Maksymowicz, A., <strong><font color="#0">Ojeda, J.</font></strong>, Ceroni, D., Cabrera, L., Potin, B. (2026). <strong><font color="#0">Foreshocks along the Chilean Subduction Zone</font></strong>. <i>StatSei14, the International Statistical Seismology Conference</i>. Santiago, Chile</li>
-													<p></p>																									
-													<li>Calderón, S., <strong><font color="#0">Ojeda, J.</font></strong>, Ruz, B., Pacheco, I., Jünemann, R. (2026). <strong><font color="#0">Cyclic simulation of the structural response of a CMU PG reinforced masonry two-story house</font></strong>. <i>International Masonry Conference</i>. Lübeck, Alemania</li>
-													<p></p>																									
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Montalva, G., Osses-Valenzuela, M., Bastías, N., Leyton, F. (2026). <strong><font color="#0">Ground-motion simulations of megathrust earthquakes constrained by interseismic coupling: implications for seismic gaps along the Chilean margin</font></strong>. <i>VI LACSC Assembly</i>. Ciudad de México, México.</li>
-													<p></p>																									
-													<li>Castro-Araya, F., Morales-Yáñez, C., González, J., <strong><font color="#0">Ojeda, J.</font></strong> (2026). <strong><font color="#0">Did the 1960 Concepción earthquake promote the Valdivia megathrust rupture? Insights from Coulomb stress modeling</font></strong>. <i>VI LACSC Assembly</i>. Ciudad de México, México.</li>
-													<p></p>																									
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Montalva, G., Osses-Valenzuela, M., Bastías, N., Leyton, F., Heresi, P., Jünemann, R., Calderón, S. (2026). <strong><font color="#0">From Interseismic Coupling to Ground Motions: An Empirical Amplitude and Phase Approach for Megathrust Earthquake Simulations</font></strong>. <i>EGU General Assembly</i>. Viena, Austria. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>	
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Klein, E., Rousset, B., Vigny, C., Ruiz, S., Potin, B., Báez, J.-C., Zigone, D. (2026). <strong><font color="#0">Bimodal Seismic-aseismic Behavior of a Weakly Coupled Megathrust Segment Revealed by Kinematic Analysis of a Seismic Swarm and Slow Slip Event Offshore Copiapó, Chile</font></strong>. <i>2026 SZ4D Science Community Meeting</i>. Long Beach, California, USA. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Montalva, G., Osses-Valenzuela, M., Bastías, N., Leyton, F., Heresi, P., Jünemann, R., Calderón, S. (2026). <strong><font color="#0">Time-Dependent Ground-Motion Scenarios for Large Megathrust Earthquakes and Mature Seismic Gaps Along the Chilean Margin</font></strong>. <i>SSA Annual Meeting</i>. Pasadena, California, USA. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>		
-													<li>Bastías, N., Montalva, G., <strong><font color="#0">Ojeda, J.</font></strong>, Leyton, F. (2026). <strong><font color="#0">Toward the incorporation of anelastic path attenuation in non-ergodic ground-motion models (GMMs): A 3D perspective for the Chilean subduction zone</font></strong>. <i>SSA Annual Meeting</i>. Pasadena, California, USA.</li>
-													<p></p>		
-													<li>Brodsky, E., De la Peña, J.T., Maksymowicz, A., Cabrera, L., Ceroni, D., <strong><font color="#0">Ojeda, J.</font></strong>, Potin, B., León-Ríos, S., Alongi, T., Ruiz, S. (2025). <strong><font color="#0">Why do foreshocks occur where they do?</font></strong>. <i>AGU Annual Meeting</i>. New Orleans, USA.</li>
-													<p></p>		
-													<li>Osses, M., Montalva, G., <strong><font color="#0">Ojeda, J.</font></strong>, Leyton, F. (2025). <strong><font color="#0">Generación de registros sintéticos de aceleración a partir de modelos empíricos de amplitud y fase de Fourier</font></strong>. <i>XII Congreso de Geotecnia</i>. Santiago, Chile.</li>
-													<p></p>		
-													<li>Bastías, N., <strong><font color="#0">Ojeda, J.</font></strong>, Montalva, G. (2025). <strong><font color="#0">Monitoreo del Ruido Sísmico en Ciudades Chilenas: Aplicaciones de la Sismología Ambiental</font></strong>. <i>XII Congreso de Geotecnia</i>. Santiago, Chile.</li>
-													<p></p>		
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Bastías, N., Montalva, G. (2025). <strong><font color="#0">Monitoreo del ruido sísmico ambiental en la ciudad de Concepción</font></strong>. <i>IV Congreso de Amenaza Sísmica</i>. Talca, Chile. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>	
-													<li>Montalva, G., Calderón, S., Barría, J., Lema, G., <strong><font color="#0">Ojeda, J.</font></strong> (2025). <strong><font color="#0">Efecto de la Interacción Suelo-Estructura en registros sísmicos: Estudio de caso del Terremoto de Iquique de 2014</font></strong>. <i>IV Congreso de Amenaza Sísmica</i>. Talca, Chile.</li>
-													<p></p>	
-													<li>Ruiz, S., <strong><font color="#0">Ojeda, J.</font></strong>, Arriola, S., Torres, R., Flores, C., Gutiérrez, C., Araya, K., Gabrielli, S., Akinci, A., Otarola, C., Carvajal, M., Valdés, B. (2025). <strong><font color="#0">High-Frequency Strong Motion Simulations</font></strong>. <i>IV Congreso de Amenaza Sísmica</i>. Talca, Chile.</li>
-													<p></p>	
-													<li>Osses-Valenzuela, M., <strong><font color="#0">Ojeda, J.</font></strong>, Bastías, N., Montalva, G. (2025). <strong><font color="#0">Descomposición del momento sísmico para simular registros sintéticos físicamente consistentes y estadísticamente robustos en la subducción chilena</font></strong>. <i>IV Congreso de Amenaza Sísmica</i>. Talca, Chile.</li>
-													<p></p>	
-													<li>Barrientos, A., Pastén, C., Heresi, P., Ruiz, S., Leyton, F., <strong><font color="#0">Ojeda, J.</font></strong> (2025). <strong><font color="#0">Análisis comparativo de desplazamientos de un tranque de relave sometido a acelerogramas artificiales y registros semilla escalados considerando la componente vertical</font></strong>. <i>IV Congreso de Amenaza Sísmica</i>. Talca, Chile.</li>
-													<p></p>													
-													<li>Cabello, C., Montalva, G., Leyton, F., Heresi, P., <strong><font color="#0">Ojeda, J.</font></strong> (2025). <strong><font color="#0">Análisis de sensibilidad en el análisis probabilístico de amenaza sísmica</font></strong>. <i>IV Congreso de Amenaza Sísmica</i>. Talca, Chile.</li>
-													<p></p>													
-													<li>De la Peña, J.T., Ruiz, S., Maksymowicz, A., Ceroni, D., Cabrera, L., Potin, B., León-Ríos, S., <strong><font color="#0">Ojeda, J.</font></strong>, Alongi, T., Brodsky, E. (2025). <strong><font color="#0">Notable but few earthquakes with foreshocks in Chile</font></strong>. <i>VII Colloquium on GSEV</i>. Valparaíso, Chile.</li>
-													<p></p>
-													<li>Ruiz, S., Maksymowicz, A., De la Peña, J.T., Ceroni, D., Cabrera, L., Potin, B., León-Ríos, S., <strong><font color="#0">Ojeda, J.</font></strong>, Alongi, T., Brodsky, E. (2025). <strong><font color="#0">Megathrust Seismicity Shaped by Oceanic Crustal Heterogeneities in Chile</font></strong>. <i>VII Colloquium on GSEV</i>. Valparaíso, Chile.</li>
-													<p></p>
-													<li>Castro-Araya, F., Morales-Yáñez, C., González, J., <strong><font color="#0">Ojeda, J.</font></strong> (2025). <strong><font color="#0">Stress interaction between the 1960 Concepción and Valdivia earthquakes in southern Chile</font></strong>. <i>VII Colloquium on GSEV</i>. Valparaíso, Chile.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M. (2025). <strong><font color="#0">Daily Monitoring of Slow Slip Events Using GNSS</font></strong>. <i>VII Colloquium on GSEV</i>. Valparaíso, Chile. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li>Castro-Araya, F., Morales-Yáñez, C., González, J., <strong><font color="#0">Ojeda, J.</font></strong> (2025). <strong><font color="#0">Evaluation of the Coulomb stress changes between the 1960 Concepción and Valdivia earthquakes in southern Chile</font></strong>. <i>EGU General Assembly</i>. Vienna, Austria.</li>
-													<p></p>
-													<li>Montalva, G., Osses, M., Leyton, F., <strong><font color="#0">Ojeda, J.</font></strong> (2025). <strong><font color="#0">Ground Motion Simulations Based on Source Slip Distribution, Fourier Amplitude, and Phase Models for the Chilean Subduction Zone</font></strong>. <i>SSA Annual Meeting</i>. Baltimore, Maryland, USA.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M., Ruis, S. (2025). <strong><font color="#0">Tracking the Aseismic Slip History Along the Chilean Subduction Zone (18°S-40°S): GPS Observations from 2006 to 2024</font></strong>. <i>Slow-to-Fast Earthquake Workshop</i>. Santiago, Chile. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li>Baez, J.C., Moreno, M., Ruiz, S., Leyton, F., Klein, E., Vigny, C., Socquet, A., Becker, T., Hormazabal, J., Potin, B., Ortega-Culaciati, F., <strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M. (2024). <strong><font color="#0">Analysis of slow earthquake recurrences and interactions in Chile: Insights from Decadal Geodetic and Seismic Observations</font></strong>. <i>AGU Annual Meeting</i>. Washington D.C., USA.</li>
-													<p></p>
-													<li>Araya Espinosa, K., Ruiz, S., <strong><font color="#0">Ojeda, J.</font></strong> (2024). <strong><font color="#0">Generación de acelerogramas artificiales para sismos de magnitud moderada</font></strong>. <i>III Congreso de Amenaza Sísmica</i>. Santiago, Chile.</li>
-													<p></p>
-													<li>Nocquet, J.-M., <strong><font color="#0">Ojeda, J.</font></strong> (2024). <strong><font color="#0">Towards a full time dependent view of slip at faults using GNSS</font></strong>. <i>39th General Assembly of the ESC</i>. Corfu, Greece.</li>
-													<p></p>
-													<li>Gabrielli, S., Akinci, A., Gutiérrez, C., <strong><font color="#0">Ojeda, J.</font></strong>, Arriola, S., Ruiz, S. (2024). <strong><font color="#0">Analyzing Temporal and Spatial variation in Attenuation and Its Impact on Ground Motion Characteristics in Central Italy</font></strong>. <i>39th General Assembly of the ESC</i>. Corfu, Greece.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Morales-Yáñez, C., Ducret, G., Ruiz, S., Grandin, R., Doin, M.-P., Vigny, C., Nocquet, J.-M. (2024). <strong><font color="#0">An (a)seismic tale of the 2006 Copiapó swarm in Atacama, Chile</font></strong>. <i>VI Colloquium on GSEV</i>. Concepción, Chile. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li>Gabrielli, S., Akinci, A., Gutiérrez, C., <strong><font color="#0">Ojeda, J.</font></strong>, Arriola, S., Ruiz, S. (2024). <strong><font color="#0">Variability in Anelastic Attenuation: Examining Temporal and Spatial Influences on Ground Motion Characteristics in Central Italy</font></strong>. <i>EGU General Assembly</i>. Vienna, Austria.</li>
-													<p></p>
-													<li>Gabrielli, S., Akinci, A., Gutiérrez, C., <strong><font color="#0">Ojeda, J.</font></strong>, Arriola, S., Ruiz, S. (2024). <strong><font color="#0">Temporal and Spatial Variability of Anelastic Attenuation and Its Effects on Ground Motion Characteristics in Central Italy</font></strong>. <i>42nd National Conference of the Gruppo Nazionale di Geofisica della Terra Solida</i>. Ferrara, Italy.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M., Ruiz, S. (2023). <strong><font color="#0">Global search of short-term transient in continuous GPS time series</font></strong>. <i>AGU Annual Meeting</i>. San Francisco, USA. <strong><font color="#008000">[INVITED TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M., Ruiz, S. (2023). <strong><font color="#0">Exploración global de deformación transiente en series de tiempo GPS</font></strong>. <i>I Congreso Estudiantes de Postgrado Universidad de Chile</i>. Santiago, Chile. <strong><font color="#008000"> [TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M., Ruiz, S. (2023). <strong><font color="#0">Global search of short-term transient deformation using continuous GPS networks</font></strong>. <i>XVI CGCh</i>. Santiago, Chile. <strong><font color="#008000"> [TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Morales-Yáñez, C., Martínez, A., Concha, E., Bahamondes Domínguez, A., Carrillo-Barra, V., de la Torre, M.B., Carrasco, S., Symmes Lopetegui, B. (2023). <strong><font color="#0">Fundación Geonautas: únete a explorar nuestro Planeta Tierra</font></strong>. <i>XVI CGCh</i>. Santiago, Chile.<strong><font color="#008000"> [POSTER]</font></strong></li>
-													<p></p>
-													<li>López, R., Cid, D., Flores-Aqueveque, V., Díaz, D., Pérez-Fodich, A., <strong><font color="#0">Ojeda, J.</font></strong>, Fernández, R., Farah, C., López, P. (2023). <strong><font color="#0">Rocadictos: Gestión de contenidos entre geocientíficos y periodistas</font></strong>. <i>XVI CGCh</i>. Santiago, Chile. <strong><font color="#0"></font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M., Ruiz, S. (2023). <strong><font color="#0">Búsqueda global de transientes en series de tiempo GPS y su relación con fallamiento activo y volcanes</font></strong>. <i>V Jornada de Postgrado en Geofísica</i>. Santiago, Chile. <strong><font color="#008000"> [TALK]</font></strong></li>
-													<p></p>
-													<li>Gabrielli, S., Akinci, A., Gutiérrez, C., <strong><font color="#0">Ojeda, J.</font></strong>, Arriola, S., Ruiz, S. (2023). <strong><font color="#0">Understanding the Impact of Anelastic Attenuation on Ground Motion Parameter Estimation in Central Italy</font></strong>. <i>SSA meeting; Physics-Based Ground Motion Modeling</i>. Vancouver, Canada.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Nocquet, J.-M. (2022). <strong><font color="#0">Exploración global de deformación transiente en series de tiempo GPS</font></strong>. <i>I Simposio de Postgrado FCFM</i>. Santiago, Chile.<strong><font color="#008000"> [POSTER]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Arriola, S., Gutierrez, C., Flores, C., Otarola, C., Akinci, A., Ruiz, S. (2023). <strong><font color="#0">Parallel Wave SIMulation (PWSIM): código para simular el movimiento fuerte del suelo</font></strong>. <i>II Congreso de Amenaza Sísmica</i>. Concepción, Chile. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li>Kondo, Y., Obayashi, M., Sugioka, H., Shiobara, H., Ito, A., Shinohara, M., Iwamori, H., Kinoshita, M., Miller, M., Tassara, C., <strong><font color="#0">Ojeda, J.</font></strong>. (2023). <strong><font color="#0">Seismic velocity structure beneath South America from finite-frequency tomography</font></strong>. <i>JpGU Meeting</i>. Chiba, Japan.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong> (2023). <strong><font color="#0">An l1-look up of short-term SSEs from GNSS arrays</font></strong>. <i>Congres des doctorants</i>. Paris, France. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Nocquet, J.-M., Ruiz, S., Klein, E., Vigny, C. (2022). <strong><font color="#0">Exploratory Search of Fluid Signature along the North-Central Chile Subduction Margin using Seismo-geodesy</font></strong>. <i>AGU Fall Meeting</i>. Chicago, USA. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li>Tissandier, R., Nocquet, J.-M., Klein, E., Vigny, C., <strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S. (2022). <strong><font color="#0">Afterslip of the Mw 8.3 2015 Illapel Earthquake Imaged Through a Time-Dependent Inversion of Continuous and Survey GNSS Data</font></strong>. <i>AGU Fall Meeting</i>. Chicago, USA.</li>
-													<p></p>
-													<li>Shiobara, H., Ito, A., Miller, M., Sugioka, H., <strong><font color="#0">Ojeda, J.</font></strong>, Tassara, C., Shinohara, M., Kinoshita, M., Iwamori, H. (2022). <strong><font color="#0">Long-term ocean bottom seismic array observation at the Chile Triple Junction</font></strong></font></strong>. <i>AGU Fall Meeting</i>. Chicago, USA.</li>
-													<p></p>
-													<li>Kondo, Y., Obayashi, M., Sugioka, H., Ito, A., Shiobara, H., Shinohara, M., Iwamori, H., Kinoshita, M., Miller, M., Tassara, C., <strong><font color="#0">Ojeda, J.</font></strong>. (2022). <strong><font color="#0">Finite-frequency Tomography in the Chile Triple Junction Region</font></strong>. <i>SSA meeting; Seismic Tomography: What comes next?</i>. Toronto, Canada.</li>
-													<p></p>
-													<li>Tissandier, R., Nocquet, J.-M., Klein, E., Vigny, C., <strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S. (2022). <strong><font color="#0">Afterslip of the Mw 8.3 2015 Illapel Earthquake Imaged Through a Time-Dependent Inversion of Continuous and Survey GNSS Data</font></strong>. <i>IV LACSC Assembly</i>. Quito, Ecuador.</li>
-													<p></p>
-													<li>Azúa, K., Ruiz, S., Sugioka, H., Shiobara, H., Ito. A., Shinohara, M., Miller, M., <strong><font color="#0">Ojeda, J.</font></strong>, Tassara, C., Kinoshita, M., Iidaka, T., Iwamori, H. (2022). <strong><font color="#0">Continuous activity of nonvolcanic Tremor Activity in the vicinity of the Chile triple junction over time</font></strong>. <i>IV LACSC Assembly</i>. Quito, Ecuador.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Morales-Yáñez, C., Ducret, G., Ruiz, S., Grandin, R., Doin, M.-P., Vigny, C., Nocquet, J.-M. (2022). <strong><font color="#0">Seismological and Geodetic constraints on the 2006 Copiapó, northern Chile, seismic swarm</font></strong>. <i>IV LACSC Assembly</i>. Online. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Nocquet, J.-M. (2022). <strong><font color="#0">Interacción entre terremotos rápidos y lentos a lo largo del margen de subducción chileno</font></strong>. <i>I Congreso de Postgrado FCFM</i>. Santiago, Chile.</li>
-													<p></p>
-													<li>Ito, H., Shiobara, H., Sugioka, H., Shinohara, M., Iwamori, H., Kinoshita, M., Miller, M., Tassara, C., <strong><font color="#0">Ojeda, J.</font></strong>. (2022). <strong><font color="#0">Long-term seafloor seismic observation at the Chile triple junction</font></strong>. <i>JpGU Meeting</i>. Chiba, Japan.</li>
-													<p></p>
-													<li>Kondo, Y., Obayashi, M., Sugioka, H., Shiobara, H., Ito, A., Shinohara, M., Iwamori, H., Kinoshita, M., Miller, M., Tassara, C., <strong><font color="#0">Ojeda, J.</font></strong>. (2022). <strong><font color="#0">Travel time anomalies in Chile Triple Junction region</font></strong>. <i>JpGU Meeting</i>. Chiba, Japan.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S. (2021). <strong><font color="#0">Geophysical signature of the pandemic: seismic noise and urban activity recorded in Santiago Chile</font></strong>. <i>IV Colloquium on GSEV</i>. Online. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Arriola, S., Flores, C., Otarola, C., Ruiz, S. (2021). <strong><font color="#0">High-frequency strong ground-motion simulation for the 2016 Mw 7.0 Kumamoto earthquake</font></strong>. <i>EGU General Assembly</i>. Online <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., del Campo, F., Carvajal, M. (2020). <strong><font color="#0">60 years after the 1960 Central-South Chilean earthquakes: what have we learned and what we still need to understand</font></strong>. <i>AGU Fall Meeting</i>. Online. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, (2020). <strong><font color="#0">Anthropogenic Seismic Noise? Observational records from seismological stations on Santiago Basin</font></strong>. <i>III Jornada de Postgrado en Geofísica</i>. Online. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li>Akinci, A., <strong><font color="#0">Ojeda, J.</font></strong>, Tinti, E., Ruiz, S., Arriola, S., Herrero, A. (2019). <strong><font color="#0">Broadband Simulations of Ground Motions from the M6.3 Norcia Earthquake of the 2016-2017 Central Italy Earthquake Sequence</font></strong>. <i>AGU Fall Meeting</i>. San Francisco, USA. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li>Blaser, F., Ruiz, S., Otarola C., <strong><font color="#0">Ojeda, J.</font></strong> (2019). <strong><font color="#0">Strong Motion Simulation of Valparaíso 2017 Mw 6.9 Chile earthquake using a hybrid method</font></strong>. <i>International Joint Workshop on Slow and Fast Earthquakes</i>. Santiago, Chile.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Otarola, C., Pastén, C. (2018). <strong><font color="#0">High frequency sources controls strong motion of Mw 8.8 Maule 2010 earthquake</font></strong>. <i>AGU Fall Meeting</i>. Washington D.C., USA. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li>Blaser, F., Ruiz, S., Otarola, C., <strong><font color="#0">Ojeda, J.</font></strong>, Pastén, C. (2018). <strong><font color="#0">Strong Motion Simulation of Valparaiso 2017 Mw 6.9 Chile earthquake using a hybrid method</font></strong>. <i>AGU Fall Meeting</i>. Washington D.C., USA.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Espinoza, N., Heredia, D., Meza, C., Martínez, A. (2018). <strong><font color="#0">Geociencias en la etapa escolar: hacia una sociedad preventiva y con cultura de desastres</font></strong>. <i>XV CGCh</i>. Concepción, Chile. <strong><font color="#008000">[TALK]</font></strong><strong><font color="#008000"><a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=257886" target="_blank">[LINK]</a></font></strong></li>
-													<p></p>
-													<li>Pérez, R., Seguel, M., Kotthoff, K., Navarrete, P., Saavedra, C., Méndez, M., Tondreau, J., <strong><font color="#0">Ojeda, J.</font></strong> (2018). <strong><font color="#0">Agrupación Geociencias para Políticas Públicas: apoyando a la educación formal en las Ciencias de la Tierra</font></strong>. <i>XV CGCh</i>. Concepción, Chile. <strong><font color="#008000"><a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=257888" target="_blank">[LINK]</a></font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Otarola, C., Pastén, C. (2018). <strong><font color="#0">Generación de acelerogramas sintéticos en borehole y en superficie para el terremoto Mw 9.0 de Tohoku-Oki 2011</font></strong>. <i>XV CGCh</i>. Concepción, Chile. <strong><font color="#008000">[TALK]</font></strong><strong><font color="#008000"><a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=258161" target="_blank">[LINK]</a></font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Del Campo, F. (2018). <strong><font color="#0">Modelos de ruptura asociados a los terremotos del 21 y 22 de mayo de 1960</font></strong>. <i>XV CGCh</i>. Concepción, Chile. <strong><font color="#008000">[POSTER]</font></strong><strong><font color="#008000"><a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=259106" target="_blank">[LINK]</a></font></strong></li>
-													<p></p>
-													<li>Blaser, F., Ruiz, S., Otarola, C., <strong><font color="#0">Ojeda, J.</font></strong>, Pastén, C. (2018). <strong><font color="#0">Simulación de acelerogramas sintéticos, utilizando un método híbrido</font></strong>. <i>XV CGCh</i>. Concepción, Chile. <strong><font color="#008000"><a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=259093" target="_blank">[LINK]</a></font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Otarola, C., Pastén, C. (2018). <strong><font color="#0">High frequency sources controls strong motion of Mw 8.8 Maule 2010 earthquake</font></strong>. <i>Japan - Latin America Academic Conference</i>. Nikko, Japan. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Otarola, C., Pastén, C. (2018). <strong><font color="#0">High frequency sources controls strong motion of Mw 8.8 Maule 2010 earthquake</font></strong>. <i>International Joint Workshop on Slow Earthquakes</i>. Fukuoka, Japan. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Otarola, C., Pastén, C. (2018). <strong><font color="#0">Stochastic strong-motion simulation on borehole and surface</font></strong>. <i>I Jornada de Postgrado en Geofísica</i>. Santiago, Chile. <strong><font color="#008000">[TALK]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., del Campo, F., Pastén, C., Otarola, C., Silva, R. (2017). <strong><font color="#0">Stochastic strong motion generation using slip model of 21 and 22 May 1960 mega-thrust earthquakes in the main cities of Central-South Chile</font></strong>. <i>AGU Fall Meeting</i>. New Orleans, USA. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li>Sáez, M., Ruiz, S., <strong><font color="#0">Ojeda, J.</font></strong> (2017). <strong><font color="#0">Juan Fernández as a T-Phase detector for South-American earthquakes</font></strong>. <i>III Colloquium on GSEV</i>. Concepción, Chile.</li>
-													<p></p>
-													<li>Medina, M., <strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S., Rivera, E., Madariaga, R. (2016). <strong><font color="#0">The Mw 7.0 earthquake that occurred in the little know north zone of Juan Fernandez microplate</font></strong>. <i>II Colloquium on GSEV</i>. Santiago, Chile.</li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Sáez, M., Medina, M., Ruiz, S., Pastén, C., Madariaga, R. (2016). <strong><font color="#0">Emergence of high frequency P, S and T waves using seismic noise at regional distances</font></strong>. <i>II Colloquium on GSEV</i>. Santiago, Chile. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S. (2016). <strong><font color="#0">Analysis of seismic swarm of Copiapó-Atacama 2006, using a teleseismic inversion</font></strong>. <i>II Colloquium on GSEV</i>. Santiago, Chile. <strong><font color="#008000">[POSTER]</font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S. (2015). <strong><font color="#0">Análisis del enjambre sísmico de Copiapó-Atacama 2006 realizando una inversión telesísmica</font></strong>. <i>XIV CGCh</i>. La Serena, Chile. <strong><font color="#008000">[POSTER]</font></strong><strong><font color="#008000"><a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=256453" target="_blank">[LINK]</a></font></strong></li>
-													<p></p>
-													<li><strong><font color="#0">Ojeda, J.</font></strong>, Ruiz, S. (2015). <strong><font color="#0">Análisis del enjambre sísmico Copiapó-Atacama 2006 realizando una inversión telesísmica</font></strong>. <i>VI Jornada de Postgrado en Geología</i>. Santiago, Chile. <strong><font color="#008000">[POSTER]</font></strong></li>
-												</ol>
-												</article>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
+footer{background:var(--text);border-top:1px solid rgba(255,255,255,.07);padding:1.3rem 2rem;text-align:center;font-size:.76rem;color:rgba(255,255,255,.32);}
+footer a{color:rgba(255,255,255,.4);}
 
+@media(max-width:700px){
+  nav{padding:0 1rem;}
+  .nav-links{gap:.6rem;}
+  section{padding:2.5rem 1.2rem;}
+  .page-header{padding:3rem 1.2rem 2rem;}
+  .search-box{min-width:150px;}
+}
+</style>
+</head>
+<body>
 
-				<!-- Footer -->
-					<div id="footer">
-						<div class="container">
-							<div class="row">
-								<div class="col-12">
-									<!-- Contact -->
-									<section class="contact">
-										<ul class="icons">
-											<li><a href="https://orcid.org/0000-0002-7188-8356" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid" style="font-size: 1.5em;"></i></a></li>
-											<li><a href="https://www.webofscience.com/wos/author/record/862622" target="_blank" rel="noopener noreferrer" class="icon solid fa-database"><span class="label">Web of Science</span></a></li>
-											<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57207963457" target="_blank" rel="noopener noreferrer"><i class="ai ai-scopus" style="font-size: 1.5em;"></i></a></li>											
-											<li><a href="https://scholar.google.com/citations?hl=es&user=HqIUR4sAAAAJ" target="_blank" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a>
-											<li><a href="https://www.researchgate.net/profile/Javier-Ojeda-5" target="_blank" class="icon brands fa-researchgate"><span class="label">Researchgate</span></a></li>
-											<li><a href="https://investigadores.anid.cl/es/public_search/researcher?id=39718" target="_blank" rel="noopener noreferrer" class="icon solid fa-id-badge"><span class="label">ANID</span></a></li>
-											<li><a href="https://www.linkedin.com/in/javierojedav/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-											<!--<li><a href="https://x.com/laviedej" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://www.instagram.com/laviedej/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://www.facebook.com/laviedej" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-										</ul>
-									</section>
+<nav>
+  <a class="nav-brand" href="index.html">Javier <span class="r">Ojeda Vargas</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="index.html#talks">Talks</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+    <li><a href="conferences.html" class="active">Conferences</a></li>
+    <li><a href="docs/CV_OJEDA_short.pdf">CV ↗</a></li>
+  </ul>
+</nav>
 
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>2026 Javier Ojeda. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Complete record</p>
+    <h1>Conference <span class="r">Presentations</span></h1>
+    <p>Comprehensive list of work and collaborations presented at conferences, congresses and workshops worldwide. My talks and poster presentations are highlighted with a red border. Invited talks are marked in gold.</p>
+    <div class="page-stats">
+      <div class="ps-item"><div class="ps-val">75</div><div class="ps-label">Total presentations</div></div>
+      <div class="ps-item"><div class="ps-val">35+</div><div class="ps-label">As first author</div></div>
+      <div class="ps-item"><div class="ps-val">9</div><div class="ps-label">Invited talks</div></div>
+      <div class="ps-item"><div class="ps-val">15+</div><div class="ps-label">Countries</div></div>
+    </div>
+  </div>
+</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<section>
+  <div class="section-inner">
 
-	</body>
+    <!-- ACRONYMS -->
+    <div class="acronyms">
+      <div class="ac-item"><strong>AGU</strong> American Geophysical Union</div>
+      <div class="ac-item"><strong>EGU</strong> European Geosciences Union</div>
+      <div class="ac-item"><strong>SSA</strong> Seismological Society of America</div>
+      <div class="ac-item"><strong>ESC</strong> European Seismological Commission</div>
+      <div class="ac-item"><strong>LACSC</strong> Latin Am. &amp; Caribbean Seismological Commission</div>
+      <div class="ac-item"><strong>GSEV</strong> Geophysical Signatures of Earthquakes &amp; Volcanoes</div>
+      <div class="ac-item"><strong>CGCh</strong> Congreso Geológico Chileno</div>
+      <div class="ac-item"><strong>JpGU</strong> Japan Geoscience Union</div>
+      <div class="ac-item"><strong>GIASIS</strong> Congreso de Amenaza Sísmica</div>
+    </div>
+
+    <!-- LEGEND -->
+    <div class="legend">
+      <div class="leg"><div class="leg-bar" style="background:var(--red);"></div> My talk or poster</div>
+      <div class="leg"><div class="leg-bar" style="background:var(--gold);"></div> Invited talk</div>
+      <div class="leg"><div class="leg-bar" style="background:var(--border2);"></div> Co-author contribution</div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <button class="filter-btn active" onclick="filterConf('all',this)">All (75)</button>
+      <button class="filter-btn" onclick="filterConf('my',this)">My presentations</button>
+      <button class="filter-btn" onclick="filterConf('invited',this)">Invited</button>
+      <button class="filter-btn" onclick="filterConf('talk',this)">Talks only</button>
+      <button class="filter-btn" onclick="filterConf('poster',this)">Posters only</button>
+      <input class="search-box" id="conf-search" type="text" placeholder="Search title, venue, location…" oninput="searchConf()">
+      <span class="results-count" id="conf-count">75 results</span>
+    </div>
+
+    <div id="conf-all">
+
+      <!-- 2026 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2026 <span class="year-count">8 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda montalva osses bastias leyton ground-motion simulations megathrust interseismic coupling seismic gaps lacsc ciudad de mexico mexico">
+            <div class="conf-num">75</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Montalva G., Osses-Valenzuela M., Bastías N., Leyton F.</div>
+              <div class="conf-title">Ground-motion simulations of megathrust earthquakes constrained by interseismic coupling: implications for seismic gaps along the Chilean margin</div>
+              <div class="conf-meta"><span class="conf-venue">VI LACSC Assembly</span><span class="conf-loc">Ciudad de México, México</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda klein rousset vigny ruiz potin baez zigone bimodal seismic aseismic megathrust copiapó sz4d long beach california">
+            <div class="conf-num">74</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Klein E., Rousset B., Vigny C., Ruiz S., Potin B., Báez J.-C., Zigone D.</div>
+              <div class="conf-title">Bimodal Seismic-aseismic Behavior of a Weakly Coupled Megathrust Segment Revealed by Kinematic Analysis of a Seismic Swarm and Slow Slip Event Offshore Copiapó, Chile</div>
+              <div class="conf-meta"><span class="conf-venue">2026 SZ4D Science Community Meeting</span><span class="conf-loc">Long Beach, California, USA</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda montalva osses bastias leyton time-dependent ground-motion scenarios megathrust seismic gaps ssa pasadena california">
+            <div class="conf-num">73</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Montalva G., Osses-Valenzuela M., Bastías N., Leyton F., Heresi P., Jünemann R., Calderón S.</div>
+              <div class="conf-title">Time-Dependent Ground-Motion Scenarios for Large Megathrust Earthquakes and Mature Seismic Gaps Along the Chilean Margin</div>
+              <div class="conf-meta"><span class="conf-venue">SSA Annual Meeting</span><span class="conf-loc">Pasadena, California, USA</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda montalva osses bastias leyton interseismic coupling ground motions empirical amplitude phase egu vienna austria">
+            <div class="conf-num">72</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Montalva G., Osses-Valenzuela M., Bastías N., Leyton F., Heresi P., Jünemann R., Calderón S.</div>
+              <div class="conf-title">From Interseismic Coupling to Ground Motions: An Empirical Amplitude and Phase Approach for Megathrust Earthquake Simulations</div>
+              <div class="conf-meta"><span class="conf-venue">EGU General Assembly</span><span class="conf-loc">Vienna, Austria</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="bastias montalva ojeda leyton anelastic attenuation non-ergodic ground motion models ssa pasadena california">
+            <div class="conf-num">71</div>
+            <div class="conf-body">
+              <div class="conf-authors">Bastías N., Montalva G., <strong>Ojeda J.</strong>, Leyton F.</div>
+              <div class="conf-title">Toward the incorporation of anelastic path attenuation in non-ergodic ground-motion models: A 3D perspective for the Chilean subduction zone</div>
+              <div class="conf-meta"><span class="conf-venue">SSA Annual Meeting</span><span class="conf-loc">Pasadena, California, USA</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="ruiz de la pena brodsky maksymowicz ojeda foreshocks chilean subduction statseis santiago">
+            <div class="conf-num">70</div>
+            <div class="conf-body">
+              <div class="conf-authors">Ruiz S., De la Peña-Silva J.T., Brodsky E., Maksymowicz A., <strong>Ojeda J.</strong>, Ceroni D., Cabrera L., Potin B.</div>
+              <div class="conf-title">Foreshocks along the Chilean Subduction Zone</div>
+              <div class="conf-meta"><span class="conf-venue">StatSei14 — International Statistical Seismology Conference</span><span class="conf-loc">Santiago, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="calderon ojeda ruz pacheco junemann masonry reinforced cyclic international masonry lubeck germany">
+            <div class="conf-num">69</div>
+            <div class="conf-body">
+              <div class="conf-authors">Calderón S., <strong>Ojeda J.</strong>, Ruz B., Pacheco I., Jünemann R.</div>
+              <div class="conf-title">Cyclic simulation of the structural response of a CMU PG reinforced masonry two-story house</div>
+              <div class="conf-meta"><span class="conf-venue">11th International Masonry Conference</span><span class="conf-loc">Lübeck, Germany</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="castro morales gonzalez ojeda 1960 concepcion valdivia coulomb stress lacsc mexico">
+            <div class="conf-num">68</div>
+            <div class="conf-body">
+              <div class="conf-authors">Castro-Araya F., Morales-Yáñez C., González J., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Did the 1960 Concepción earthquake promote the Valdivia megathrust rupture? Insights from Coulomb stress modeling</div>
+              <div class="conf-meta"><span class="conf-venue">VI LACSC Assembly</span><span class="conf-loc">Ciudad de México, México</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2025 <span class="year-count">18 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item" data-type="coauthor" data-text="brodsky de la pena maksymowicz ojeda foreshocks agu new orleans">
+            <div class="conf-num">67</div>
+            <div class="conf-body">
+              <div class="conf-authors">Brodsky E., De la Peña J.T., Maksymowicz A., Cabrera L., Ceroni D., <strong>Ojeda J.</strong>, Potin B., León-Ríos S., Alongi T., Ruiz S.</div>
+              <div class="conf-title">Why do foreshocks occur where they do?</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Annual Meeting</span><span class="conf-loc">New Orleans, USA</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="osses montalva ojeda leyton registros sinteticos aceleracion fourier geotecnia santiago">
+            <div class="conf-num">66</div>
+            <div class="conf-body">
+              <div class="conf-authors">Osses M., Montalva G., <strong>Ojeda J.</strong>, Leyton F.</div>
+              <div class="conf-title">Generación de registros sintéticos de aceleración a partir de modelos empíricos de amplitud y fase de Fourier</div>
+              <div class="conf-meta"><span class="conf-venue">XII Congreso de Geotecnia</span><span class="conf-loc">Santiago, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda bastias montalva ruido sismico ciudades chilenas sismologia ambiental geotecnia santiago">
+            <div class="conf-num">65</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Bastías N., Montalva G.</div>
+              <div class="conf-title">Monitoreo del Ruido Sísmico en Ciudades Chilenas: Aplicaciones de la Sismología Ambiental</div>
+              <div class="conf-meta"><span class="conf-venue">XII Congreso de Geotecnia</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda bastias montalva ruido sismico ambiental concepcion giasis talca">
+            <div class="conf-num">64</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Bastías N., Montalva G.</div>
+              <div class="conf-title">Monitoreo del ruido sísmico ambiental en la ciudad de Concepción</div>
+              <div class="conf-meta"><span class="conf-venue">IV Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Talca, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="montalva calderon barria lema ojeda interaccion suelo estructura iquique giasis talca">
+            <div class="conf-num">63</div>
+            <div class="conf-body">
+              <div class="conf-authors">Montalva G., Calderón S., Barría J., Lema G., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Efecto de la Interacción Suelo-Estructura en registros sísmicos: Estudio de caso del Terremoto de Iquique de 2014</div>
+              <div class="conf-meta"><span class="conf-venue">IV Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Talca, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="ruiz ojeda arriola flores gutierrez akinci high frequency strong motion giasis talca">
+            <div class="conf-num">62</div>
+            <div class="conf-body">
+              <div class="conf-authors">Ruiz S., <strong>Ojeda J.</strong>, Arriola S., Torres R., Flores C., Gutiérrez C., Araya K., Gabrielli S., Akinci A., Otarola C., Carvajal M., Valdés B.</div>
+              <div class="conf-title">High-Frequency Strong Motion Simulations</div>
+              <div class="conf-meta"><span class="conf-venue">IV Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Talca, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="osses ojeda bastias montalva descomposicion momento sismico subduccion giasis talca">
+            <div class="conf-num">61</div>
+            <div class="conf-body">
+              <div class="conf-authors">Osses-Valenzuela M., <strong>Ojeda J.</strong>, Bastías N., Montalva G.</div>
+              <div class="conf-title">Descomposición del momento sísmico para simular registros sintéticos físicamente consistentes en la subducción chilena</div>
+              <div class="conf-meta"><span class="conf-venue">IV Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Talca, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="barrientos pasten heresi ruiz leyton ojeda tranque relave acelerogramas giasis talca">
+            <div class="conf-num">60</div>
+            <div class="conf-body">
+              <div class="conf-authors">Barrientos A., Pastén C., Heresi P., Ruiz S., Leyton F., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Análisis comparativo de desplazamientos de un tranque de relave sometido a acelerogramas artificiales y registros semilla escalados</div>
+              <div class="conf-meta"><span class="conf-venue">IV Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Talca, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="cabello montalva leyton heresi ojeda bastias probabilistico amenaza sismica giasis talca">
+            <div class="conf-num">59</div>
+            <div class="conf-body">
+              <div class="conf-authors">Cabello C., Montalva G., Leyton F., Heresi P., <strong>Ojeda J.</strong>, Bastías N.</div>
+              <div class="conf-title">Análisis de sensibilidad en el análisis probabilístico de amenaza sísmica</div>
+              <div class="conf-meta"><span class="conf-venue">IV Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Talca, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="de la pena ruiz maksymowicz ojeda foreshocks chile gsev valparaiso">
+            <div class="conf-num">58</div>
+            <div class="conf-body">
+              <div class="conf-authors">De la Peña J.T., Ruiz S., Maksymowicz A., Ceroni D., Cabrera L., Potin B., León-Ríos S., <strong>Ojeda J.</strong>, Alongi T., Brodsky E.</div>
+              <div class="conf-title">Notable but few earthquakes with foreshocks in Chile</div>
+              <div class="conf-meta"><span class="conf-venue">VII Colloquium on GSEV</span><span class="conf-loc">Valparaíso, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="ruiz maksymowicz de la pena ojeda megathrust oceanic crustal chile gsev valparaiso">
+            <div class="conf-num">57</div>
+            <div class="conf-body">
+              <div class="conf-authors">Ruiz S., Maksymowicz A., De la Peña J.T., Ceroni D., Cabrera L., Potin B., León-Ríos S., <strong>Ojeda J.</strong>, Alongi T., Brodsky E.</div>
+              <div class="conf-title">Megathrust Seismicity Shaped by Oceanic Crustal Heterogeneities in Chile</div>
+              <div class="conf-meta"><span class="conf-venue">VII Colloquium on GSEV</span><span class="conf-loc">Valparaíso, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="castro morales gonzalez ojeda stress 1960 concepcion valdivia gsev valparaiso">
+            <div class="conf-num">56</div>
+            <div class="conf-body">
+              <div class="conf-authors">Castro-Araya F., Morales-Yáñez C., González-Carrasco J., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Stress interaction between the 1960 Concepción and Valdivia earthquakes in southern Chile</div>
+              <div class="conf-meta"><span class="conf-venue">VII Colloquium on GSEV</span><span class="conf-loc">Valparaíso, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda nocquet daily monitoring slow slip gnss gsev valparaiso">
+            <div class="conf-num">55</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Nocquet J.-M.</div>
+              <div class="conf-title">Daily Monitoring of Slow Slip Events Using GNSS</div>
+              <div class="conf-meta"><span class="conf-venue">VII Colloquium on GSEV</span><span class="conf-loc">Valparaíso, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="castro morales gonzalez ojeda coulomb stress 1960 egu vienna">
+            <div class="conf-num">54</div>
+            <div class="conf-body">
+              <div class="conf-authors">Castro-Araya F., Morales-Yáñez C., González J., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Evaluation of the Coulomb stress changes between the 1960 Concepción and Valdivia earthquakes in southern Chile</div>
+              <div class="conf-meta"><span class="conf-venue">EGU General Assembly</span><span class="conf-loc">Vienna, Austria</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="montalva osses leyton ojeda ground motion simulations ssa baltimore">
+            <div class="conf-num">53</div>
+            <div class="conf-body">
+              <div class="conf-authors">Montalva G., Osses M., Leyton F., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Ground Motion Simulations Based on Source Slip Distribution, Fourier Amplitude, and Phase Models for the Chilean Subduction Zone</div>
+              <div class="conf-meta"><span class="conf-venue">SSA Annual Meeting</span><span class="conf-loc">Baltimore, Maryland, USA</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda nocquet ruiz aseismic slip chilean subduction gnss s2feq santiago">
+            <div class="conf-num">52</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S.</div>
+              <div class="conf-title">Tracking the Aseismic Slip History Along the Chilean Subduction Zone (18°S–40°S): GPS Observations from 2006 to 2024</div>
+              <div class="conf-meta"><span class="conf-venue">Slow-to-Fast Earthquake Workshop (S2FEQ)</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="gabrielli akinci gutierrez ojeda anelastic attenuation egu vienna">
+            <div class="conf-num">51</div>
+            <div class="conf-body">
+              <div class="conf-authors">Gabrielli S., Akinci A., Gutiérrez C., <strong>Ojeda J.</strong>, Arriola S., Ruiz S.</div>
+              <div class="conf-title">Temporal and Spatial Variability of Anelastic Attenuation and Its Effects on Ground Motion in Central Italy</div>
+              <div class="conf-meta"><span class="conf-venue">SSA Annual Meeting</span><span class="conf-loc">Baltimore, Maryland, USA</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="baez moreno ruiz leyton klein vigny ojeda slow earthquake recurrences agu washington">
+            <div class="conf-num">50</div>
+            <div class="conf-body">
+              <div class="conf-authors">Baez J.C., Moreno M., Ruiz S., Leyton F., Klein E., Vigny C., Socquet A., Becker T., Hormazabal J., Potin B., Ortega-Culaciati F., <strong>Ojeda J.</strong>, Nocquet J.-M.</div>
+              <div class="conf-title">Analysis of slow earthquake recurrences and interactions in Chile: Insights from Decadal Geodetic and Seismic Observations</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Annual Meeting 2024</span><span class="conf-loc">Washington D.C., USA</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2024 <span class="year-count">9 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item" data-type="coauthor" data-text="araya ruiz ojeda acelerogramas magnitud moderada giasis santiago">
+            <div class="conf-num">49</div>
+            <div class="conf-body">
+              <div class="conf-authors">Araya Espinosa K., Ruiz S., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Generación de acelerogramas artificiales para sismos de magnitud moderada</div>
+              <div class="conf-meta"><span class="conf-venue">III Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Santiago, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="nocquet ojeda full time dependent slip faults gnss esc corfu greece">
+            <div class="conf-num">48</div>
+            <div class="conf-body">
+              <div class="conf-authors">Nocquet J.-M., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Towards a full time dependent view of slip at faults using GNSS</div>
+              <div class="conf-meta"><span class="conf-venue">39th General Assembly of the ESC</span><span class="conf-loc">Corfu, Greece</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="gabrielli akinci gutierrez ojeda attenuation ground motion esc corfu">
+            <div class="conf-num">47</div>
+            <div class="conf-body">
+              <div class="conf-authors">Gabrielli S., Akinci A., Gutiérrez C., <strong>Ojeda J.</strong>, Arriola S., Ruiz S.</div>
+              <div class="conf-title">Analyzing Temporal and Spatial variation in Attenuation and Its Impact on Ground Motion in Central Italy</div>
+              <div class="conf-meta"><span class="conf-venue">39th General Assembly of the ESC</span><span class="conf-loc">Corfu, Greece</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda morales ducret ruiz grandin vigny nocquet copiapo swarm aseismic gsev concepcion">
+            <div class="conf-num">46</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Morales-Yáñez C., Ducret G., Ruiz S., Grandin R., Doin M.-P., Vigny C., Nocquet J.-M.</div>
+              <div class="conf-title">An (a)seismic tale of the 2006 Copiapó swarm in Atacama, Chile</div>
+              <div class="conf-meta"><span class="conf-venue">VI Colloquium on GSEV</span><span class="conf-loc">Concepción, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="gabrielli akinci gutierrez ojeda attenuation egu vienna">
+            <div class="conf-num">45</div>
+            <div class="conf-body">
+              <div class="conf-authors">Gabrielli S., Akinci A., Gutiérrez C., <strong>Ojeda J.</strong>, Arriola S., Ruiz S.</div>
+              <div class="conf-title">Variability in Anelastic Attenuation: Examining Temporal and Spatial Influences on Ground Motion in Central Italy</div>
+              <div class="conf-meta"><span class="conf-venue">EGU General Assembly</span><span class="conf-loc">Vienna, Austria</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="gabrielli akinci gutierrez ojeda attenuation ground motion ferrara italy gngts">
+            <div class="conf-num">44</div>
+            <div class="conf-body">
+              <div class="conf-authors">Gabrielli S., Akinci A., Gutiérrez C., <strong>Ojeda J.</strong>, Arriola S., Ruiz S.</div>
+              <div class="conf-title">Temporal and Spatial Variability of Anelastic Attenuation and Its Effects on Ground Motion in Central Italy</div>
+              <div class="conf-meta"><span class="conf-venue">42nd National Conference — Gruppo Nazionale di Geofisica della Terra Solida</span><span class="conf-loc">Ferrara, Italy</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2023 <span class="year-count">12 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk invited" data-type="my talk invited" data-text="ojeda nocquet ruiz global search short-term transient gps agu san francisco invited">
+            <div class="conf-num">43</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S.</div>
+              <div class="conf-title">Global search of short-term transient in continuous GPS time series</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Annual Meeting</span><span class="conf-loc">San Francisco, USA</span></div>
+              <div class="conf-badges"><span class="badge badge-invited">★ INVITED TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda nocquet ruiz exploracion global deformacion transiente gps uchile santiago">
+            <div class="conf-num">42</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S.</div>
+              <div class="conf-title">Exploración global de deformación transiente en series de tiempo GPS</div>
+              <div class="conf-meta"><span class="conf-venue">I Congreso Estudiantes de Postgrado Universidad de Chile</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda nocquet ruiz global search transient gps networks cgch santiago">
+            <div class="conf-num">41</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S.</div>
+              <div class="conf-title">Global search of short-term transient deformation using continuous GPS networks</div>
+              <div class="conf-meta"><span class="conf-venue">XVI Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda morales martinez geonautas cgch santiago poster">
+            <div class="conf-num">40</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Morales-Yáñez C., Martínez A., Concha E., et al.</div>
+              <div class="conf-title">Fundación Geonautas: únete a explorar nuestro Planeta Tierra</div>
+              <div class="conf-meta"><span class="conf-venue">XVI Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="lopez cid flores ojeda rocadictos geocientificos periodistas cgch santiago">
+            <div class="conf-num">39</div>
+            <div class="conf-body">
+              <div class="conf-authors">López R., Cid D., Flores-Aqueveque V., Díaz D., Pérez-Fodich A., <strong>Ojeda J.</strong>, et al.</div>
+              <div class="conf-title">Rocadictos: Gestión de contenidos entre geocientíficos y periodistas</div>
+              <div class="conf-meta"><span class="conf-venue">XVI Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Santiago, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda nocquet ruiz busqueda global transientes gps jornada postgrado geofisica uchile">
+            <div class="conf-num">38</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S.</div>
+              <div class="conf-title">Búsqueda global de transientes en series de tiempo GPS y su relación con fallamiento activo y volcanes</div>
+              <div class="conf-meta"><span class="conf-venue">V Jornada de Postgrado en Geofísica</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="gabrielli akinci gutierrez ojeda attenuation ssa vancouver">
+            <div class="conf-num">37</div>
+            <div class="conf-body">
+              <div class="conf-authors">Gabrielli S., Akinci A., Gutiérrez C., <strong>Ojeda J.</strong>, Arriola S., Ruiz S.</div>
+              <div class="conf-title">Understanding the Impact of Anelastic Attenuation on Ground Motion in Central Italy</div>
+              <div class="conf-meta"><span class="conf-venue">SSA Meeting — Physics-Based Ground Motion Modeling</span><span class="conf-loc">Vancouver, Canada</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda arriola gutierrez flores otarola akinci ruiz pwsim wave simulation giasis concepcion">
+            <div class="conf-num">36</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Arriola S., Gutiérrez C., Flores C., Otarola C., Akinci A., Ruiz S.</div>
+              <div class="conf-title">Parallel Wave SIMulation (PWSIM): código para simular el movimiento fuerte del suelo</div>
+              <div class="conf-meta"><span class="conf-venue">II Congreso de Amenaza Sísmica (GIASIS)</span><span class="conf-loc">Concepción, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="kondo obayashi sugioka ojeda seismic velocity tomography south america jpgu japan">
+            <div class="conf-num">35</div>
+            <div class="conf-body">
+              <div class="conf-authors">Kondo Y., Obayashi M., Sugioka H., Shiobara H., Ito A., Shinohara M., Iwamori H., Kinoshita M., Miller M., Tassara C., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Seismic velocity structure beneath South America from finite-frequency tomography</div>
+              <div class="conf-meta"><span class="conf-venue">Japan Geoscience Union Meeting (JpGU)</span><span class="conf-loc">Chiba, Japan</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda l1 short-term sse gnss arrays congres doctorants paris france">
+            <div class="conf-num">34</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong></div>
+              <div class="conf-title">An l1-look up of short-term SSEs from GNSS arrays</div>
+              <div class="conf-meta"><span class="conf-venue">Congrès des Doctorant·es, IPGP</span><span class="conf-loc">Paris, France</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz nocquet exploracion global transiente gps simposio fcfm santiago poster">
+            <div class="conf-num">33</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Nocquet J.-M.</div>
+              <div class="conf-title">Exploración global de deformación transiente en series de tiempo GPS</div>
+              <div class="conf-meta"><span class="conf-venue">I Simposio de Postgrado FCFM</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2022 <span class="year-count">10 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda nocquet ruiz klein vigny fluid signature subduction chile agu chicago poster">
+            <div class="conf-num">32</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S., Klein E., Vigny C.</div>
+              <div class="conf-title">Exploratory Search of Fluid Signature along the North-Central Chile Subduction Margin using Seismo-geodesy</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">Chicago, USA</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="tissandier nocquet klein vigny ojeda ruiz afterslip illapel agu chicago">
+            <div class="conf-num">31</div>
+            <div class="conf-body">
+              <div class="conf-authors">Tissandier R., Nocquet J.-M., Klein E., Vigny C., <strong>Ojeda J.</strong>, Ruiz S.</div>
+              <div class="conf-title">Afterslip of the Mw 8.3 2015 Illapel Earthquake Imaged Through a Time-Dependent Inversion of GNSS Data</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">Chicago, USA</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="shiobara ito miller sugioka ojeda tassara chile triple junction agu chicago">
+            <div class="conf-num">30</div>
+            <div class="conf-body">
+              <div class="conf-authors">Shiobara H., Ito A., Miller M., Sugioka H., <strong>Ojeda J.</strong>, Tassara C., Shinohara M., Kinoshita M., Iwamori H.</div>
+              <div class="conf-title">Long-term ocean bottom seismic array observation at the Chile Triple Junction</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">Chicago, USA</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="kondo obayashi ojeda finite-frequency tomography chile triple junction ssa toronto">
+            <div class="conf-num">29</div>
+            <div class="conf-body">
+              <div class="conf-authors">Kondo Y., Obayashi M., Sugioka H., Ito A., Shiobara H., Shinohara M., Iwamori H., Kinoshita M., Miller M., Tassara C., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Finite-frequency Tomography in the Chile Triple Junction Region</div>
+              <div class="conf-meta"><span class="conf-venue">SSA Meeting — Seismic Tomography: What comes next?</span><span class="conf-loc">Toronto, Canada</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="tissandier nocquet klein vigny ojeda ruiz afterslip illapel lacsc quito ecuador">
+            <div class="conf-num">28</div>
+            <div class="conf-body">
+              <div class="conf-authors">Tissandier R., Nocquet J.-M., Klein E., Vigny C., <strong>Ojeda J.</strong>, Ruiz S.</div>
+              <div class="conf-title">Afterslip of the Mw 8.3 2015 Illapel Earthquake — Time-Dependent Inversion of GNSS Data</div>
+              <div class="conf-meta"><span class="conf-venue">IV LACSC Assembly</span><span class="conf-loc">Quito, Ecuador</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="azua ruiz sugioka ojeda tremor chile triple junction lacsc quito">
+            <div class="conf-num">27</div>
+            <div class="conf-body">
+              <div class="conf-authors">Azúa K., Ruiz S., Sugioka H., Shiobara H., Ito A., Shinohara M., Miller M., <strong>Ojeda J.</strong>, Tassara C., et al.</div>
+              <div class="conf-title">Continuous activity of nonvolcanic Tremor Activity in the vicinity of the Chile triple junction over time</div>
+              <div class="conf-meta"><span class="conf-venue">IV LACSC Assembly</span><span class="conf-loc">Quito, Ecuador</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda morales ducret ruiz grandin doin vigny nocquet copiapo seismic swarm lacsc online">
+            <div class="conf-num">26</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Morales-Yáñez C., Ducret G., Ruiz S., Grandin R., Doin M.-P., Vigny C., Nocquet J.-M.</div>
+              <div class="conf-title">Seismological and Geodetic constraints on the 2006 Copiapó, northern Chile, seismic swarm</div>
+              <div class="conf-meta"><span class="conf-venue">IV LACSC Assembly</span><span class="conf-loc">Online</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="ito shiobara sugioka ojeda seafloor seismic chile triple junction jpgu japan">
+            <div class="conf-num">25</div>
+            <div class="conf-body">
+              <div class="conf-authors">Ito H., Shiobara H., Sugioka H., Shinohara M., Iwamori H., Kinoshita M., Miller M., Tassara C., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Long-term seafloor seismic observation at the Chile triple junction</div>
+              <div class="conf-meta"><span class="conf-venue">Japan Geoscience Union Meeting (JpGU)</span><span class="conf-loc">Chiba, Japan</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="kondo obayashi ojeda travel time chile triple junction jpgu japan">
+            <div class="conf-num">24</div>
+            <div class="conf-body">
+              <div class="conf-authors">Kondo Y., Obayashi M., Sugioka H., Shiobara H., Ito A., Shinohara M., Iwamori H., Kinoshita M., Miller M., Tassara C., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Travel time anomalies in Chile Triple Junction region</div>
+              <div class="conf-meta"><span class="conf-venue">Japan Geoscience Union Meeting (JpGU)</span><span class="conf-loc">Chiba, Japan</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="ojeda ruiz nocquet interaccion terremotos rapidos lentos margen chileno congreso postgrado fcfm">
+            <div class="conf-num">23</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Nocquet J.-M.</div>
+              <div class="conf-title">Interacción entre terremotos rápidos y lentos a lo largo del margen de subducción chileno</div>
+              <div class="conf-meta"><span class="conf-venue">I Congreso de Postgrado FCFM</span><span class="conf-loc">Santiago, Chile</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2021 <span class="year-count">3 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda ruiz geophysical signature pandemic seismic noise urban santiago gsev online">
+            <div class="conf-num">22</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S.</div>
+              <div class="conf-title">Geophysical signature of the pandemic: seismic noise and urban activity recorded in Santiago Chile</div>
+              <div class="conf-meta"><span class="conf-venue">IV Colloquium on GSEV</span><span class="conf-loc">Online</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda arriola flores otarola ruiz high-frequency strong ground-motion simulation kumamoto egu online">
+            <div class="conf-num">21</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Arriola S., Flores C., Otarola C., Ruiz S.</div>
+              <div class="conf-title">High-frequency strong ground-motion simulation for the 2016 Mw 7.0 Kumamoto earthquake</div>
+              <div class="conf-meta"><span class="conf-venue">EGU General Assembly</span><span class="conf-loc">Online</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda ruiz del campo carvajal 1960 chilean earthquakes agu online">
+            <div class="conf-num">20</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., del Campo F., Carvajal M.</div>
+              <div class="conf-title">60 years after the 1960 Central-South Chilean earthquakes: what have we learned and what we still need to understand</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">Online</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2020 <span class="year-count">2 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda anthropogenic seismic noise santiago basin jornada postgrado online">
+            <div class="conf-num">19</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong></div>
+              <div class="conf-title">Anthropogenic Seismic Noise? Observational records from seismological stations on Santiago Basin</div>
+              <div class="conf-meta"><span class="conf-venue">III Jornada de Postgrado en Geofísica</span><span class="conf-loc">Online</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2019 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2019 <span class="year-count">2 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item" data-type="coauthor" data-text="akinci ojeda tinti ruiz arriola norcia broadband simulations agu san francisco poster">
+            <div class="conf-num">18</div>
+            <div class="conf-body">
+              <div class="conf-authors">Akinci A., <strong>Ojeda J.</strong>, Tinti E., Ruiz S., Arriola S., Herrero A.</div>
+              <div class="conf-title">Broadband Simulations of Ground Motions from the M6.3 Norcia Earthquake of the 2016-2017 Central Italy Earthquake Sequence</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">San Francisco, USA</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="blaser ruiz otarola ojeda valparaiso strong motion hybrid slow fast santiago">
+            <div class="conf-num">17</div>
+            <div class="conf-body">
+              <div class="conf-authors">Blaser F., Ruiz S., Otarola C., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Strong Motion Simulation of Valparaíso 2017 Mw 6.9 Chile earthquake using a hybrid method</div>
+              <div class="conf-meta"><span class="conf-venue">International Joint Workshop on Slow and Fast Earthquakes</span><span class="conf-loc">Santiago, Chile</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2018 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2018 <span class="year-count">10 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz otarola pasten high frequency maule 2010 agu washington poster">
+            <div class="conf-num">16</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Otarola C., Pastén C.</div>
+              <div class="conf-title">High frequency sources controls strong motion of Mw 8.8 Maule 2010 earthquake</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">Washington D.C., USA</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="blaser ruiz otarola ojeda valparaiso strong motion agu washington">
+            <div class="conf-num">15</div>
+            <div class="conf-body">
+              <div class="conf-authors">Blaser F., Ruiz S., Otarola C., <strong>Ojeda J.</strong>, Pastén C.</div>
+              <div class="conf-title">Strong Motion Simulation of Valparaiso 2017 Mw 6.9 Chile earthquake using a hybrid method</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">Washington D.C., USA</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda espinoza heredia meza martinez geociencias etapa escolar cgch concepcion">
+            <div class="conf-num">14</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Espinoza N., Heredia D., Meza C., Martínez A.</div>
+              <div class="conf-title">Geociencias en la etapa escolar: hacia una sociedad preventiva y con cultura de desastres</div>
+              <div class="conf-meta"><span class="conf-venue">XV Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Concepción, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span>
+                <a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=257886" target="_blank" class="badge badge-link">Proceedings ↗</a></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="perez seguel kotthoff navarrete ojeda geociencias politicas publicas cgch concepcion">
+            <div class="conf-num">13</div>
+            <div class="conf-body">
+              <div class="conf-authors">Pérez R., Seguel M., Kotthoff K., Navarrete P., Saavedra C., Méndez M., Tondreau J., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Agrupación Geociencias para Políticas Públicas: apoyando a la educación formal en las Ciencias de la Tierra</div>
+              <div class="conf-meta"><span class="conf-venue">XV Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Concepción, Chile</span></div>
+              <div class="conf-badges">
+                <a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=257888" target="_blank" class="badge badge-link">Proceedings ↗</a></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda ruiz otarola pasten tohoku borehole surface cgch concepcion">
+            <div class="conf-num">12</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Otarola C., Pastén C.</div>
+              <div class="conf-title">Generación de acelerogramas sintéticos en borehole y en superficie para el terremoto Mw 9.0 de Tohoku-Oki 2011</div>
+              <div class="conf-meta"><span class="conf-venue">XV Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Concepción, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span>
+                <a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=258161" target="_blank" class="badge badge-link">Proceedings ↗</a></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz del campo modelos ruptura 1960 cgch concepcion poster">
+            <div class="conf-num">11</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Del Campo F.</div>
+              <div class="conf-title">Modelos de ruptura asociados a los terremotos del 21 y 22 de mayo de 1960</div>
+              <div class="conf-meta"><span class="conf-venue">XV Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Concepción, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span>
+                <a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=259106" target="_blank" class="badge badge-link">Proceedings ↗</a></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="blaser ruiz otarola ojeda valparaiso simulacion cgch concepcion">
+            <div class="conf-num">10</div>
+            <div class="conf-body">
+              <div class="conf-authors">Blaser F., Ruiz S., Otarola C., <strong>Ojeda J.</strong>, Pastén C.</div>
+              <div class="conf-title">Simulación de acelerogramas sintéticos, utilizando un método híbrido</div>
+              <div class="conf-meta"><span class="conf-venue">XV Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">Concepción, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda ruiz otarola pasten maule high frequency japan latin america nikko">
+            <div class="conf-num">9</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Otarola C., Pastén C.</div>
+              <div class="conf-title">High frequency sources controls strong motion of Mw 8.8 Maule 2010 earthquake</div>
+              <div class="conf-meta"><span class="conf-venue">Japan – Latin America Academic Conference</span><span class="conf-loc">Nikko, Japan</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz otarola pasten maule slow earthquakes fukuoka japan poster">
+            <div class="conf-num">8</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Otarola C., Pastén C.</div>
+              <div class="conf-title">High frequency sources controls strong motion of Mw 8.8 Maule 2010 earthquake</div>
+              <div class="conf-meta"><span class="conf-venue">International Joint Workshop on Slow Earthquakes</span><span class="conf-loc">Fukuoka, Japan</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk" data-text="ojeda ruiz otarola pasten stochastic strong-motion borehole jornada postgrado geofisica uchile">
+            <div class="conf-num">7</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., Otarola C., Pastén C.</div>
+              <div class="conf-title">Stochastic strong-motion simulation on borehole and surface</div>
+              <div class="conf-meta"><span class="conf-venue">I Jornada de Postgrado en Geofísica</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-talk">TALK</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2017 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2017 <span class="year-count">2 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz del campo pasten otarola silva stochastic strong motion 1960 agu new orleans poster">
+            <div class="conf-num">6</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S., del Campo F., Pastén C., Otarola C., Silva R.</div>
+              <div class="conf-title">Stochastic strong motion generation using slip model of 21 and 22 May 1960 mega-thrust earthquakes in the main cities of Central-South Chile</div>
+              <div class="conf-meta"><span class="conf-venue">AGU Fall Meeting</span><span class="conf-loc">New Orleans, USA</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item" data-type="coauthor" data-text="saez ruiz ojeda juan fernandez t-phase gsev concepcion">
+            <div class="conf-num">5</div>
+            <div class="conf-body">
+              <div class="conf-authors">Sáez M., Ruiz S., <strong>Ojeda J.</strong></div>
+              <div class="conf-title">Juan Fernández as a T-Phase detector for South-American earthquakes</div>
+              <div class="conf-meta"><span class="conf-venue">III Colloquium on GSEV</span><span class="conf-loc">Concepción, Chile</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2016 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2016 <span class="year-count">3 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item" data-type="coauthor" data-text="medina ojeda ruiz rivera madariaga juan fernandez microplate gsev santiago">
+            <div class="conf-num">4</div>
+            <div class="conf-body">
+              <div class="conf-authors">Medina M., <strong>Ojeda J.</strong>, Ruiz S., Rivera E., Madariaga R.</div>
+              <div class="conf-title">The Mw 7.0 earthquake that occurred in the little known north zone of Juan Fernandez microplate</div>
+              <div class="conf-meta"><span class="conf-venue">II Colloquium on GSEV</span><span class="conf-loc">Santiago, Chile</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda saez medina ruiz pasten madariaga high frequency seismic noise gsev santiago poster">
+            <div class="conf-num">3</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Sáez M., Medina M., Ruiz S., Pastén C., Madariaga R.</div>
+              <div class="conf-title">Emergence of high frequency P, S and T waves using seismic noise at regional distances</div>
+              <div class="conf-meta"><span class="conf-venue">II Colloquium on GSEV</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz copiapo swarm teleseismic inversion gsev santiago poster">
+            <div class="conf-num">2</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S.</div>
+              <div class="conf-title">Analysis of seismic swarm of Copiapó-Atacama 2006, using a teleseismic inversion</div>
+              <div class="conf-meta"><span class="conf-venue">II Colloquium on GSEV</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2015 -->
+      <div class="year-group reveal">
+        <div class="year-heading">2015 <span class="year-count">2 presentations</span></div>
+        <div class="conf-list">
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz copiapo atacama enjambre sismico inversion cgch la serena poster">
+            <div class="conf-num">2</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S.</div>
+              <div class="conf-title">Análisis del enjambre sísmico de Copiapó-Atacama 2006 realizando una inversión telesísmica</div>
+              <div class="conf-meta"><span class="conf-venue">XIV Congreso Geológico Chileno (CGCh)</span><span class="conf-loc">La Serena, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span>
+                <a href="https://biblioteca.sernageomin.cl/cgi-bin/koha/opac-detail.pl?biblionumber=256453" target="_blank" class="badge badge-link">Proceedings ↗</a></div>
+            </div>
+          </div>
+
+          <div class="conf-item my-talk" data-type="my talk poster" data-text="ojeda ruiz copiapo atacama enjambre inversion jornada postgrado geologia">
+            <div class="conf-num">1</div>
+            <div class="conf-body">
+              <div class="conf-authors"><strong>Ojeda J.</strong>, Ruiz S.</div>
+              <div class="conf-title">Análisis del enjambre sísmico Copiapó-Atacama 2006 realizando una inversión telesísmica</div>
+              <div class="conf-meta"><span class="conf-venue">VI Jornada de Postgrado en Geología</span><span class="conf-loc">Santiago, Chile</span></div>
+              <div class="conf-badges"><span class="badge badge-poster">POSTER</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- end conf-all -->
+    <p id="no-results" style="display:none;text-align:center;color:var(--text3);padding:2rem 0;font-style:italic;">No presentations match your filter.</p>
+
+  </div>
+</section>
+
+<footer>© 2026 Javier Alejandro Ojeda Vargas · <a href="index.html">javierojedav.github.io</a> · Updated May 2026</footer>
+
+<script>
+const items = document.querySelectorAll('.conf-item');
+
+function filterConf(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const q = document.getElementById('conf-search').value.toLowerCase();
+  let vis = 0;
+  items.forEach(el => {
+    const t = el.dataset.type || '';
+    const typeOk = type === 'all' ||
+      (type === 'my' && t.includes('my')) ||
+      (type === 'invited' && t.includes('invited')) ||
+      (type === 'talk' && t.includes('talk') && !t.includes('poster')) ||
+      (type === 'poster' && t.includes('poster'));
+    const textOk = !q || (el.dataset.text || '').includes(q) || el.textContent.toLowerCase().includes(q);
+    const show = typeOk && textOk;
+    el.classList.toggle('hidden', !show);
+    if(show) vis++;
+  });
+  document.getElementById('conf-count').textContent = vis + ' results';
+  document.getElementById('no-results').style.display = vis ? 'none' : 'block';
+}
+
+function searchConf() {
+  const active = document.querySelector('.filter-btn.active');
+  const type = active ? active.textContent.toLowerCase().split(' ')[0] : 'all';
+  filterConf(type === 'all' ? 'all' : type, active);
+}
+
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.06});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-

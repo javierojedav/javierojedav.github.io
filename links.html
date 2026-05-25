@@ -1,414 +1,439 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Javier Ojeda</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="assets/img/icon_bg2.png" type="image/x-icon">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">				
-	</head>
-	<body class="no-sidebar is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resources & Links — Javier Ojeda Vargas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--bg2:#edeae2;--bg3:#fff;--text:#1a1814;--text2:#5a5650;--text3:#9a9590;--red:#c0392b;--redbg:#fdf0ef;--teal:#0e6b5a;--tealbg:#e8f5f1;--blue:#1a5276;--bluebg:#eaf0f6;--gold:#7d6008;--goldbg:#fef9e7;--purple:#5b2d8e;--purplebg:#f3eefa;--border:rgba(26,24,20,.10);--border2:rgba(26,24,20,.18);--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.07);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;}
+a{color:inherit;text-decoration:none;}
 
-			<!-- Header -->
-				<div id="header">
+nav{position:sticky;top:0;z-index:100;background:rgba(247,245,240,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem;}
+.nav-brand{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--text);letter-spacing:-.02em;white-space:nowrap;}
+.nav-brand .r{color:var(--red);}
+.nav-links{display:flex;gap:1.1rem;list-style:none;flex-wrap:wrap;}
+.nav-links a{font-size:.8rem;font-weight:400;color:var(--text2);transition:color .2s;}
+.nav-links a:hover{color:var(--red);}
+.nav-links a.active{color:var(--red);font-weight:500;}
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">External links</a></h1>
-							</header>
-						</div>
+/* PAGE HEADER */
+.page-header{background:var(--text);padding:4rem 2rem 3rem;}
+.page-header-inner{max-width:1100px;margin:0 auto;}
+.page-eyebrow{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.14em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:.6rem;}
+.page-header h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;letter-spacing:-.02em;line-height:1.1;margin-bottom:.8rem;}
+.page-header h1 .r{color:var(--red);}
+.page-header p{font-size:.95rem;color:rgba(255,255,255,.55);max-width:680px;line-height:1.8;}
 
-		<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="publications.html">Publications</a></li>
-								<li><a href="teaching.html">Teaching & Advising</a></li>
-								<li><a href="outreach.html">Media & Outreach</a></li>
-								<li><a href="docs/CV_OJEDA_short.pdf">Mon CV</a></li>
-								<!--<li><a href="links.html">Links</a></li>-->
-							</ul>
-						</nav>
+/* SEARCH BAR */
+.search-bar-wrap{max-width:1100px;margin:0 auto;padding:2rem 2rem 0;}
+.search-outer{position:relative;}
+.search-outer svg{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text3);}
+.search-input{width:100%;padding:.75rem 1rem .75rem 2.8rem;border-radius:100px;border:1.5px solid var(--border2);background:var(--bg3);font-family:inherit;font-size:.9rem;color:var(--text);outline:none;transition:border-color .2s;}
+.search-input:focus{border-color:var(--red);}
+.search-count{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);margin-top:.5rem;padding-left:1rem;}
 
-				</div>
+/* CAT FILTERS */
+.cat-filters{max-width:1100px;margin:.75rem auto 0;padding:0 2rem;display:flex;gap:.5rem;flex-wrap:wrap;}
+.cf-btn{padding:.35rem .85rem;border-radius:100px;font-size:.76rem;font-weight:500;cursor:pointer;border:1.5px solid var(--border);background:transparent;color:var(--text2);transition:all .2s;font-family:inherit;}
+.cf-btn.active{background:var(--text);color:#fff;border-color:var(--text);}
+.cf-btn:hover:not(.active){border-color:var(--red);color:var(--red);}
 
-			<!-- Main -->
-				<div class="wrapper style1">
+/* CONTENT */
+.links-inner{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 4rem;}
 
-					<div class="container">
+/* CATEGORY SECTION */
+.cat-section{margin-bottom:3rem;}
+.cat-section.hidden{display:none;}
+.cat-heading{font-family:'DM Serif Display',serif;font-size:1.4rem;letter-spacing:-.01em;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.8rem;color:var(--text);}
+.cat-count{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text3);font-weight:400;}
+.cat-desc{font-size:.84rem;color:var(--text2);margin-bottom:1.2rem;line-height:1.6;}
 
-						<div class="row">
+/* LINKS GRID */
+.links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.65rem;}
 
+/* LINK CARD */
+.lk{display:flex;flex-direction:column;gap:.2rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem;transition:box-shadow .2s,transform .15s;position:relative;}
+.lk:hover{box-shadow:var(--shadow);transform:translateY(-1px);}
+.lk.hidden{display:none;}
+.lk-title{font-size:.86rem;font-weight:600;color:var(--text);line-height:1.35;}
+.lk-title a{color:inherit;text-decoration:none;}
+.lk-title a:hover{color:var(--red);}
+.lk-desc{font-size:.78rem;color:var(--text2);line-height:1.5;}
+.lk-domain{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--text3);margin-top:.2rem;}
+.lk-badge{position:absolute;top:.7rem;right:.8rem;font-size:.62rem;padding:1px 6px;border-radius:3px;font-weight:500;}
 
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3><a>Data</a></h3>
-								</header>
-								<p>
-								<ul style="list-style-type: '&#x22C4; ';">
-									<li><a href="https://www.kyoshin.bosai.go.jp/" target="_blank"><font color="#000000">Japan Strong motion networks</font></a></li>
-									<li><a href="http://itaca.mi.ingv.it/ItacaNet_30/#/home" target="_blank"><font color="#000000">ITACA INGV</font></a></li>
-									<li><a href="https://geofon.gfz-potsdam.de/" target="_blank"><font color="#000000">GEOFON GFZ Potsdam</font></a></li>
-									<li><a href="http://evtdb.csn.uchile.cl/" target="_blank"><font color="#000000">evtdb CSN-Chile</font></a></li>
-									<li><a href="http://www.isc.ac.uk/iscbulletin/search/catalogue/" target="_blank"><font color="#000000">ISC Bulletin, catalogue search</font></a></li>
-									<li><a href="https://earthquake.usgs.gov/earthquakes/map/?extent=-89.99846,-433.125&extent=89.99846,466.875&listOnlyShown=true&timeZone=utc" target="_blank"><font color="#000000">USGS, latest earthquakes</font></a></li>
-									<li><a href="http://www.ign.es/web/resources/sismologia/estaciones/estaciones.html" target="_blank">
-									<font color="#000000">IGN España, stations and data</font></a></li>
-									<li><a href="http://geodesy.unr.edu/NGLStationPages/gpsnetmap/GPSNetMap.html" target="_blank">
-									<font color="#000000">Nevada Geodetic Lab GPS Network</font></a></li>
-									<li><a href="http://early-est.rm.ingv.it/warning.html" target="_blank"><font color="#000000">Early Est INGV</font></a></li>
-									<li><a href="http://geodesy.unr.edu/NGLStationPages/" target="_blank"><font color="#000000">UNR NGL Station Database</font></a></li>
-									<li><a href="https://shakenet.raspberryshake.org/#?net=AM&sta=RFF8B" target="_blank"><font color="#000000">Raspberry shake net</font></a></li>
-									<li><a href="http://terremotos.ing.uchile.cl/" target="_blank"><font color="#000000">RENADIC-UCh, old acc database</font></a></li>
-									<li><a href="https://www.fnet.bosai.go.jp/event/search.php?LANG=en" target="_blank"><font color="#000000">NIED F-Net</font></a></li>
-									<li><a href="http://scardec.projects.sismo.ipgp.fr/" target="_blank"><font color="#000000">SCARDEC, STF database</font></a></li>
-									<li><a href="http://equake-rc.info/srcmod/" target="_blank"><font color="#000000">SRCMOD, EQ Source Model database</font></a></li>
-									<li><a href="http://ji.faculty.geol.ucsb.edu/big_earthquakes/home" target="_blank"><font color="#000000">Big Earthquakes database</font></a></li>
-									<li><a href="http://www.ioc-sealevelmonitoring.org/station.php?code=pmel" target="_blank"><font color="#000000">IOC, Sea Level Monitoring</font></a></li>
-									<li><a href="https://fallasactivas.cl/" target="_blank"><font color="#000000">CHAF, Chilean active fault, CYCLO</font></a></li>
-									<li><a href="https://www.sciencebase.gov/catalog/item/5aa1b00ee4b0b1c392e86467" target="_blank"><font color="#000000">Slab 2.0 - Subduction zone</font></a></li>
-									<li><a href="https://comet.nerc.ac.uk/COMET-LiCS-portal/" target="_blank"><font color="#000000">COMET-LiCS Sentinel-1 InSAR portal</font></a></li>
-									<li><a href="https://www.earth.ox.ac.uk/~smachine/cgi/index.php" target="_blank"<font color="#000000">SubMachine Earth Models repository</font></a</li>
-									<li><a href="http://ds.iris.edu/spud/backprojection#" target="_blank"><font color="#000000">IRIS, backprojection query</font></a></li>
-									<li><a href="https://ds.iris.edu/gmap/" target="_blank"><font color="#000000">IRIS-gmap, stations availability</font></a></li>
-									<li><a href="http://www.shoa.cl/php/citsu.php?idioma=es&__cf_chl_jschl_tk__=bd10d53b161b0be965ce7527ed1e2861708ad867-1590187379-0-ARem8KppGr3M66tcxg5u5g5CtR8xgt-rVUKFIVGww6PJJ5nzYMttDMdnhXvlmxVZkc-0abcV6brPLH5Mbktl1e82OcKvQlsJs5rAWg9XiCldqj4KfR5UWM-shXJfDjIjn2GK8Ymazb4i2e6SsRK-hLYgD5VWcnqQWArdoQ7WA8BcuGbevMdMQ-FScjHwb-lx7-qAIHKAFC2UqUMdwOlOMsZqTgVBnPB606RnHdn-dIpKaz_MRVtMGOiG7qg1iOS7rjiW99f4Yandct5eH-eLCniFG0rfDr2yJyd3QmqzPjfheF2tqm4OJJpQANetVd0VRg" target="_blank"><font color="#000000">SHOA Cartas de inundación por tsunami (CITSU)</font></a></li>
-									<li><a href="https://ayiti.unice.fr/ayiti-seismes/" target="_blank"><font color="#000000">Ayiti-seismes, Haití catalogue</font></a></li>
-									<li><a href="https://www.geologie.ens.fr/seismes/index.php?dir=&sort=date&order=desc" target="_blank"><font color="#000000">Seismes Geologie ENS</font></a></li>
-									<li><a href="https://fallasactivas.cl/" target="_blank"><font color="#000000">Chilean Active Faults (CHAF)</font></a></li>
-									<li><a href="http://ohpdmc.eri.u-tokyo.ac.jp/dataset/index.html" target="_blank"><font color="#000000">OHP DMC - OBS data</font></a></li>
-									<li><a href="http://www-solid.eps.s.u-tokyo.ac.jp/~sloweq/" target="_blank"><font color="#000000">Slow Earthquake Database</font></a></li>
-									<li><a href="https://quakesearch.geonet.org.nz/" target="_blank"><font color="#000000">Geonet quakesearch</font></a></li>
-									<li><a href="https://www.geonet.org.nz/data/gnss/map" target="_blank"><font color="#000000">Geonet geodetic</font></a></li>
-									<li><a href="https://www.geonet.org.nz/earthquake/sse/manawatu" target="_blank"><font color="#000000">Geonet SSE</font></a></li>
-									<li><a href="https://earthquake.usgs.gov/slab2/" target="_blank"><font color="#000000">USGS Slab 2</font></a></li>
-									<li><a href="https://www.isterre.fr/public/DEEPtrigger/map/first_map.html" target="_blank"><font color="#000000">DEEPtrigger data</font></a></li>
-									<li><a href="https://www.ngdc.noaa.gov/mgg/curator/" target="_blank"><font color="#000000">Marine and Lacustrine Geological Samples</font></a></li>
-									</ul>
+/* BADGE COLORS per category */
+.b-data{background:var(--bluebg);color:var(--blue);}
+.b-soft{background:var(--tealbg);color:var(--teal);}
+.b-edu{background:var(--goldbg);color:var(--gold);}
+.b-tools{background:var(--redbg);color:var(--red);}
+.b-proj{background:var(--purplebg);color:var(--purple);}
+.b-ref{background:var(--bg2);color:var(--text2);}
+.b-ml{background:#fce8f3;color:#8b1a5a;}
 
-									<header>
-										<h3><a>Data maps</a></h3>
-									</header>
-									<p>
-									<ul style="list-style-type: '&#x22C4; ';">
-										<li><a href="https://gadm.org/download_country_v3.html" target="_blank"><font color="#000000">Download GADM data</font></a></li>
-										<li><a href="https://gis.stackexchange.com/questions/183248/getting-polygon-boundaries-of-city-in-json-from-google-maps-api" target="_blank"<font color="#000000">Polygon cities boundaries in JSON</font></a></li>
-										<li><a href="https://nominatim.openstreetmap.org/ui/search.html?q=Metropolitan+Region&countrycodes=cl" target="_blank"><font color="#000000">Map search</font></a></li>
-										<li><a href="https://nominatim.openstreetmap.org/ui/details.html?place_id=145126778" target="_blank"><font color="#000000">Map search 2</font></a></li>
-										<li><a href="http://polygons.openstreetmap.fr/index.py" target="_blank"><font color="#000000">Polygon creation</font></a></li>
-										<li><a href="https://topex.ucsd.edu/cgi-bin/get_data.cgi" target="_blank"><font color="#000000">Extract XYZ Grid from topo or grav</font></a></li>
-										<li><a href="https://github.com/dhasterok/global_tectonics/" target="_blank"><font color="#000000">Github global_tectonics</font></a></li>
-								</ul>
-							</article>
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;}
+.reveal.visible{opacity:1;transform:none;}
 
+#no-results{display:none;text-align:center;color:var(--text3);padding:3rem 0;font-style:italic;}
 
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3><a>Software Seismology</a></h3>
-								</header>
-								<p>
-								<ul style="list-style-type: '&#x22C4; ';">
-										<li><a href="http://alomax.free.fr/nlloc/" target="_blank"><font color="#000000">NonLinLoc, Anthony Lomax</font></a></li>
-										<li><a href="http://nuquake.eu/About/index.html" target="_blank"><font color="#000000">NuQuake, Peter Moczo</font></a></li>
-										<li><a href="https://www.eas.slu.edu/People/RBHerrmann/CPS330.html" target="_blank"><font color="#000000">CPS, RBHerrmann</font></a></li>
-										<li><a href="https://pyrocko.org/" target="_blank"><font color="#000000">pyrocko, seismology toolbox</font></a></li>
-										<li><a href="https://ds.iris.edu/ds/products/" target="_blank"><font color="#000000">IRIS Data Service Products</font></a></li>
-										<li><a href="https://eqcorrscan.readthedocs.io/en/latest/index.html#" target="_blank"><font color="#000000">EQcorrscan, py RE detection</font></a></li>
-										<li><a href="https://krischer.github.io/mtspec/index.html" target="_blank"><font color="#000000">mtspec, Multitaper</font></a></li>
-										<li><a href="http://www.msnoise.org/" target="_blank">
-										<font color="#000000">MSNoise, monitoring ASN vel changes</font></a></li>
-										<li><a href="https://github.com/PeterMakus/SeisMIC" target="_blank"><font color="#000000">SeisMIC: monitoring ASN vel changes</font></a></li>
-										<li><a href="https://sites.google.com/site/seismzhang/software" target="_blank"><font color="#000000">Miao Zhang Software developments</font></a></li>
-										<li><a href="http://bison.ihep.su/~kachaev/books/Numerical_Recipes/" target="_blank"><font color="#000000">Numerical Recipes-fortran programs</font></a></li>
-										<li><a href="https://robmccaffrey.github.io/MT5/MT5.html" target="_blank"><font color="#000000">MT5, program for teleseismic inversion</font></a></li>
-										<li><a href="http://wwweic.eri.u-tokyo.ac.jp/ETAL/KIKUCHI/" target="_blank"><font color="#000000">Kikuchi-Kanamori for teleseismic body wave inversion</font></a></li>
-										<li><a href="https://github.com/QuakeMigrate/QuakeMigrate" target="_blank"><font color="#000000">Github - QuakeMigrate</font></a></li>
-										<li><a href="https://github.com/dmelgarm/MudPy" target="_blank"><font color="#000000">Github - MudPy</font></a</li>
-										<li><a href="https://github.com/Ulvetanna/HypoSVI" target="_blank">
-										<font color="#000000">Github - HypoSVI</font></a></li>
-										<li><a href="https://github.com/geniusinaction/okapy" target="_blank"><font color="#000000">Github - OkaPy</font></a></li>
-										<li><a href="https://github.com/braunfuss/Palantiri" target="_blank"><font color="#000000">Github - Palantiri backprojection</font></a></li>
-										<li><a href="https://github.com/jakewalter/easyQuake" target="_blank"><font color="#000000">Github - easyQuake - ML driven earthquake detec, loc, analysis</font></a></li>
-										<li><a href="https://github.com/MrXiaoXiao/ESPRH" target="_blank"><font color="#000000">Github - ESPRH</font></a></li>
-										<li><a href="https://github.com/dttrugman/GrowClust" target="_blank"><font color="#000000">Github - GrowClust</font></a></li>
-										<li><a href="https://github.com/nikosT/Gisola/wiki" target="_blank"><font color="#000000">Github - Gisola</font></a></li>
-										<li><a href="https://github.com/slipinversion/WASP" target="_blank"><font color="#000000">Github - WASP-slip inversion</font></a></li>
-										<li><a href="https://github.com/adjtomo/seisflows" target="_blank"><font color="#000000">Github - SeisFlows</font></a></li>
-										<li><a href="https://core-man.github.io/link/post/codes/" target="_blank"><font color="#000000">Core-man links codes</font></a></li>
-										<li><a href="https://github.com/claudiodsf/earthquake_seismology_software" target="_blank"><font color="#000000">EQ location link codes</font></a></li>
-										<li><a href="https://sites.google.com/site/seismzhang/software" target="_blank"><font color="#000000">Miao Zhang links codes </font></a></li>
-										<li><a href="https://integratedseismicprogram.com/" target="_blank"><font color="#000000">Integrated Seismic Program</font></a></li>
-										<li><a href="https://instaseis.net/" target="_blank"><font color="#000000">Instaseis</font></a></li>
-										<li><a href="https://www.seis.sc.edu/taup/" target="_blank"><font color="#000000">TauP</font></a></li>
-										<li><a href="https://github.com/pyrocko/grond" target="_blank"><font color="#000000">Pyrocko-Grond</font></a></li>
-										<li><a href="https://pyrocko.org/beat/docs/current/examples/FFI_kinematic.html" target="_blank"><font color="#000000">Pyrocko-BEAT kinematic inversion</font></a></li>
-										<li><a href="https://github.com/jbrundle/EarthquakeInformation" target="_blank"><font color="#000000">SIMSEISTimeSeries - Poisson dist</font></a></li>
-										<li><a href="https://github.com/beridel/fast_matched_filter" target="_blank"><font color="#000000">fast matched filter</font></a></li>
-										<li><a href="https://github.com/coutanto/axitra" target="_blank"><font color="#000000">Axitra</font></a></li>
-										<li><a href="https://github.com/YijianZhou?tab=repositories" target="_blank"><font color="#000000">locate-seismicity-github</font></a></li>
-										<li><a href="https://github.com/smousavi05/EQTransformer" target="_blank"><font color="#000000">Github - EQ Transformer</font></a></li>
-										<li><a href="https://github.com/AI4EPS/GaMMA" target="_blank"><font color="#000000">Github - GaMMA</font></a></li>
-										<li><a href="https://github.com/ahmadtourei/das-anomaly" target="_blank"><font color="#000000">Github - DAS anomaly</font></a></li>
-								</ul>
+footer{background:var(--text);border-top:1px solid rgba(255,255,255,.07);padding:1.3rem 2rem;text-align:center;font-size:.76rem;color:rgba(255,255,255,.32);}
+footer a{color:rgba(255,255,255,.4);}
 
-										<header>
-											<h3><a>Others</a></h3>
-										</header>
-										<p>
-										<ul>
-										<li><a href="https://www.gplates.org/" target="_blank"><font color="#000000">GPlates, py visual plate tectonics</font></a></li>
-										<li><a href="https://www.geopsy.org/" target="_blank"><font color="#000000">Geopsy</font></a></li>
-										<li><a href="https://simpeg.xyz/" target="_blank"><font color="#000000">SIMPEG - Sim and param estimation</font></a></li>
-										<li><a href="https://tsfresh.readthedocs.io/en/latest/" target="_blank"><font color="#000000">ts fresh</font></a></li>
-										<li><a href="https://github.com/florentaden/mineral_clustering" target="_blank"><font color="#000000">Github - Mineral clustering</font></a></li>
-									</ul>
-								</article>
+@media(max-width:700px){
+  nav{padding:0 1rem;}
+  .nav-links{gap:.6rem;}
+  .page-header{padding:3rem 1.2rem 2rem;}
+  .search-bar-wrap,.cat-filters,.links-inner{padding-left:1.2rem;padding-right:1.2rem;}
+}
+</style>
+</head>
+<body>
 
+<nav>
+  <a class="nav-brand" href="index.html">Javier <span class="r">Ojeda Vargas</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+    <li><a href="conferences.html">Conferences</a></li>
+    <li><a href="links.html" class="active">Links</a></li>
+    <li><a href="docs/CV_OJEDA_short.pdf">CV ↗</a></li>
+  </ul>
+</nav>
 
-								<article class="col-4 col-12-mobile special">
-									<header>
-										<h3><a>Book/reps explanations</a></h3>
-									</header>
-									<p>
-									<ul style="list-style-type: '&#x22C4; ';">
-										<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/" target="_blank"><font color="#000000">Python Data Science Handbook</font></a></li>
-										<li><a href="http://www.seismology.harvard.edu/research/backproj.html" target="_blank"><font color="#000000">EQ Backprojection analysis</font></a></li>
-										<li><a href="http://ds.iris.edu/seismo-archives/quakes/" target="_blank"><font color="#000000">IRIS, Earthquake Archives</font></a></li>
-										<li><a href="https://github.com/petrelli-m/python_earth_science_book" target="_blank"><font color="#000000">Github, python earth science book</font></a></li>
-										<li><a href="https://github.com/SaulArciniegaEsparza/Python-Basico" target="_blank"><font color="#000000">Github, python intro</font></a></li>
-										<li><a href="https://github.com/softwareunderground/awesome-open-geoscience" target="_blank"><font color="#000000">Github, awesome-open-geoscience</font></a></li>
-										<li><a href="http://alomax.free.fr/nlloc/edt/edt.html" target="_blank"><font color="#000000">The EDT likelihood function</font></a></li>
-										<li><a href="http://eqseis.geosc.psu.edu/cammon/HTML/RftnDocs/seq01.html" target="_blank"><font color="#000000">Isolating Receiver Response</font></a></li>
-										<li><a href="https://jmnocquet.github.io/pyacs_docs/pyacs/tutorial_gts.html" target="_blank"><font color="#000000">PYACS - GPS time series analysis</font></a></li>
-										<li><a href="https://mttime.readthedocs.io/en/latest/index.html" target="_blank"><font color="#000000">Time Domain MT inversion in python</font></a></li>
-										<li><a href="https://djpugh.github.io/MTfit/index.html" target="_blank"><font color="#000000">MTfit: Bayesian Source Inversion</font></a></li>
-										<li><a href="https://github.com/zorzalerrante" target="_blank"><font color="#000000">zorzalerrante</font></a></li>
-										<li><a href="https://github.com/ManonDls/KFTS-InSAR" target="_blank"><font color="#000000">Kalman Filter for ts InSAR data</font></a></li>
-										<li><a href="https://github.com/ltauxe/Python-for-Earth-Science-Students" target="_blank"><font color="#000000">Py for Earth Science students</font></a></li>
-										<li><a href="https://github.com/bodlukas/ground-motion-simulation-shakemap" target="_blank"><font color="#000000">Ground Motion sim shakemaps</font></a></li>
-										<li><a href="https://colab.research.google.com/drive/1nXM8Y9G5jduo0XoXNfC1siQz-x3vv2V4?usp=sharing" target="_blank"><font color="#000000">Shakemap sim example</font></a></li>
-										<li><a href="https://github.com/sstaehler/dailyspec" target="_blank"><font color="#000000">dailyspec-good spectrograms</font></a></li>
-										<li><a href="https://github.com/AI4EPS/PhaseNet" target="_blank"><font color="#000000">Phasenet</font></a></li>
-										<li><a href="https://github.com/yuanzhoulvpi2017/getdata" target="_blank"><font color="#000000">Get data from papers</font></a></li>
-										<li><a href="https://zenodo.org/record/6272823#.Y_dFydLMJhF" target="_blank"><font color="#000000">TIITBA - interface for historical seismograms</font></a></li>
-										<li><a href="https://github.com/lmizrahi/etas" target="_blank"><font color="#000000">ETAS model</font></a></li>
-										<li><a href="https://github.com/scatseisnet/scatseisnet" target="_blank"><font color="#000000">Scatseisnet</font></a></li>
-										<li><a href="https://scatseisnet.readthedocs.io/en/latest/" target="_blank"><font color="#000000">Scatseisnet documentation</font></a></li>
-										<li><a href="https://github.com/leonard-seydoux/scientific_computing" target="_blank"><font color="#000000">Scientif computing</font></a></li>
-										<li><a href="https://www.daveboore.com/software_online.html" target="_blank"><font color="#000000">EXSIM Dave Boore</font></a></li>
-										<li><a href="https://mplstereonet.readthedocs.io/en/latest/" target="_blank"><font color="#000000">mpl stereonet</font></a></li>
-									</ul>
-										<header>
-											<h3><a>ML</a></h3>
-										</header>
-										<p>
-										<ul>
-										<li><a href="https://github.com/smousavi05/dl_seismology" target="_blank"><font color="#000000">Github - DL Seismology</font></a></li>
-										<li><a href="https://github.com/leouieda/ml-intro" target="_blank"><font color="#000000">Github - Intro ML</font></a></li>
-										<li><a href="https://github.com/niyiyu/PNW-ML" target="_blank"><font color="#000000">Github - PNW-ML</font></a></li>
-										<li><a href="https://github.com/leonard-seydoux/frontiers_in_earth_sciences" target="_blank"><font color="#000000">Github - Frontiers in earth Sciences</font></a></li>
-										<li><a href="https://github.com/leonard-seydoux/ML-Geosciences" target="_blank"><font color="#000000">Github - ML Geosciences</font></a></li>
-										<li><a href="https://github.com/AI4EPS" target="_blank"><font color="#000000">Github - AI4EPS</font></a></li>
-										<li><a href="https://github.com/saeedsltm?tab=repositories" target="_blank"><font color="#000000">Github - repositories</font></a></li>
-										<li><a href="https://gricad-gitlab.univ-grenoble-alpes.fr/costangi/sse-detection" target="_blank"><font color="#000000">sse detection</font></a></li>
-
-										</ul>
-									</article>
-
-
-						</div>
-						<hr />
-
-
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3><a>Useful links</a></h3>
-								</header>
-								<p>
-								<ul style="list-style-type: '&#x22C4; ';">
-										<li><a href="https://www-k12.atmos.washington.edu/~ovens/gmt/doc/html/GMT_Docs/node153.html" target="_blank"><font color="#000000">Special characters GMT</font></a></li>
-										<li><a href="http://kestrel.nmt.edu/~raymond/software/howtos/greekscape.xhtml" target="_blank"><font color="#000000">Greek unicode Inkscape</font></a></li>
-										<li><a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/" target="_blank"><font color="#000000">CPT-city palettes</font></a></li>
-										<li><a href="https://plotdigitizer.com/" target="_blank"><font color="#000000">Plot digitizer</font></a></li>
-										<li><a href="https://apps.automeris.io/wpd/" target="_blank"><font color="#000000">Image scanner points</font></a></li>
-										<li><a href="https://htmlcolorcodes.com/es/" target="_blank"><font color="#000000">HTML, RGB, HSL color codes</font></a></li>
-										<li><a href="http://www3.uji.es/~galdu/ssh_vs_rsh/x165.html" target="_blank"><font color="#000000">SSH, basic commands</font></a></li>
-										<li><a href="http://mapasgeologicos.blogspot.com/2016/06/12-bloque-3d.html" target="_blank"><font color="#000000">GMT Maps examples</font></a></li>
-										<li><a href="https://texample.net/media/tikz/examples/TEX/" target="_blank"><font color="#000000">LaTeX examples</font></a></li>
-										<li><a href="http://www-udc.ig.utexas.edu/external/becker/vdata.html" target="_blank"><font color="#000000">Map visualization examples</font></a></li>
-										<li><a href="https://docs.obspy.org/master/gallery.html#gallery" target="_blank"><font color="#000000">Obspy plotting</font></a></li>
-										<li><a href="http://niram.org/read/" target="_blank"><font color="#000000">Read-o-meter</font></a></li>
-										<li><a href="https://www.ngs.noaa.gov/CORS/Gpscal.shtml" target="_blank"><font color="#000000">GPS Calendar</font></a></li>
-										<li><a href="https://github.com/matplotlib/cheatsheets" target="_blank"><font color="#000000">Github - cheatsheets matplotlib</font></a></li>
-										<li><a href="https://docs.obspy.org/packages/obspy.clients.fdsn.html" target="_blank"><font color="#000000">FDSN web service client for OBSPY</font></a></li>
-										<li><a href="https://docs.obspy.org/tutorial/code_snippets/visualize_data_availability_of_local_waveform_archive.html" target="_blank"><font color="#000000">Visualize data availability archive</font></a></li>
-									  <li><a href="https://docs.astropy.org/en/latest/visualization/histogram.html" target="_blank"><font color="#000000">Choosing histogram bins</font></a></li>
-									 	<li><a href="http://vrl.cs.brown.edu/color" target="_blank"><font color="#000000">Colorgical</font></a></li>
-									 	<li><a href="https://mokole.com/palette.html" target="_blank"><font color="#000000">Visual colors MOKOLE</font></a></li>
-									 	<li><a href="https://alexanderlabwhoi.github.io/post/2021-03-missingfont/" target="_blank"><font color="#000000">Fixing matplotlib font</font></a></li>
-									 	<li><a href="https://qrfy.com/es?utm_source=Google&utm_medium=CPC&utm_campaign=17305776861&utm_term=qr%20generator&gclid=CjwKCAjw79iaBhAJEiwAPYwoCMH1b8uI7m0vOxEuFl0EAcwdT8X87e-uvP5p2liqccBYPCp19L4teBoCu2IQAvD_BwE" target="_blank"><font color="#000000">QR generator</font></a></li>
-										<li><a href="https://www.gsb.stanford.edu/alumni/career-resources/job-search/resumes" target="_blank"><font color="#000000">Resumes & Cover Letters</font></a></li>
-									 <li><a href="https://semver.org/" target="_blank"><font color="#000000">Semantic versioning 2.0.0</font></a></li>
-									 <li><a href="https://repositorio.anid.cl/home" target="_blank"><font color="#000000">Repositorio ANID</font></a></li>
-									 <li><a href="https://www.theses.fr/s341184" target="_blank"><font color="#000000">Theses France</font></a></li>
-									 <li><a href="https://play.4id.science/cgch003/info" target="_blank"><font color="#000000">Congreso Geológico Chileno</font></a></li>
-									 <li><a href="https://threadreaderapp.com/thread/1586420517225238529.html" target="_blank"><font color="#000000">How to write a research article?</font></a></li>
-									 <li><a href="https://blogs.egu.eu/divisions/gd/2018/06/07/the-art-of-the-15-minute-talk/" target="_blank"><font color="#000000">The art of the 15 minute talk</font></a></li>
-									</ul>
-							</article>
-
-							<article class="col-4 col-12-mobile special">
-								<header>
-									<h3><a>Educational seismo</a></h3>
-								</header>
-								<p>
-								<ul style="list-style-type: '&#x22C4; ';">
-									<li><a href="https://www.iris.edu/app/station_monitor/?fbclid=IwAR2DZp5TBbI0zH3TGLoYAVKKeuXb-2YCoPAVVqAYVUKi4tStSojC2bxiWD0#2018-09-06T15:49:14/C1-MT03/webicorder/C1-MT03|10944928" target="_blank"><font color="#000000">IRIS Visualization</font></a></li>
-									<li><a href="https://volcano.si.edu/" target="_blank"><font color="#000000">Volcano bulletin</font></a></li>
-									<li><a href="https://www.usgs.gov/programs/earthquake-hazards/education" target="_blank"><font color="#000000">USGS Education</font></a></li>
-									<li><a href="http://www-udc.ig.utexas.edu/external/plates/data.htm" target="_blank"><font color="#000000">Tectonic Plate database</font></a></li>
-									<li><a href="https://dinosaurpictures.org/ancient-earth/#240" target="_blank"><font color="#000000">Earth in different periods of time</font></a></li>
-									<li><a href="https://saviot.cnrs.fr/terre/index.en.html" target="_blank"><font color="#000000">Earth free oscillations, normal modes</font></a></li>
-									<li><a href="https://share.streamlit.io/cedrictwardz/pydeform/main/Deformation_app.py" target="_blank"><font color="#000000">Surface deformation, Okada equation</font></a></li>
-									<li><a href="https://share.streamlit.io/cedrictwardz/pyfocmec/main/app.py" target="_blank"><font color="#000000">Focal mechanisms</font></a></li>
-									<li><a href="http://www.seismo-live.org/" target="_blank"><font color="#000000">Seismo-Live, seismo-notebooks</font></a></li>
-									<li><a href="https://eos.org/science-updates/visualizing-cross-sectional-data-in-a-real-world-context" target="_blank"><font color="#000000">Vis Cross-sec Data in Real-world</font></a></li>
-									<li><a href="https://scipy-lectures.org/" target="_blank"><font color="#000000">Scipy lecture notes</font></a></li>
-									<li><a href="https://www.earthinversion.com/recent-posts/" target="_blank"><font color="#000000">Earth Inversion, useful tips</font></a></li>
-									<li><a href="https://www.biointeractive.org/classroom-resources/earthviewer" target="_blank"><font color="#000000">Earth Viewer</font></a></li>
-									<li><a href="https://www.virtualmicroscope.org/collections" target="_blank"><font color="#000000">Virtual rock collection</font></a></li>
-									<li><a href="https://visible-earthquakes.appspot.com/" target="_blank"><font color="#000000">Visible earthquakes with InSAR images</font></a></li>
-									<li><a href="https://github.com/crowellbw/SNIVEL" target="_blank"><font color="#000000">Github - SNIVEL, vel from GPS</font></a></li>
-									<li><a href="https://github.com/iris-edu/gmv" target="_blank"><font color="#000000">Github -  IRIS GMV</font></a></li>
-									<li><a href="https://serc.carleton.edu/teachearth/index.html" target="_blank"><font color="#000000">Teach The Earth NAGT</font></a></li>
-									<li><a href="https://cos.ethz.ch/software/Educational%20Software.html" target="_blank"><font color="#000000">Educational software ETH Zurich</font></a></li>
-									<li><a href="https://www.generic-mapping-tools.org/egu22pygmt/intro.html" target="_blank"><font color="#000000">PyGMT for begginners</font></a></li>
-									<li><a href="https://damzar.medium.com/python-para-ciencias-de-la-tierra-8f55e534025f" target="_blank"><font color="#000000">Python para Ciencias de la Tierra</font></a></li>
-									<li><a href="https://estereo.reyuntec.ar/" target="_blank"><font color="#000000">Red esterográfica online</font></a></li>
-									<li><a href="https://www.autodraw.com/" target="_blank"><font color="#000000">Autodraw online</font></a></li>
-									<li><a href="https://joshdata.me/iceberger.html" target="_blank"><font color="#000000">Iceberg draw</font></a></li>
-									<li><a href="https://www.ipgp.fr/~grandin/Raphael_Grandin_personal_web_page/Teaching.html" target="_blank"><font color="#000000">Teaching Mecanique</font></a></li>
-									<li><a href="https://www.src.com.au/earthquake-size/" target="_blank"><font color="#000000">Earthquake size</font></a></li>
-									<li><a href="https://sites.google.com/view/leonard-seydoux/teaching?authuser=0" target="_blank"><font color="#000000">Computational seismology - LS</font></a></li>
-									<li><a href="https://www.iris.edu/hq/science_highlights/global_seismographic_networks_part_i_a_brief_history" target="_blank"><font color="#000000">Global seismographic network</font></a></li>
-									<li><a href="https://ipgp.github.io/scientific_python_cheat_sheet/" target="_blank"><font color="#000000">IPGP Scientific Python Cheatsheet</font></a></li>
-									<li><a href="https://gitlab.ethz.ch/spacegeodesy_public" target="_blank"><font color="#000000">Space Geodesy ETH</font></a></li>
-									<li><a href="https://rmets-onlinelibrary-wiley-com.insu.bib.cnrs.fr/doi/10.1002/gdj3.185" target="_blank"><font color="#000000">PyGplately paper</font></a></li>
-									<li><a href="http://seismic-explorer.concord.org/" target="_blank"><font color="#000000">Seismic explorer Concord</font></a></li>
-									<li><a href="http://guiastematicas.uchile.cl/subjects/guide.php?subject=Tierrasolida" target="_blank"><font color="#000000">Guía Geofísica Tierra Sólida</font></a></li>
-									<li><a href="https://ciencia.unam.mx/leer/1162/de-sismometros-y-gps-tecnologias-de-monitoreo-de-sismos-" target="_blank"><font color="#000000">UNAM Sismómetros y GPS</font></a></li>
-									<li><a href="https://bbb.unistra.fr/b/ren-7p1-3om-ihd" target="_blank"><font color="#000000">Seminaires Strasbourg</font></a></li>
-
-									</ul>
-								</article>
-
-
-								<article class="col-4 col-12-mobile special">
-									<header>
-										<h3><a>Paper info</a></h3>
-									</header>
-									<p>
-									<ul style="list-style-type: '&#x22C4; ';">
-											<li><a href="https://github.com/MinCiencia/Datos-COVID19" target="_blank"><font color="#000000">MinCiencia Data Covid-19</font></a></li>
-											<li><a href="https://drive.google.com/drive/u/0/folders/1Dp7BFQhcej2LGarP5Gj7JKkCzPycJW_5" target="_blank"><font color="#000000">Norcia earthquake Data</font></a></li>
-											<li><a href="http://ds.iris.edu/mda/IU/LCO/#IU_LCO_1998-12-20_2014-08-04" target="_blank"><font color="#000000">LCO Las Campanas data</font></a></li>
-											<li><a href="https://ds.iris.edu/mustang/databrowser/" target="_blank"><font color="#000000">Mustang databrowser</font></a></li>
-											<li><a href="https://ds.iris.edu/wilber3/find_stations/5159344" target="_blank"><font color="#000000">Particular earthquake to see</font></a></li>
-											<li><a href="https://www.geonet.org.nz/mbl/news/49bQvqYLz4qA48ZULBAA97" target="_blank"><font color="#000000">SSE news Geonet</font></a></li>
-											<li><a href="https://hakaimagazine.com/features/great-quake-and-great-drowning/" target="_blank"><font color="#000000">Mithology earthquake Cascadia</font></a></li>
-											<li><a href="https://xkcd.com/2701/" target="_blank"><font color="#000000">What if? webcomic</font></a></li>
-											<li><a href="https://www.doi2bib.org/" target="_blank"><font color="#000000">doi2bib</font></a></li>
-											<li><a href="https://strike-dip.com/" target="_blank"><font color="#000000">Diseños ilustraciones geología</font></a></li>
-											<li><a href="https://s-ink.org/volcanic-arc-creation" target="_blank"><font color="#000000">Volcanic creations ilustraciones geología</font></a></li>
-											<li><a href="https://www.earthscope.org/news/geophysical-events/" target="_blank"><font color="#000000">Geophysical events EarthScope</font></a></li>
-
-									</ul>
-
-									<header>
-										<h3><a>Geosciences projects</a></h3>
-									</header>
-									<p>
-									<ul style="list-style-type: '&#x22C4; ';">
-										<li><a href="https://www.sz4dmcs.org/megathrust-workshop" target="_blank"><font color="#000000">SZ4DMCS, modeling for Subduction</font></a></li>
-										<li><a href="https://www.sz4dmcs.org/fluids-workshop" target="_blank"><font color="#000000">Fluid transport modeling workshop</font></a></li>
-										<li><a href="https://slow-to-fast-eq.org/" target="_blank"><font color="#000000">Slow-to-fast earthquake, Japan</font></a></li>
-										<li><a href="https://www.sz4d.org/" target="_blank"><font color="#000000">SZ4D, subduction zone observatory</font></a></li>
-										<li><a href="https://comet.nerc.ac.uk/publications/" target="_blank"><font color="#000000">COMET, Centre for Observation and Modelling of EQ, Volca, Tectonics</font></a></li>
-										<li><a href="https://sites.google.com/view/uwsglab/home?authuser=0" target="_blank"><font color="#000000">UW Seismogeodesy lab</font></a></li>
-										<li><a href="http://txti.es/mardiseismes" target="_blank"><font color="#000000">Mardi seismes - Geoazur</font></a></li>
-										<li><a href="https://www.geosciences.ens.fr/realism" target="_blank"><font color="#000000">Realism - ENS</font></a></li>
-										<li><a href="https://www.fatiando.org/" target="_blank"><font color="#000000">Fatiando a Terra</font></a></li>
-										<li><a href="https://sites.google.com/site/controlesuchile/" target="_blank"><font color="#000000">Mis Apuntes UChile</font></a></li>
-										<li><a href="https://github.com/mdenolle?tab=repositories" target="_blank"><font color="#000000">MD - noise codes</font></a></li>
-										<li><a href="http://datagramas.cl/acerca_de/" target="_blank"><font color="#000000">EG-G - social media analysis</font></a></li>
-										<li><a href="https://sianipar17.com/2017/12/14/tutorial-for-teleseismic-body-wave-inversion-program/" target="_blank"><font color="#000000">DS - Teleseismic KK</font></a></li>
-										<li><a href="https://www.matthewwherman.com/tutorials.html" target="_blank"><font color="#000000">Teaching MH - Seismo</font></a></li>
-										<li><a href="https://sites.google.com/a/geociencias.unam.mx/rz/docencia?authuser=0" target="_blank"><font color="#000000">Teaching FZ - Seismo</font></a></li>
-										<li><a href="https://outcrop-analogue.com/" target="_blank"><font color="#000000">Teaching OA - Geology</font></a></li>
-										<li><a href="https://csim.kaust.edu.sa/files/erse210/index1.html" target="_blank"><font color="#000000">Teaching GS - Seismo</font></a></li>
-										<li><a href="https://mttmllr.com/geoTS.htm" target="_blank"><font color="#000000">Teaching MM - Geophysics</font></a></li>
-										<li><a href="https://www.rcep.dpri.kyoto-u.ac.jp/~nishimura/index.html" target="_blank"><font color="#000000">GPS - JP</font></a></li>
-										<li><a href="https://elifo.github.io/" target="_blank"><font color="#000000">EQ physics geohazards</font></a></li>
-										<li><a href="http://faculty.ucr.edu/~aghosh/research.html" target="_blank"><font color="#000000">High resolution catalogs</font></a></li>
-										<li><a href="https://www.davidezaccagnino.com/about-me/" target="_blank"><font color="#000000">Physics messages</font></a></li>
-										<li><a href="https://andesnetinfo.wixsite.com/andesnet" target="_blank"><font color="#000000">Andes Net</font></a></li>
-
-										</ul>
-								</article>
-						</div>
-</div>
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Curated resources</p>
+    <h1>Resources &amp; <span class="r">Links</span></h1>
+    <p>A personal compendium of data portals, seismology software, educational notebooks, mapping tools, and research projects I find useful and return to regularly. Broken links removed.</p>
+  </div>
 </div>
 
-<!-- Footer -->
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<!-- Contact -->
-									<section class="contact">
-										<ul class="icons">
-											<li><a href="https://orcid.org/0000-0002-7188-8356" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid" style="font-size: 1.5em;"></i></a></li>
-											<li><a href="https://www.webofscience.com/wos/author/record/862622" target="_blank" rel="noopener noreferrer" class="icon solid fa-database"><span class="label">Web of Science</span></a></li>
-											<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57207963457" target="_blank" rel="noopener noreferrer"><i class="ai ai-scopus" style="font-size: 1.5em;"></i></a></li>											
-											<li><a href="https://scholar.google.com/citations?hl=es&user=HqIUR4sAAAAJ" target="_blank" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a>
-											<li><a href="https://www.researchgate.net/profile/Javier-Ojeda-5" target="_blank" class="icon brands fa-researchgate"><span class="label">Researchgate</span></a></li>
-											<li><a href="https://investigadores.anid.cl/es/public_search/researcher?id=39718" target="_blank" rel="noopener noreferrer" class="icon solid fa-id-badge"><span class="label">ANID</span></a></li>
-											<li><a href="https://www.linkedin.com/in/javierojedav/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-											<!--<li><a href="https://x.com/laviedej" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://www.instagram.com/laviedej/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://www.facebook.com/laviedej" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-										</ul>
-									</section>
-
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>2026 Javier Ojeda. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
-			</div>
-		</div>
-	</div>
+<!-- SEARCH -->
+<div class="search-bar-wrap">
+  <div class="search-outer">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input class="search-input" id="link-search" type="text" placeholder="Search links…" oninput="filterLinks()">
+  </div>
+  <div class="search-count" id="link-count">Browse all categories below</div>
 </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- CATEGORY FILTERS -->
+<div class="cat-filters">
+  <button class="cf-btn active" onclick="filterCat('all',this)">All</button>
+  <button class="cf-btn" onclick="filterCat('data',this)">📡 Seismic Data</button>
+  <button class="cf-btn" onclick="filterCat('geodesy',this)">🛰️ Geodesy &amp; GPS</button>
+  <button class="cf-btn" onclick="filterCat('software',this)">⚙️ Software</button>
+  <button class="cf-btn" onclick="filterCat('ml',this)">🤖 ML / AI</button>
+  <button class="cf-btn" onclick="filterCat('maps',this)">🗺️ Maps &amp; Topo</button>
+  <button class="cf-btn" onclick="filterCat('edu',this)">📚 Educational</button>
+  <button class="cf-btn" onclick="filterCat('projects',this)">🌐 Projects</button>
+  <button class="cf-btn" onclick="filterCat('tools',this)">🛠️ Useful Tools</button>
+</div>
 
-	</body>
+<div class="links-inner">
+<div id="no-results">No links match your search.</div>
+
+<!-- ═══════════════════════════════════════════
+     1. SEISMIC DATA
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-data" data-cat="data">
+  <div class="cat-heading">📡 Seismic Data <span class="cat-count" id="cnt-data"></span></div>
+  <p class="cat-desc">Waveform archives, catalogues, and monitoring networks for earthquake research.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="data" data-text="japan strong motion kyoshin"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://www.kyoshin.bosai.go.jp/" target="_blank">Japan Strong Motion Network (K-NET / KiK-net)</a></div><div class="lk-desc">Japanese strong-motion database from NIED. Essential for near-source ground motion research.</div><div class="lk-domain">kyoshin.bosai.go.jp</div></div>
+    <div class="lk" data-cat="data" data-text="itaca ingv italian accelerometric"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://itaca.mi.ingv.it/ItacaNet_30/#/home" target="_blank">ITACA — Italian Accelerometric Archive</a></div><div class="lk-desc">INGV's accelerometric database. Used for Norcia 2016 ground motion work.</div><div class="lk-domain">itaca.mi.ingv.it · INGV</div></div>
+    <div class="lk" data-cat="data" data-text="geofon gfz potsdam waveform archive"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://geofon.gfz-potsdam.de/" target="_blank">GEOFON — GFZ Potsdam</a></div><div class="lk-desc">Global waveform archive and EIDA node for European seismic data.</div><div class="lk-domain">geofon.gfz-potsdam.de</div></div>
+    <div class="lk" data-cat="data" data-text="csn chile evtdb seismic catalogue"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://evtdb.csn.uchile.cl/" target="_blank">evtdb — CSN Chile Earthquake Catalogue</a></div><div class="lk-desc">Chilean National Seismological Centre event database.</div><div class="lk-domain">csn.uchile.cl</div></div>
+    <div class="lk" data-cat="data" data-text="isc international seismological centre bulletin catalogue"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://www.isc.ac.uk/iscbulletin/search/catalogue/" target="_blank">ISC Bulletin — Catalogue Search</a></div><div class="lk-desc">Comprehensive global earthquake catalogue from the International Seismological Centre.</div><div class="lk-domain">isc.ac.uk</div></div>
+    <div class="lk" data-cat="data" data-text="usgs latest earthquakes map real time"><span class="lk-badge b-data">Real-time</span><div class="lk-title"><a href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank">USGS — Latest Earthquakes</a></div><div class="lk-desc">Real-time earthquake monitoring and catalogue from the U.S. Geological Survey.</div><div class="lk-domain">earthquake.usgs.gov</div></div>
+    <div class="lk" data-cat="data" data-text="renadic chile accelerometric database old uchile"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://terremotos.ing.uchile.cl/" target="_blank">RENADIC — Chilean Accelerometric Database</a></div><div class="lk-desc">Old accelerometric database maintained by Universidad de Chile.</div><div class="lk-domain">terremotos.ing.uchile.cl</div></div>
+    <div class="lk" data-cat="data" data-text="f-net nied japan broadband seismograph network"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://www.fnet.bosai.go.jp/event/search.php?LANG=en" target="_blank">NIED F-Net — Broadband Seismograph Network</a></div><div class="lk-desc">Japanese broadband seismograph network for moment tensor and waveform analysis.</div><div class="lk-domain">fnet.bosai.go.jp</div></div>
+    <div class="lk" data-cat="data" data-text="scardec ipgp source time function database"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://scardec.projects.sismo.ipgp.fr/" target="_blank">SCARDEC — Source Time Function Database</a></div><div class="lk-desc">IPGP database of STFs computed from deconvolution of teleseismic P waves.</div><div class="lk-domain">scardec.projects.sismo.ipgp.fr · IPGP</div></div>
+    <div class="lk" data-cat="data" data-text="srcmod earthquake source model slip inversion finite fault"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://equake-rc.info/srcmod/" target="_blank">SRCMOD — Earthquake Source Model Database</a></div><div class="lk-desc">Repository of finite-fault slip models from published literature. Key reference for source studies.</div><div class="lk-domain">equake-rc.info</div></div>
+    <div class="lk" data-cat="data" data-text="big earthquakes ucsb ji finite fault models database"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://ji.faculty.geol.ucsb.edu/big_earthquakes/home" target="_blank">Big Earthquakes — UCSB Finite-Fault Models</a></div><div class="lk-desc">C. Ji's database of finite-fault slip models for large earthquakes.</div><div class="lk-domain">ji.faculty.geol.ucsb.edu</div></div>
+    <div class="lk" data-cat="data" data-text="ioc sea level monitoring tide gauge tsunami"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://www.ioc-sealevelmonitoring.org/station.php?code=pmel" target="_blank">IOC — Sea Level Monitoring</a></div><div class="lk-desc">Real-time tide gauge network. Useful for tsunami and co-seismic subsidence research.</div><div class="lk-domain">ioc-sealevelmonitoring.org</div></div>
+    <div class="lk" data-cat="data" data-text="iris gmap stations availability waveform archive"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://ds.iris.edu/gmap/" target="_blank">IRIS — gmap Station Availability</a></div><div class="lk-desc">Interactive map of global seismic stations with data availability from IRIS/EarthScope.</div><div class="lk-domain">ds.iris.edu</div></div>
+    <div class="lk" data-cat="data" data-text="iris spud backprojection query waveform"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://ds.iris.edu/spud/backprojection" target="_blank">IRIS SPUD — Backprojection Query</a></div><div class="lk-desc">Seismic Product Depot with backprojection results for large earthquakes.</div><div class="lk-domain">ds.iris.edu</div></div>
+    <div class="lk" data-cat="data" data-text="early est ingv earthquake early warning real time"><span class="lk-badge b-data">Real-time</span><div class="lk-title"><a href="http://early-est.rm.ingv.it/warning.html" target="_blank">Early-Est INGV — Earthquake Early Warning</a></div><div class="lk-desc">INGV's real-time earthquake characterization and early warning interface.</div><div class="lk-domain">early-est.rm.ingv.it · INGV</div></div>
+    <div class="lk" data-cat="data" data-text="raspberry shake network citizen seismology"><span class="lk-badge b-data">Citizen</span><div class="lk-title"><a href="https://shakenet.raspberryshake.org/" target="_blank">ShakeNet — Raspberry Shake Network</a></div><div class="lk-desc">Citizen seismology network. Good for real-time urban noise monitoring studies.</div><div class="lk-domain">shakenet.raspberryshake.org</div></div>
+    <div class="lk" data-cat="data" data-text="slow earthquake database japan tremor sse"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://www-solid.eps.s.u-tokyo.ac.jp/~sloweq/" target="_blank">Slow Earthquake Database — Tokyo</a></div><div class="lk-desc">Comprehensive catalogue of tremor, SSEs and LFEs from Japan and worldwide subduction zones.</div><div class="lk-domain">eps.s.u-tokyo.ac.jp</div></div>
+    <div class="lk" data-cat="data" data-text="ayiti seismes haiti catalogue seismicity"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://ayiti.unice.fr/ayiti-seismes/" target="_blank">Ayiti-Séismes — Haiti Catalogue</a></div><div class="lk-desc">Seismicity catalogue for Haiti from Géoazur, Université Côte d'Azur.</div><div class="lk-domain">ayiti.unice.fr</div></div>
+    <div class="lk" data-cat="data" data-text="geonet new zealand quake search catalogue"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://quakesearch.geonet.org.nz/" target="_blank">GeoNet — Quake Search (NZ)</a></div><div class="lk-desc">New Zealand earthquake catalogue and waveform access from GNS Science.</div><div class="lk-domain">quakesearch.geonet.org.nz</div></div>
+    <div class="lk" data-cat="data" data-text="geonet sse slow slip manawatu new zealand"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://www.geonet.org.nz/earthquake/sse/manawatu" target="_blank">GeoNet — Slow Slip Events (NZ)</a></div><div class="lk-desc">Real-time slow slip event monitoring and bulletin for New Zealand.</div><div class="lk-domain">geonet.org.nz</div></div>
+    <div class="lk" data-cat="data" data-text="ohp dmc ocean bottom seismometer obs japan data"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://ohpdmc.eri.u-tokyo.ac.jp/dataset/index.html" target="_blank">OHP DMC — Ocean Bottom Seismometer Data</a></div><div class="lk-desc">OBS dataset repository from the Ocean Hemisphere Project. Used for Chile Triple Junction work.</div><div class="lk-domain">ohpdmc.eri.u-tokyo.ac.jp</div></div>
+    <div class="lk" data-cat="data" data-text="deeptrigger dynamically triggered seismicity isterre grenoble"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://www.isterre.fr/public/DEEPtrigger/map/first_map.html" target="_blank">DEEPtrigger — Dynamically Triggered Seismicity</a></div><div class="lk-desc">ISTerre database of dynamically triggered seismicity events worldwide.</div><div class="lk-domain">isterre.fr</div></div>
+    <div class="lk" data-cat="data" data-text="iris earthscope seismo archives historical"><span class="lk-badge b-data">Archive</span><div class="lk-title"><a href="http://ds.iris.edu/seismo-archives/quakes/" target="_blank">IRIS — Earthquake Seismogram Archives</a></div><div class="lk-desc">Historical seismogram archive from IRIS/EarthScope for major earthquakes.</div><div class="lk-domain">ds.iris.edu</div></div>
+    <div class="lk" data-cat="data" data-text="mustang databrowser iris waveform quality"><span class="lk-badge b-data">QC</span><div class="lk-title"><a href="https://ds.iris.edu/mustang/databrowser/" target="_blank">IRIS MUSTANG — Data Quality Browser</a></div><div class="lk-desc">Metric-based data quality measurement for seismic waveforms.</div><div class="lk-domain">ds.iris.edu</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     2. GEODESY & GPS
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-geodesy" data-cat="geodesy">
+  <div class="cat-heading">🛰️ Geodesy &amp; GPS <span class="cat-count" id="cnt-geodesy"></span></div>
+  <p class="cat-desc">GNSS networks, GPS time series, InSAR portals, and tectonic models.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="geodesy" data-text="nevada geodetic lab ngl gps gnss station network map"><span class="lk-badge b-data">GPS</span><div class="lk-title"><a href="http://geodesy.unr.edu/NGLStationPages/gpsnetmap/GPSNetMap.html" target="_blank">Nevada Geodetic Lab — GPS Network Map</a></div><div class="lk-desc">Global GPS station map with time series. Key resource for transient deformation research.</div><div class="lk-domain">geodesy.unr.edu</div></div>
+    <div class="lk" data-cat="geodesy" data-text="unr ngl station database gps time series download"><span class="lk-badge b-data">GPS</span><div class="lk-title"><a href="http://geodesy.unr.edu/NGLStationPages/" target="_blank">UNR NGL — Station Database &amp; Time Series</a></div><div class="lk-desc">Download processed GPS position time series for thousands of global stations.</div><div class="lk-domain">geodesy.unr.edu</div></div>
+    <div class="lk" data-cat="geodesy" data-text="slab 2 usgs subduction zone geometry 3d"><span class="lk-badge b-data">Model</span><div class="lk-title"><a href="https://earthquake.usgs.gov/slab2/" target="_blank">USGS Slab 2 — Subduction Zone Geometry</a></div><div class="lk-desc">3D geometry model of global subduction zones. Essential for coupling and hazard models.</div><div class="lk-domain">earthquake.usgs.gov</div></div>
+    <div class="lk" data-cat="geodesy" data-text="slab 2 sciencebase data download"><span class="lk-badge b-data">Model</span><div class="lk-title"><a href="https://www.sciencebase.gov/catalog/item/5aa1b00ee4b0b1c392e86467" target="_blank">Slab 2.0 — ScienceBase Data Download</a></div><div class="lk-desc">USGS ScienceBase repository for Slab 2.0 grids in netCDF format.</div><div class="lk-domain">sciencebase.gov</div></div>
+    <div class="lk" data-cat="geodesy" data-text="comet lics sentinel-1 insar portal uk"><span class="lk-badge b-data">InSAR</span><div class="lk-title"><a href="https://comet.nerc.ac.uk/COMET-LiCS-portal/" target="_blank">COMET-LiCS — Sentinel-1 InSAR Portal</a></div><div class="lk-desc">UK NERC COMET's automated Sentinel-1 InSAR portal for tectonic deformation mapping.</div><div class="lk-domain">comet.nerc.ac.uk</div></div>
+    <div class="lk" data-cat="geodesy" data-text="geonet geodetic gnss new zealand map"><span class="lk-badge b-data">GPS</span><div class="lk-title"><a href="https://www.geonet.org.nz/data/gnss/map" target="_blank">GeoNet — Geodetic GNSS Network (NZ)</a></div><div class="lk-desc">New Zealand GNSS network with position time series and data access.</div><div class="lk-domain">geonet.org.nz</div></div>
+    <div class="lk" data-cat="geodesy" data-text="pyacs gps time series analysis nocquet python"><span class="lk-badge b-soft">Software</span><div class="lk-title"><a href="https://jmnocquet.github.io/pyacs_docs/pyacs/tutorial_gts.html" target="_blank">PYACS — GPS Time Series Analysis</a></div><div class="lk-desc">Python toolbox by J.-M. Nocquet for GNSS time series processing and transient detection (my PhD supervisor).</div><div class="lk-domain">jmnocquet.github.io</div></div>
+    <div class="lk" data-cat="geodesy" data-text="kalman filter insar time series kfts python"><span class="lk-badge b-soft">Software</span><div class="lk-title"><a href="https://github.com/ManonDls/KFTS-InSAR" target="_blank">KFTS-InSAR — Kalman Filter for InSAR Time Series</a></div><div class="lk-desc">GitHub repo for Kalman Filter-based InSAR time series analysis.</div><div class="lk-domain">github.com/ManonDls</div></div>
+    <div class="lk" data-cat="geodesy" data-text="submachine earth models mantle tomography seismic viewer"><span class="lk-badge b-data">Model</span><div class="lk-title"><a href="https://www.earth.ox.ac.uk/~smachine/cgi/index.php" target="_blank">SubMachine — Earth Model Repository</a></div><div class="lk-desc">Oxford web-based access to global mantle tomography and seismic Earth models.</div><div class="lk-domain">earth.ox.ac.uk</div></div>
+    <div class="lk" data-cat="geodesy" data-text="chaf chilean active faults fallasactivas database"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://fallasactivas.cl/" target="_blank">CHAF — Chilean Active Fault Database</a></div><div class="lk-desc">Georeferenced database of active faults in Chile (CYCLO project).</div><div class="lk-domain">fallasactivas.cl</div></div>
+    <div class="lk" data-cat="geodesy" data-text="shoa citsu tsunami inundation maps chile"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="http://www.shoa.cl/php/citsu.php" target="_blank">SHOA — Cartas de Inundación por Tsunami (CITSU)</a></div><div class="lk-desc">Chilean Navy's tsunami inundation maps for coastal cities.</div><div class="lk-domain">shoa.cl</div></div>
+    <div class="lk" data-cat="geodesy" data-text="snivel velocity seismic gnss python crowellbw"><span class="lk-badge b-soft">Software</span><div class="lk-title"><a href="https://github.com/crowellbw/SNIVEL" target="_blank">SNIVEL — Seismic Velocity from GNSS</a></div><div class="lk-desc">Python code for computing seismic velocities from high-rate GPS data.</div><div class="lk-domain">github.com/crowellbw</div></div>
+    <div class="lk" data-cat="geodesy" data-text="gps calendar ngs noaa week number"><span class="lk-badge b-tools">Tool</span><div class="lk-title"><a href="https://www.ngs.noaa.gov/CORS/Gpscal.shtml" target="_blank">GPS Calendar — NGS/NOAA</a></div><div class="lk-desc">GPS week number converter and calendar tool.</div><div class="lk-domain">ngs.noaa.gov</div></div>
+    <div class="lk" data-cat="geodesy" data-text="space geodesy eth zurich gitlab public"><span class="lk-badge b-data">Resource</span><div class="lk-title"><a href="https://gitlab.ethz.ch/spacegeodesy_public" target="_blank">Space Geodesy — ETH Zürich GitLab</a></div><div class="lk-desc">Public repository from ETH Zurich's Space Geodesy group: codes and teaching materials.</div><div class="lk-domain">gitlab.ethz.ch</div></div>
+    <div class="lk" data-cat="geodesy" data-text="gplately pygplates plate tectonics python reconstruction"><span class="lk-badge b-soft">Software</span><div class="lk-title"><a href="https://www.gplates.org/" target="_blank">GPlates — Plate Tectonics Visualization</a></div><div class="lk-desc">Python-based plate tectonic reconstruction and visualization tool.</div><div class="lk-domain">gplates.org</div></div>
+    <div class="lk" data-cat="geodesy" data-text="marine lacustrine geological samples noaa ngdc cores"><span class="lk-badge b-data">Data</span><div class="lk-title"><a href="https://www.ngdc.noaa.gov/mgg/curator/" target="_blank">NOAA — Marine &amp; Lacustrine Geological Samples</a></div><div class="lk-desc">NOAA/NGDC repository for marine sediment cores and geological samples.</div><div class="lk-domain">ngdc.noaa.gov</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     3. SOFTWARE
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-software" data-cat="software">
+  <div class="cat-heading">⚙️ Seismology Software <span class="cat-count" id="cnt-software"></span></div>
+  <p class="cat-desc">Tools for earthquake location, waveform analysis, source inversion, strong-motion simulation, and noise monitoring.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="software" data-text="nonlinloc lomax earthquake location probabilistic"><span class="lk-badge b-soft">Location</span><div class="lk-title"><a href="https://alomax.free.fr/nlloc/" target="_blank">NonLinLoc — Anthony Lomax</a></div><div class="lk-desc">Non-linear probabilistic earthquake location program. Industry standard for local seismicity.</div><div class="lk-domain">alomax.free.fr</div></div>
+    <div class="lk" data-cat="software" data-text="cps herrmann surface wave dispersion layer model slu"><span class="lk-badge b-soft">Modeling</span><div class="lk-title"><a href="https://www.eas.slu.edu/People/RBHerrmann/CPS330.html" target="_blank">CPS 330 — R.B. Herrmann</a></div><div class="lk-desc">Computer Programs in Seismology. Surface wave, body wave and synthetic seismogram computation.</div><div class="lk-domain">eas.slu.edu</div></div>
+    <div class="lk" data-cat="software" data-text="pyrocko seismology toolbox python waveform processing"><span class="lk-badge b-soft">Python</span><div class="lk-title"><a href="https://pyrocko.org/" target="_blank">Pyrocko — Seismology Toolbox</a></div><div class="lk-desc">Versatile Python seismology toolbox: waveform processing, synthetic seismograms, inversion.</div><div class="lk-domain">pyrocko.org</div></div>
+    <div class="lk" data-cat="software" data-text="eqcorrscan matched filter template detection python"><span class="lk-badge b-soft">Detection</span><div class="lk-title"><a href="https://eqcorrscan.readthedocs.io/en/latest/index.html" target="_blank">EQcorrscan — Matched Filter Detection</a></div><div class="lk-desc">Python package for matched-filter earthquake detection and relative relocation.</div><div class="lk-domain">eqcorrscan.readthedocs.io</div></div>
+    <div class="lk" data-cat="software" data-text="fast matched filter gpu cross correlation seismology"><span class="lk-badge b-soft">Detection</span><div class="lk-title"><a href="https://github.com/beridel/fast_matched_filter" target="_blank">fast_matched_filter — GPU Cross-Correlation</a></div><div class="lk-desc">Fast GPU-based matched filter implementation in Python/CUDA for high-volume detection.</div><div class="lk-domain">github.com/beridel</div></div>
+    <div class="lk" data-cat="software" data-text="mt5 teleseismic body wave moment tensor inversion mccaffrey"><span class="lk-badge b-soft">Inversion</span><div class="lk-title"><a href="https://robmccaffrey.github.io/MT5/MT5.html" target="_blank">MT5 — Teleseismic Body-Wave Inversion</a></div><div class="lk-desc">McCaffrey's program for moment tensor inversion from teleseismic body waves.</div><div class="lk-domain">robmccaffrey.github.io</div></div>
+    <div class="lk" data-cat="software" data-text="kikuchi kanamori teleseismic body wave inversion program tokyo eri"><span class="lk-badge b-soft">Inversion</span><div class="lk-title"><a href="http://wwweic.eri.u-tokyo.ac.jp/ETAL/KIKUCHI/" target="_blank">Kikuchi-Kanamori — Teleseismic Body Wave Inversion</a></div><div class="lk-desc">Classic teleseismic body-wave inversion program. Used in many Chilean earthquake source studies.</div><div class="lk-domain">eri.u-tokyo.ac.jp</div></div>
+    <div class="lk" data-cat="software" data-text="wasp slip inversion finite fault python github"><span class="lk-badge b-soft">Inversion</span><div class="lk-title"><a href="https://github.com/slipinversion/WASP" target="_blank">WASP — Slip Inversion (GitHub)</a></div><div class="lk-desc">Waveform Analysis of Seismic and high-rate GPS data for slip model inversion.</div><div class="lk-domain">github.com/slipinversion</div></div>
+    <div class="lk" data-cat="software" data-text="mudpy geodetic slip inversion finite fault python melgar"><span class="lk-badge b-soft">Inversion</span><div class="lk-title"><a href="https://github.com/dmelgarm/MudPy" target="_blank">MudPy — Geodetic Slip Inversion</a></div><div class="lk-desc">Python package for modeling static offsets and coseismic slip from GPS and InSAR data.</div><div class="lk-domain">github.com/dmelgarm</div></div>
+    <div class="lk" data-cat="software" data-text="quakemigrate migration location seismicity python"><span class="lk-badge b-soft">Location</span><div class="lk-title"><a href="https://github.com/QuakeMigrate/QuakeMigrate" target="_blank">QuakeMigrate — Migration-Based Location</a></div><div class="lk-desc">Python framework for automatic detection and location of seismicity using migration.</div><div class="lk-domain">github.com/QuakeMigrate</div></div>
+    <div class="lk" data-cat="software" data-text="growclust double difference relocation cluster seismicity"><span class="lk-badge b-soft">Relocation</span><div class="lk-title"><a href="https://github.com/dttrugman/GrowClust" target="_blank">GrowClust — Cluster Relocation</a></div><div class="lk-desc">Hierarchical clustering algorithm for relative relocation of seismicity clusters.</div><div class="lk-domain">github.com/dttrugman</div></div>
+    <div class="lk" data-cat="software" data-text="hypologi svi variational inference location hypocenter"><span class="lk-badge b-soft">Location</span><div class="lk-title"><a href="https://github.com/Ulvetanna/HypoSVI" target="_blank">HypoSVI — Variational Inference Location</a></div><div class="lk-desc">Stochastic Variational Inference for earthquake hypocenter determination.</div><div class="lk-domain">github.com/Ulvetanna</div></div>
+    <div class="lk" data-cat="software" data-text="seisflows seismic waveform inversion workflow python adjoint"><span class="lk-badge b-soft">Inversion</span><div class="lk-title"><a href="https://github.com/adjtomo/seisflows" target="_blank">SeisFlows — Waveform Inversion Workflow</a></div><div class="lk-desc">Automated workflow manager for seismic inversion using adjoint methods (SPECFEM-based).</div><div class="lk-domain">github.com/adjtomo</div></div>
+    <div class="lk" data-cat="software" data-text="msnoise seismic noise monitoring ambient velocity changes"><span class="lk-badge b-soft">Monitoring</span><div class="lk-title"><a href="http://www.msnoise.org/" target="_blank">MSNoise — Ambient Noise Monitoring</a></div><div class="lk-desc">Python package for monitoring seismic velocity changes using ambient noise cross-correlation.</div><div class="lk-domain">msnoise.org</div></div>
+    <div class="lk" data-cat="software" data-text="seismic ambient noise velocity changes python makus"><span class="lk-badge b-soft">Monitoring</span><div class="lk-title"><a href="https://github.com/PeterMakus/SeisMIC" target="_blank">SeisMIC — Seismic Noise Monitoring</a></div><div class="lk-desc">Modern Python package for seismic interferometry and velocity change monitoring.</div><div class="lk-domain">github.com/PeterMakus</div></div>
+    <div class="lk" data-cat="software" data-text="exsim stochastic finite fault simulation boore dave"><span class="lk-badge b-soft">Ground Motion</span><div class="lk-title"><a href="https://www.daveboore.com/software_online.html" target="_blank">EXSIM / SMSIM — Dave Boore</a></div><div class="lk-desc">Stochastic ground-motion simulation software. EXSIM for finite-fault, SMSIM for point source.</div><div class="lk-domain">daveboore.com</div></div>
+    <div class="lk" data-cat="software" data-text="taup travel time seismic phases java iris"><span class="lk-badge b-soft">Phases</span><div class="lk-title"><a href="https://www.seis.sc.edu/taup/" target="_blank">TauP — Travel Time Calculator</a></div><div class="lk-desc">Seismic phase travel time calculator. Standard tool for phase identification and ray tracing.</div><div class="lk-domain">seis.sc.edu</div></div>
+    <div class="lk" data-cat="software" data-text="instaseis broadband seismogram database normal modes instaneous"><span class="lk-badge b-soft">Synthetics</span><div class="lk-title"><a href="https://instaseis.net/" target="_blank">Instaseis — Broadband Seismograms</a></div><div class="lk-desc">Database approach for computing broadband seismograms using pre-computed Green's functions.</div><div class="lk-domain">instaseis.net</div></div>
+    <div class="lk" data-cat="software" data-text="pyrocko grond optimization source parameter inversion"><span class="lk-badge b-soft">Inversion</span><div class="lk-title"><a href="https://github.com/pyrocko/grond" target="_blank">Grond — Source Parameter Optimization</a></div><div class="lk-desc">Bootstrap-based probabilistic optimization for seismic source parameters (Pyrocko ecosystem).</div><div class="lk-domain">github.com/pyrocko</div></div>
+    <div class="lk" data-cat="software" data-text="pyrocko beat kinematic finite fault inversion bayesian"><span class="lk-badge b-soft">Inversion</span><div class="lk-title"><a href="https://pyrocko.org/beat/docs/current/examples/FFI_kinematic.html" target="_blank">BEAT — Bayesian Earthquake Analysis Tool</a></div><div class="lk-desc">Full kinematic finite-fault inversion using Bayesian inference (Pyrocko ecosystem).</div><div class="lk-domain">pyrocko.org</div></div>
+    <div class="lk" data-cat="software" data-text="axitra synthetic seismogram layer model haskell fortran"><span class="lk-badge b-soft">Synthetics</span><div class="lk-title"><a href="https://github.com/coutanto/axitra" target="_blank">Axitra — Synthetic Seismograms</a></div><div class="lk-desc">Fortran/Python code for computing synthetic seismograms in layered media using propagator matrices.</div><div class="lk-domain">github.com/coutanto</div></div>
+    <div class="lk" data-cat="software" data-text="geopsy hvsr microtremor site characterization surface waves"><span class="lk-badge b-soft">Site</span><div class="lk-title"><a href="https://www.geopsy.org/" target="_blank">Geopsy — Ambient Vibrations &amp; HVSR</a></div><div class="lk-desc">Software for processing seismic noise, H/V spectral ratios and dispersion curves. Used for site characterization.</div><div class="lk-domain">geopsy.org</div></div>
+    <div class="lk" data-cat="software" data-text="mtspec multitaper spectral estimation python seismology"><span class="lk-badge b-soft">Python</span><div class="lk-title"><a href="https://krischer.github.io/mtspec/index.html" target="_blank">mtspec — Multitaper Spectral Estimation</a></div><div class="lk-desc">Python wrapper for multitaper spectral estimation. Useful for source spectra and noise analysis.</div><div class="lk-domain">krischer.github.io</div></div>
+    <div class="lk" data-cat="software" data-text="okapy okada deformation python ground surface"><span class="lk-badge b-soft">Deformation</span><div class="lk-title"><a href="https://github.com/geniusinaction/okapy" target="_blank">OkaPy — Okada Surface Deformation</a></div><div class="lk-desc">Python implementation of Okada (1992) surface deformation from dislocation sources.</div><div class="lk-domain">github.com/geniusinaction</div></div>
+    <div class="lk" data-cat="software" data-text="obspy python seismology waveform fdsn webservice client"><span class="lk-badge b-soft">Python</span><div class="lk-title"><a href="https://docs.obspy.org/packages/obspy.clients.fdsn.html" target="_blank">ObsPy — FDSN Web Service Client</a></div><div class="lk-desc">ObsPy documentation for FDSN client: download waveforms, metadata, and events from any FDSN node.</div><div class="lk-domain">docs.obspy.org</div></div>
+    <div class="lk" data-cat="software" data-text="gamma association phase picker seismic network ai4eps"><span class="lk-badge b-soft">Detection</span><div class="lk-title"><a href="https://github.com/AI4EPS/GaMMA" target="_blank">GaMMA — Phase Association (AI4EPS)</a></div><div class="lk-desc">Gaussian Mixture Model Associator for seismic phase picks from dense networks.</div><div class="lk-domain">github.com/AI4EPS</div></div>
+    <div class="lk" data-cat="software" data-text="phasenet deep learning phase picker seismic waveform"><span class="lk-badge b-soft">Detection</span><div class="lk-title"><a href="https://github.com/AI4EPS/PhaseNet" target="_blank">PhaseNet — Deep Learning Phase Picker</a></div><div class="lk-desc">U-Net-based deep learning model for seismic phase detection and picking.</div><div class="lk-domain">github.com/AI4EPS</div></div>
+    <div class="lk" data-cat="software" data-text="eqtransformer transformer seismic phase picking detection"><span class="lk-badge b-soft">Detection</span><div class="lk-title"><a href="https://github.com/smousavi05/EQTransformer" target="_blank">EQTransformer — Attention-Based Picker</a></div><div class="lk-desc">Attention-based deep learning framework for simultaneous seismic detection and phase picking.</div><div class="lk-domain">github.com/smousavi05</div></div>
+    <div class="lk" data-cat="software" data-text="scatseisnet scattering transform seismic network detection"><span class="lk-badge b-soft">Detection</span><div class="lk-title"><a href="https://github.com/scatseisnet/scatseisnet" target="_blank">ScatSeisNet — Scattering Transform Network</a></div><div class="lk-desc">Seismic signal classification using scattering transform networks.</div><div class="lk-domain">github.com/scatseisnet</div></div>
+    <div class="lk" data-cat="software" data-text="etas epidemic type aftershock sequence seismicity model python"><span class="lk-badge b-soft">Seismicity</span><div class="lk-title"><a href="https://github.com/lmizrahi/etas" target="_blank">ETAS — Epidemic-Type Aftershock Model</a></div><div class="lk-desc">Python implementation of the ETAS model for seismicity rate forecasting.</div><div class="lk-domain">github.com/lmizrahi</div></div>
+    <div class="lk" data-cat="software" data-text="dailyspec spectrogram seismic daily noise stahler"><span class="lk-badge b-soft">Noise</span><div class="lk-title"><a href="https://github.com/sstaehler/dailyspec" target="_blank">dailyspec — Daily Spectrograms</a></div><div class="lk-desc">Clean spectrograms from seismic stations for noise level monitoring.</div><div class="lk-domain">github.com/sstaehler</div></div>
+    <div class="lk" data-cat="software" data-text="easy quake machine learning earthquake detection location"><span class="lk-badge b-soft">Detection</span><div class="lk-title"><a href="https://github.com/jakewalter/easyQuake" target="_blank">easyQuake — ML-Driven Detection &amp; Location</a></div><div class="lk-desc">End-to-end machine learning driven earthquake detection, location and analysis pipeline.</div><div class="lk-domain">github.com/jakewalter</div></div>
+    <div class="lk" data-cat="software" data-text="das anomaly detection distributed acoustic sensing python"><span class="lk-badge b-soft">DAS</span><div class="lk-title"><a href="https://github.com/ahmadtourei/das-anomaly" target="_blank">DAS Anomaly Detection (GitHub)</a></div><div class="lk-desc">Python tools for anomaly detection in Distributed Acoustic Sensing (DAS) data.</div><div class="lk-domain">github.com/ahmadtourei</div></div>
+    <div class="lk" data-cat="software" data-text="ground motion simulation shakemap lu bodlukas"><span class="lk-badge b-soft">Ground Motion</span><div class="lk-title"><a href="https://github.com/bodlukas/ground-motion-simulation-shakemap" target="_blank">Ground Motion Simulation ShakeMap</a></div><div class="lk-desc">Python code for ground motion simulation used for ShakeMap generation.</div><div class="lk-domain">github.com/bodlukas</div></div>
+    <div class="lk" data-cat="software" data-text="iris gmv global map view seismogram visualization"><span class="lk-badge b-soft">Visualization</span><div class="lk-title"><a href="https://github.com/iris-edu/gmv" target="_blank">IRIS GMV — Global Map View</a></div><div class="lk-desc">Visualize ground motion propagation from large earthquakes across global seismic networks.</div><div class="lk-domain">github.com/iris-edu</div></div>
+    <div class="lk" data-cat="software" data-text="mineral clustering geology petrology python florentaden"><span class="lk-badge b-soft">Geoscience</span><div class="lk-title"><a href="https://github.com/florentaden/mineral_clustering" target="_blank">Mineral Clustering (GitHub)</a></div><div class="lk-desc">Python toolkit for clustering and classification of mineral compositions.</div><div class="lk-domain">github.com/florentaden</div></div>
+    <div class="lk" data-cat="software" data-text="simpeg simulation parameter estimation geophysics python"><span class="lk-badge b-soft">Geophysics</span><div class="lk-title"><a href="https://simpeg.xyz/" target="_blank">SimPEG — Simulation &amp; Parameter Estimation</a></div><div class="lk-desc">Python framework for geophysical simulation and parameter estimation (EM, gravity, seismic).</div><div class="lk-domain">simpeg.xyz</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     4. ML / AI
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-ml" data-cat="ml">
+  <div class="cat-heading">🤖 Machine Learning in Seismology <span class="cat-count" id="cnt-ml"></span></div>
+  <p class="cat-desc">Deep learning, ML frameworks and tutorials applied to geoscience and seismology problems.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="ml" data-text="dl seismology deep learning github mousavi"><span class="lk-badge b-ml">ML</span><div class="lk-title"><a href="https://github.com/smousavi05/dl_seismology" target="_blank">DL Seismology — GitHub Resources</a></div><div class="lk-desc">Curated collection of deep learning applied to seismology problems.</div><div class="lk-domain">github.com/smousavi05</div></div>
+    <div class="lk" data-cat="ml" data-text="intro machine learning geoscience python uieda leouieda"><span class="lk-badge b-ml">Tutorial</span><div class="lk-title"><a href="https://github.com/leouieda/ml-intro" target="_blank">Intro to ML for Geosciences — Uieda</a></div><div class="lk-desc">Introductory machine learning tutorials in Python tailored for geoscience applications.</div><div class="lk-domain">github.com/leouieda</div></div>
+    <div class="lk" data-cat="ml" data-text="pnw machine learning pacific northwest seismology niyiyu"><span class="lk-badge b-ml">ML</span><div class="lk-title"><a href="https://github.com/niyiyu/PNW-ML" target="_blank">PNW-ML — Pacific Northwest ML Models</a></div><div class="lk-desc">Machine learning seismic phase models trained on Pacific Northwest seismograms.</div><div class="lk-domain">github.com/niyiyu</div></div>
+    <div class="lk" data-cat="ml" data-text="frontiers earth sciences deep learning seydoux leonard"><span class="lk-badge b-ml">Course</span><div class="lk-title"><a href="https://github.com/leonard-seydoux/frontiers_in_earth_sciences" target="_blank">Frontiers in Earth Sciences — ML Course</a></div><div class="lk-desc">Jupyter notebooks for deep learning in Earth Sciences (L. Seydoux, IPGP).</div><div class="lk-domain">github.com/leonard-seydoux</div></div>
+    <div class="lk" data-cat="ml" data-text="ml geosciences seydoux machine learning notebooks"><span class="lk-badge b-ml">Course</span><div class="lk-title"><a href="https://github.com/leonard-seydoux/ML-Geosciences" target="_blank">ML-Geosciences — Seydoux Notebooks</a></div><div class="lk-desc">Course notebooks covering ML fundamentals applied to geoscience datasets.</div><div class="lk-domain">github.com/leonard-seydoux</div></div>
+    <div class="lk" data-cat="ml" data-text="ai4eps artificial intelligence earthquakes phase ai github"><span class="lk-badge b-ml">ML</span><div class="lk-title"><a href="https://github.com/AI4EPS" target="_blank">AI4EPS — AI for Earth &amp; Planetary Sciences</a></div><div class="lk-desc">GitHub organization with multiple ML tools for seismology: PhaseNet, GaMMA, SeisFoundation, etc.</div><div class="lk-domain">github.com/AI4EPS</div></div>
+    <div class="lk" data-cat="ml" data-text="sse slow slip detection machine learning grenoble gricad"><span class="lk-badge b-ml">Detection</span><div class="lk-title"><a href="https://gricad-gitlab.univ-grenoble-alpes.fr/costangi/sse-detection" target="_blank">SSE Detection — ML (Grenoble)</a></div><div class="lk-desc">Machine learning algorithms for detecting slow slip events in GNSS time series (Costantini, ISTerre).</div><div class="lk-domain">gricad-gitlab.univ-grenoble-alpes.fr</div></div>
+    <div class="lk" data-cat="ml" data-text="tsfresh time series feature extraction python classification"><span class="lk-badge b-ml">Python</span><div class="lk-title"><a href="https://tsfresh.readthedocs.io/en/latest/" target="_blank">tsfresh — Time Series Feature Extraction</a></div><div class="lk-desc">Automated extraction of relevant time series features for ML classification and regression.</div><div class="lk-domain">tsfresh.readthedocs.io</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     5. MAPS & TOPOGRAPHY
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-maps" data-cat="maps">
+  <div class="cat-heading">🗺️ Maps, Topography &amp; Data Visualization <span class="cat-count" id="cnt-maps"></span></div>
+  <p class="cat-desc">GIS resources, topographic data, polygon generation, and scientific visualization tools.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="maps" data-text="gadm administrative boundaries shapefile country polygon download"><span class="lk-badge b-tools">GIS</span><div class="lk-title"><a href="https://gadm.org/download_country_v3.html" target="_blank">GADM — Administrative Boundaries</a></div><div class="lk-desc">Download country and subnational administrative boundary shapefiles.</div><div class="lk-domain">gadm.org</div></div>
+    <div class="lk" data-cat="maps" data-text="openstreetmap nominatim geocoder polygon city boundary json"><span class="lk-badge b-tools">GIS</span><div class="lk-title"><a href="https://nominatim.openstreetmap.org/ui/search.html?q=Metropolitan+Region&countrycodes=cl" target="_blank">Nominatim — OpenStreetMap Geocoder</a></div><div class="lk-desc">Geocoding search for city boundaries and polygon extraction from OpenStreetMap.</div><div class="lk-domain">nominatim.openstreetmap.org</div></div>
+    <div class="lk" data-cat="maps" data-text="polygon creation openstreetmap france boundary"><span class="lk-badge b-tools">GIS</span><div class="lk-title"><a href="http://polygons.openstreetmap.fr/index.py" target="_blank">OpenStreetMap — Polygon Creator</a></div><div class="lk-desc">Extract polygon boundaries from OpenStreetMap for any administrative unit.</div><div class="lk-domain">polygons.openstreetmap.fr</div></div>
+    <div class="lk" data-cat="maps" data-text="topex ucsd extract xyz grid topo gravity gmt"><span class="lk-badge b-tools">Topo</span><div class="lk-title"><a href="https://topex.ucsd.edu/cgi-bin/get_data.cgi" target="_blank">TOPEX/UCSD — Extract XYZ Topography/Gravity Grid</a></div><div class="lk-desc">Extracts gridded topography or gravity data for any region. GMT-compatible output.</div><div class="lk-domain">topex.ucsd.edu</div></div>
+    <div class="lk" data-cat="maps" data-text="global tectonics database plates faults boundaries github hasterok"><span class="lk-badge b-tools">GIS</span><div class="lk-title"><a href="https://github.com/dhasterok/global_tectonics/" target="_blank">Global Tectonics Database — Hasterok</a></div><div class="lk-desc">GitHub repository with global tectonic plates, faults, and boundary data in standard GIS formats.</div><div class="lk-domain">github.com/dhasterok</div></div>
+    <div class="lk" data-cat="maps" data-text="plot digitizer image extract data points graph figure"><span class="lk-badge b-tools">Tool</span><div class="lk-title"><a href="https://plotdigitizer.com/" target="_blank">Plot Digitizer</a></div><div class="lk-desc">Extract numerical data from plots in published figures. Essential for meta-analysis work.</div><div class="lk-domain">plotdigitizer.com</div></div>
+    <div class="lk" data-cat="maps" data-text="image scanner web plot digitizer automeris wpd data points"><span class="lk-badge b-tools">Tool</span><div class="lk-title"><a href="https://apps.automeris.io/wpd/" target="_blank">WebPlotDigitizer — Automeris</a></div><div class="lk-desc">Browser-based tool to extract XY data from images of plots and graphs.</div><div class="lk-domain">apps.automeris.io</div></div>
+    <div class="lk" data-cat="maps" data-text="html rgb hsl color codes palettes web design"><span class="lk-badge b-tools">Colors</span><div class="lk-title"><a href="https://htmlcolorcodes.com/es/" target="_blank">HTML Color Codes — RGB, HSL</a></div><div class="lk-desc">Color picker, palettes, and code converters for scientific figure design.</div><div class="lk-domain">htmlcolorcodes.com</div></div>
+    <div class="lk" data-cat="maps" data-text="colorgical visual colors palette scientific plotting brown"><span class="lk-badge b-tools">Colors</span><div class="lk-title"><a href="http://vrl.cs.brown.edu/color" target="_blank">Colorgical — Visual Color Palettes</a></div><div class="lk-desc">Interactive tool to select visually distinct and accessible color palettes for data visualization.</div><div class="lk-domain">vrl.cs.brown.edu</div></div>
+    <div class="lk" data-cat="maps" data-text="mokole color palette visual palette design perceptual"><span class="lk-badge b-tools">Colors</span><div class="lk-title"><a href="https://mokole.com/palette.html" target="_blank">MOKOLE — Visual Color Palettes</a></div><div class="lk-desc">Generate large sets of visually distinct colors for plotting many categories.</div><div class="lk-domain">mokole.com</div></div>
+    <div class="lk" data-cat="maps" data-text="pygmt generic mapping tools python beginners tutorial egu"><span class="lk-badge b-tools">GMT/Python</span><div class="lk-title"><a href="https://www.generic-mapping-tools.org/egu22pygmt/intro.html" target="_blank">PyGMT for Beginners — EGU22 Tutorial</a></div><div class="lk-desc">Introduction to PyGMT: Python interface to the Generic Mapping Tools for geospatial figures.</div><div class="lk-domain">generic-mapping-tools.org</div></div>
+    <div class="lk" data-cat="maps" data-text="gmt special characters symbols postscript"><span class="lk-badge b-tools">GMT</span><div class="lk-title"><a href="https://www-k12.atmos.washington.edu/~ovens/gmt/doc/html/GMT_Docs/node153.html" target="_blank">GMT — Special Characters Reference</a></div><div class="lk-desc">Character code reference for GMT PostScript labels and annotations.</div><div class="lk-domain">atmos.washington.edu</div></div>
+    <div class="lk" data-cat="maps" data-text="gmt maps examples geological 3d block"><span class="lk-badge b-tools">GMT</span><div class="lk-title"><a href="http://mapasgeologicos.blogspot.com/2016/06/12-bloque-3d.html" target="_blank">GMT Maps — Geological Examples</a></div><div class="lk-desc">Blog with GMT examples including 3D block diagrams and geological map styles.</div><div class="lk-domain">mapasgeologicos.blogspot.com</div></div>
+    <div class="lk" data-cat="maps" data-text="mpl stereonet python matplotlib stereographic projection structural geology"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://mplstereonet.readthedocs.io/en/latest/" target="_blank">mplstereonet — Stereographic Projections</a></div><div class="lk-desc">Python library for stereographic and equal-area projections (fault planes, focal mechanisms).</div><div class="lk-domain">mplstereonet.readthedocs.io</div></div>
+    <div class="lk" data-cat="maps" data-text="red esterografica online stereonet web fault poles"><span class="lk-badge b-tools">Web</span><div class="lk-title"><a href="https://estereo.reyuntec.ar/" target="_blank">Red Estereográfica Online</a></div><div class="lk-desc">Web-based stereonet for plotting structural data (poles, planes, fault-slip data).</div><div class="lk-domain">estereo.reyuntec.ar</div></div>
+    <div class="lk" data-cat="maps" data-text="obspy plotting gallery seismogram waveform tutorial"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://docs.obspy.org/master/gallery.html#gallery" target="_blank">ObsPy — Plotting Gallery</a></div><div class="lk-desc">ObsPy gallery with examples of waveform, spectrogram, and station map plots.</div><div class="lk-domain">docs.obspy.org</div></div>
+    <div class="lk" data-cat="maps" data-text="matplotlib cheatsheets quick reference python plotting"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://github.com/matplotlib/cheatsheets" target="_blank">Matplotlib — Cheatsheets</a></div><div class="lk-desc">Official matplotlib cheatsheets and quick-reference guides for Python plotting.</div><div class="lk-domain">github.com/matplotlib</div></div>
+    <div class="lk" data-cat="maps" data-text="visible earthquakes insar images co-seismic deformation map"><span class="lk-badge b-tools">InSAR</span><div class="lk-title"><a href="https://visible-earthquakes.appspot.com/" target="_blank">Visible Earthquakes — InSAR Gallery</a></div><div class="lk-desc">Browse coseismic InSAR deformation maps from Sentinel-1 for major earthquakes worldwide.</div><div class="lk-domain">visible-earthquakes.appspot.com</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     6. EDUCATIONAL
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-edu" data-cat="edu">
+  <div class="cat-heading">📚 Educational Resources <span class="cat-count" id="cnt-edu"></span></div>
+  <p class="cat-desc">Notebooks, courses, tutorials and reference books for seismology, geophysics and Python in Earth sciences.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="edu" data-text="python data science handbook jakevdp vanderplas jupyter"><span class="lk-badge b-edu">Book</span><div class="lk-title"><a href="https://jakevdp.github.io/PythonDataScienceHandbook/" target="_blank">Python Data Science Handbook — VanderPlas</a></div><div class="lk-desc">Free online edition of the essential Python data science reference book.</div><div class="lk-domain">jakevdp.github.io</div></div>
+    <div class="lk" data-cat="edu" data-text="python earth science book petrelli geoscience notebook jupyter"><span class="lk-badge b-edu">Notebooks</span><div class="lk-title"><a href="https://github.com/petrelli-m/python_earth_science_book" target="_blank">Python Earth Science Book — Petrelli</a></div><div class="lk-desc">Jupyter notebooks covering Python data analysis for Earth Sciences.</div><div class="lk-domain">github.com/petrelli-m</div></div>
+    <div class="lk" data-cat="edu" data-text="awesome open geoscience software tools resources curated list"><span class="lk-badge b-edu">Resource list</span><div class="lk-title"><a href="https://github.com/softwareunderground/awesome-open-geoscience" target="_blank">Awesome Open Geoscience — Curated List</a></div><div class="lk-desc">Community-curated list of open-source geoscience software, datasets and learning resources.</div><div class="lk-domain">github.com/softwareunderground</div></div>
+    <div class="lk" data-cat="edu" data-text="seismo live seismology notebooks interactive python"><span class="lk-badge b-edu">Notebooks</span><div class="lk-title"><a href="http://www.seismo-live.org/" target="_blank">Seismo-Live — Interactive Seismology Notebooks</a></div><div class="lk-desc">Collection of Jupyter notebooks for learning computational seismology interactively.</div><div class="lk-domain">seismo-live.org</div></div>
+    <div class="lk" data-cat="edu" data-text="scipy lecture notes python scientific computing tutorial"><span class="lk-badge b-edu">Course</span><div class="lk-title"><a href="https://scipy-lectures.org/" target="_blank">SciPy Lecture Notes</a></div><div class="lk-desc">Comprehensive tutorials for scientific computing in Python: NumPy, SciPy, Matplotlib.</div><div class="lk-domain">scipy-lectures.org</div></div>
+    <div class="lk" data-cat="edu" data-text="ipgp scientific python cheatsheet quick reference paris"><span class="lk-badge b-edu">Reference</span><div class="lk-title"><a href="https://ipgp.github.io/scientific_python_cheat_sheet/" target="_blank">IPGP — Scientific Python Cheatsheet</a></div><div class="lk-desc">Compact reference for scientific Python (NumPy, SciPy, Matplotlib) maintained by IPGP.</div><div class="lk-domain">ipgp.github.io</div></div>
+    <div class="lk" data-cat="edu" data-text="python intro basico saularciniega github tutorial spanish"><span class="lk-badge b-edu">Tutorial</span><div class="lk-title"><a href="https://github.com/SaulArciniegaEsparza/Python-Basico" target="_blank">Python Básico — Intro (Spanish)</a></div><div class="lk-desc">Spanish-language introductory Python tutorial notebooks for STEM students.</div><div class="lk-domain">github.com/SaulArciniegaEsparza</div></div>
+    <div class="lk" data-cat="edu" data-text="iris usgs education earthquake hazards learning"><span class="lk-badge b-edu">Education</span><div class="lk-title"><a href="https://www.usgs.gov/programs/earthquake-hazards/education" target="_blank">USGS — Earthquake Education Resources</a></div><div class="lk-desc">K-12 and public education materials from the USGS Earthquake Hazards Program.</div><div class="lk-domain">usgs.gov</div></div>
+    <div class="lk" data-cat="edu" data-text="teach the earth nagt serc carleton geoscience education"><span class="lk-badge b-edu">Education</span><div class="lk-title"><a href="https://serc.carleton.edu/teachearth/index.html" target="_blank">Teach the Earth — NAGT</a></div><div class="lk-desc">NAGT portal for geoscience teaching resources, activities, and course materials.</div><div class="lk-domain">serc.carleton.edu</div></div>
+    <div class="lk" data-cat="edu" data-text="earth viewer biointeractive ancient earth geologic time history"><span class="lk-badge b-edu">Interactive</span><div class="lk-title"><a href="https://www.biointeractive.org/classroom-resources/earthviewer" target="_blank">EarthViewer — Geologic Time</a></div><div class="lk-desc">Interactive visualization of Earth through geologic time, climate, biodiversity and plate positions.</div><div class="lk-domain">biointeractive.org</div></div>
+    <div class="lk" data-cat="edu" data-text="ancient earth time geological reconstruction periods dinosaurs"><span class="lk-badge b-edu">Interactive</span><div class="lk-title"><a href="https://dinosaurpictures.org/ancient-earth/#240" target="_blank">Ancient Earth — Plate Reconstruction</a></div><div class="lk-desc">Interactive tool showing plate positions for any location at any geological time.</div><div class="lk-domain">dinosaurpictures.org</div></div>
+    <div class="lk" data-cat="edu" data-text="earth free oscillations normal modes toroidal spheroidal saviot cnrs"><span class="lk-badge b-edu">Interactive</span><div class="lk-title"><a href="https://saviot.cnrs.fr/terre/index.en.html" target="_blank">Earth Normal Modes — CNRS</a></div><div class="lk-desc">Visualization of Earth's free oscillation modes (toroidal and spheroidal) with audio.</div><div class="lk-domain">saviot.cnrs.fr</div></div>
+    <div class="lk" data-cat="edu" data-text="okada deformation focal mechanism streamlit app focal mechanism web"><span class="lk-badge b-edu">Interactive</span><div class="lk-title"><a href="https://share.streamlit.io/cedrictwardz/pyfocmec/main/app.py" target="_blank">PyFocMec — Focal Mechanism App</a></div><div class="lk-desc">Streamlit web app for visualizing and computing focal mechanisms interactively.</div><div class="lk-domain">streamlit.io</div></div>
+    <div class="lk" data-cat="edu" data-text="seismic explorer concord virtual labs plate tectonics earthquakes"><span class="lk-badge b-edu">Interactive</span><div class="lk-title"><a href="http://seismic-explorer.concord.org/" target="_blank">Seismic Explorer — Concord</a></div><div class="lk-desc">Interactive web tool for exploring global seismicity in the context of plate tectonics.</div><div class="lk-domain">seismic-explorer.concord.org</div></div>
+    <div class="lk" data-cat="edu" data-text="virtual rock collection microscope geology thin sections"><span class="lk-badge b-edu">Collection</span><div class="lk-title"><a href="https://www.virtualmicroscope.org/collections" target="_blank">Virtual Rock Collection — Microscope</a></div><div class="lk-desc">High-resolution scans of rocks under polarized light for online petrography teaching.</div><div class="lk-domain">virtualmicroscope.org</div></div>
+    <div class="lk" data-cat="edu" data-text="computational seismology leonard seydoux ipgp course notebooks python"><span class="lk-badge b-edu">Course</span><div class="lk-title"><a href="https://sites.google.com/view/leonard-seydoux/teaching?authuser=0" target="_blank">Computational Seismology — Seydoux (IPGP)</a></div><div class="lk-desc">Lecture notes and Python notebooks for computational seismology from IPGP.</div><div class="lk-domain">sites.google.com</div></div>
+    <div class="lk" data-cat="edu" data-text="global seismographic network iris history gsn broadband"><span class="lk-badge b-edu">Reference</span><div class="lk-title"><a href="https://www.iris.edu/hq/science_highlights/global_seismographic_networks_part_i_a_brief_history" target="_blank">Global Seismographic Network — History</a></div><div class="lk-desc">IRIS summary of the history and status of the Global Seismographic Network.</div><div class="lk-domain">iris.edu</div></div>
+    <div class="lk" data-cat="edu" data-text="volcano bulletin smithsonian global volcanism eruptions history"><span class="lk-badge b-edu">Data</span><div class="lk-title"><a href="https://volcano.si.edu/" target="_blank">Smithsonian — Global Volcanism Program</a></div><div class="lk-desc">Weekly volcanic activity bulletins and comprehensive eruption database.</div><div class="lk-domain">volcano.si.edu</div></div>
+    <div class="lk" data-cat="edu" data-text="python para ciencias de la tierra damzar medium tutorial spanish"><span class="lk-badge b-edu">Tutorial</span><div class="lk-title"><a href="https://damzar.medium.com/python-para-ciencias-de-la-tierra-8f55e534025f" target="_blank">Python para Ciencias de la Tierra (Spanish)</a></div><div class="lk-desc">Spanish-language introduction to Python for Earth Sciences published on Medium.</div><div class="lk-domain">damzar.medium.com</div></div>
+    <div class="lk" data-cat="edu" data-text="earthquake size magnitude moment energy comparison src australia"><span class="lk-badge b-edu">Reference</span><div class="lk-title"><a href="https://www.src.com.au/earthquake-size/" target="_blank">Earthquake Size — SRC Australia</a></div><div class="lk-desc">Visual comparison of earthquake sizes, moment magnitudes, and energy released.</div><div class="lk-domain">src.com.au</div></div>
+    <div class="lk" data-cat="edu" data-text="tiitba historical seismograms interface zenodo archive"><span class="lk-badge b-edu">Archive</span><div class="lk-title"><a href="https://zenodo.org/record/6272823" target="_blank">TIITBA — Historical Seismogram Interface</a></div><div class="lk-desc">Tool for browsing and accessing digitized historical seismograms from paper records.</div><div class="lk-domain">zenodo.org</div></div>
+    <div class="lk" data-cat="edu" data-text="doi2bib bibtex reference doi citation automatic"><span class="lk-badge b-edu">Tool</span><div class="lk-title"><a href="https://www.doi2bib.org/" target="_blank">doi2bib — DOI to BibTeX</a></div><div class="lk-desc">Convert any DOI directly to a BibTeX citation entry. Huge time-saver for paper writing.</div><div class="lk-domain">doi2bib.org</div></div>
+    <div class="lk" data-cat="edu" data-text="latex examples tikz gallery templates figures scientific"><span class="lk-badge b-edu">LaTeX</span><div class="lk-title"><a href="https://texample.net/media/tikz/examples/TEX/" target="_blank">LaTeX / TikZ Examples Gallery</a></div><div class="lk-desc">Gallery of TikZ examples for scientific figures, diagrams and illustrations.</div><div class="lk-domain">texample.net</div></div>
+    <div class="lk" data-cat="edu" data-text="how write research article tips twitter thread advice"><span class="lk-badge b-edu">Writing</span><div class="lk-title"><a href="https://threadreaderapp.com/thread/1586420517225238529.html" target="_blank">How to Write a Research Article?</a></div><div class="lk-desc">Practical advice thread on writing scientific papers. Recommended reading for early-career researchers.</div><div class="lk-domain">threadreaderapp.com</div></div>
+    <div class="lk" data-cat="edu" data-text="egu 15 minute talk art presentation tips blog geodynamics"><span class="lk-badge b-edu">Advice</span><div class="lk-title"><a href="https://blogs.egu.eu/divisions/gd/2018/06/07/the-art-of-the-15-minute-talk/" target="_blank">The Art of the 15-Minute Talk — EGU Blog</a></div><div class="lk-desc">Tips for delivering effective short oral presentations at conferences.</div><div class="lk-domain">blogs.egu.eu</div></div>
+    <div class="lk" data-cat="edu" data-text="resumes cover letters stanford graduate school tips career"><span class="lk-badge b-edu">Career</span><div class="lk-title"><a href="https://www.gsb.stanford.edu/alumni/career-resources/job-search/resumes" target="_blank">Resumes &amp; Cover Letters — Stanford GSB</a></div><div class="lk-desc">Practical CV and cover letter guidance from Stanford Graduate School of Business.</div><div class="lk-domain">gsb.stanford.edu</div></div>
+    <div class="lk" data-cat="edu" data-text="theses france repository doctoral french universities"><span class="lk-badge b-edu">Resource</span><div class="lk-title"><a href="https://www.theses.fr/s341184" target="_blank">Theses.fr — French Doctoral Repository</a></div><div class="lk-desc">French national repository for doctoral theses, including my own thesis record.</div><div class="lk-domain">theses.fr</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     7. RESEARCH PROJECTS
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-projects" data-cat="projects">
+  <div class="cat-heading">🌐 Research Projects &amp; Groups <span class="cat-count" id="cnt-projects"></span></div>
+  <p class="cat-desc">International research networks, observatories, and scientific communities relevant to my work.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="projects" data-text="sz4d subduction zone observatory nsf science community"><span class="lk-badge b-proj">Network</span><div class="lk-title"><a href="https://www.sz4d.org/" target="_blank">SZ4D — Subduction Zone Observatory</a></div><div class="lk-desc">NSF-funded initiative for integrated observation of subduction zones. I participate via SZNet.</div><div class="lk-domain">sz4d.org</div></div>
+    <div class="lk" data-cat="projects" data-text="sz4d mcs megathrust workshop modeling"><span class="lk-badge b-proj">Workshop</span><div class="lk-title"><a href="https://www.sz4dmcs.org/megathrust-workshop" target="_blank">SZ4DMCS — Megathrust Modeling Workshop</a></div><div class="lk-desc">Community modeling workshops for subduction zone science and megathrust dynamics.</div><div class="lk-domain">sz4dmcs.org</div></div>
+    <div class="lk" data-cat="projects" data-text="slow to fast earthquake japan workshop sse tremor"><span class="lk-badge b-proj">Community</span><div class="lk-title"><a href="https://slow-to-fast-eq.org/" target="_blank">Slow-to-Fast Earthquake — Japan Workshop</a></div><div class="lk-desc">International workshop series on the spectrum of fault slip from creep to megaearthquakes.</div><div class="lk-domain">slow-to-fast-eq.org</div></div>
+    <div class="lk" data-cat="projects" data-text="comet centre observation modelling earthquake volcano tectonics nerc uk"><span class="lk-badge b-proj">Centre</span><div class="lk-title"><a href="https://comet.nerc.ac.uk/publications/" target="_blank">COMET — Centre for Earthquakes, Volcanoes &amp; Tectonics</a></div><div class="lk-desc">UK NERC centre integrating satellite geodesy with seismology and modelling. Publication list.</div><div class="lk-domain">comet.nerc.ac.uk</div></div>
+    <div class="lk" data-cat="projects" data-text="fatiando terra open-source python geophysics community"><span class="lk-badge b-proj">Community</span><div class="lk-title"><a href="https://www.fatiando.org/" target="_blank">Fatiando a Terra — Open Geophysics</a></div><div class="lk-desc">Open-source Python tools for geophysical data processing and modelling.</div><div class="lk-domain">fatiando.org</div></div>
+    <div class="lk" data-cat="projects" data-text="andesnet south america andean subduction network seismology geodesy"><span class="lk-badge b-proj">Network</span><div class="lk-title"><a href="https://andesnetinfo.wixsite.com/andesnet" target="_blank">AndesNet — Andean Subduction Network</a></div><div class="lk-desc">Regional scientific network for earthquake and geodesy research along the Andes.</div><div class="lk-domain">andesnetinfo.wixsite.com</div></div>
+    <div class="lk" data-cat="projects" data-text="realism ens seismology tectonics group paris france"><span class="lk-badge b-proj">Group</span><div class="lk-title"><a href="https://www.geosciences.ens.fr/realism" target="_blank">REALISM — ENS Seismology Group</a></div><div class="lk-desc">Research group at École Normale Supérieure (Paris) on earthquake mechanics and tectonics.</div><div class="lk-domain">geosciences.ens.fr</div></div>
+    <div class="lk" data-cat="projects" data-text="uw seismogeodesy lab university washington<br> bock ortega-culaciati"><span class="lk-badge b-proj">Group</span><div class="lk-title"><a href="https://sites.google.com/view/uwsglab/home?authuser=0" target="_blank">UW Seismogeodesy Lab</a></div><div class="lk-desc">University of Washington lab integrating seismology and geodesy for subduction zone science.</div><div class="lk-domain">sites.google.com</div></div>
+    <div class="lk" data-cat="projects" data-text="elifo earthquake physics geohazards community code"><span class="lk-badge b-proj">Community</span><div class="lk-title"><a href="https://elifo.github.io/" target="_blank">Elifo — EQ Physics &amp; Geohazards</a></div><div class="lk-desc">Community page for earthquake physics and geohazard research with code and tutorials.</div><div class="lk-domain">elifo.github.io</div></div>
+    <div class="lk" data-cat="projects" data-text="md noise ambient seismic noise codes github denolle meghana"><span class="lk-badge b-proj">Code</span><div class="lk-title"><a href="https://github.com/mdenolle?tab=repositories" target="_blank">M. Denolle — Noise &amp; Seismology Codes</a></div><div class="lk-desc">GitHub repositories from M. Denolle (UW) for ambient noise cross-correlation and seismology.</div><div class="lk-domain">github.com/mdenolle</div></div>
+    <div class="lk" data-cat="projects" data-text="core-man links codes seismology earthquake resources compiled"><span class="lk-badge b-proj">Curated</span><div class="lk-title"><a href="https://core-man.github.io/link/post/codes/" target="_blank">Core-Man — Seismology Code Links</a></div><div class="lk-desc">Comprehensive curated list of seismology codes and resources compiled by Jiayuan Yao.</div><div class="lk-domain">core-man.github.io</div></div>
+    <div class="lk" data-cat="projects" data-text="earthquake location codes catalogue software claudiodsf"><span class="lk-badge b-proj">Curated</span><div class="lk-title"><a href="https://github.com/claudiodsf/earthquake_seismology_software" target="_blank">Earthquake Location Software List</a></div><div class="lk-desc">GitHub list of earthquake location and seismology software tools, curated by Claudio Satriano (IPGP).</div><div class="lk-domain">github.com/claudiodsf</div></div>
+    <div class="lk" data-cat="projects" data-text="geophysical events earthscope news hazard real time"><span class="lk-badge b-proj">News</span><div class="lk-title"><a href="https://www.earthscope.org/news/geophysical-events/" target="_blank">EarthScope — Geophysical Events</a></div><div class="lk-desc">Real-time geophysical event monitoring and news from EarthScope (formerly IRIS/UNAVCO).</div><div class="lk-domain">earthscope.org</div></div>
+    <div class="lk" data-cat="projects" data-text="repositorio anid chile scientific theses projects"><span class="lk-badge b-proj">Chile</span><div class="lk-title"><a href="https://repositorio.anid.cl/home" target="_blank">Repositorio ANID — Chile</a></div><div class="lk-desc">Chilean National Research Agency repository for funded projects and academic outputs.</div><div class="lk-domain">repositorio.anid.cl</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     8. USEFUL TOOLS
+════════════════════════════════════════════ -->
+<div class="cat-section reveal" id="cat-tools" data-cat="tools">
+  <div class="cat-heading">🛠️ Useful Tools &amp; References <span class="cat-count" id="cnt-tools"></span></div>
+  <p class="cat-desc">Practical web tools, formatting aids, and miscellaneous resources for daily research life.</p>
+  <div class="links-grid">
+    <div class="lk" data-cat="tools" data-text="greek unicode inkscape special characters latex symbols"><span class="lk-badge b-tools">Design</span><div class="lk-title"><a href="http://kestrel.nmt.edu/~raymond/software/howtos/greekscape.xhtml" target="_blank">Greek Unicode in Inkscape</a></div><div class="lk-desc">How-to guide for entering Greek letters and special characters in Inkscape SVG graphics.</div><div class="lk-domain">kestrel.nmt.edu</div></div>
+    <div class="lk" data-cat="tools" data-text="obspy visualize data availability local waveform archive python"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://docs.obspy.org/tutorial/code_snippets/visualize_data_availability_of_local_waveform_archive.html" target="_blank">ObsPy — Visualize Data Availability</a></div><div class="lk-desc">Code snippet for visualizing data completeness of local seismic waveform archives.</div><div class="lk-domain">docs.obspy.org</div></div>
+    <div class="lk" data-cat="tools" data-text="choosing histogram bins astropy visualization statistics python"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://docs.astropy.org/en/latest/visualization/histogram.html" target="_blank">Choosing Histogram Bins — AstroPy</a></div><div class="lk-desc">Guide to selecting optimal bin sizes for histograms using AstroPy methods.</div><div class="lk-domain">docs.astropy.org</div></div>
+    <div class="lk" data-cat="tools" data-text="matplotlib font missing fix python tutorial lab whoi"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://alexanderlabwhoi.github.io/post/2021-03-missingfont/" target="_blank">Fixing Matplotlib Missing Fonts</a></div><div class="lk-desc">Step-by-step guide to resolving custom font issues in matplotlib plots.</div><div class="lk-domain">alexanderlabwhoi.github.io</div></div>
+    <div class="lk" data-cat="tools" data-text="get data papers github figure extraction digitize yuanzhoulvpi"><span class="lk-badge b-tools">Tool</span><div class="lk-title"><a href="https://github.com/yuanzhoulvpi2017/getdata" target="_blank">GetData — Extract Values from Figures</a></div><div class="lk-desc">Tool to automatically extract numerical data from published figures.</div><div class="lk-domain">github.com/yuanzhoulvpi2017</div></div>
+    <div class="lk" data-cat="tools" data-text="semantic versioning 2.0 software release version numbers specification"><span class="lk-badge b-tools">Dev</span><div class="lk-title"><a href="https://semver.org/" target="_blank">Semantic Versioning 2.0.0</a></div><div class="lk-desc">Specification for versioning software releases: MAJOR.MINOR.PATCH convention.</div><div class="lk-domain">semver.org</div></div>
+    <div class="lk" data-cat="tools" data-text="scientific computing numerical python seydoux notebooks ipgp"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://github.com/leonard-seydoux/scientific_computing" target="_blank">Scientific Computing Notebooks — Seydoux</a></div><div class="lk-desc">Python notebooks for scientific computing fundamentals, taught at IPGP (L. Seydoux).</div><div class="lk-domain">github.com/leonard-seydoux</div></div>
+    <div class="lk" data-cat="tools" data-text="autodraw automatic drawing ai sketching tool web"><span class="lk-badge b-tools">Design</span><div class="lk-title"><a href="https://www.autodraw.com/" target="_blank">AutoDraw — AI Drawing Tool</a></div><div class="lk-desc">Google's AI-powered drawing tool for quick sketches and simple illustrations.</div><div class="lk-domain">autodraw.com</div></div>
+    <div class="lk" data-cat="tools" data-text="iceberg draw iceberger float orientation web tool fun"><span class="lk-badge b-tools">Fun</span><div class="lk-title"><a href="https://joshdata.me/iceberger.html" target="_blank">Iceberger — Draw an Iceberg</a></div><div class="lk-desc">Draw an iceberg and see how it actually floats. Great for explaining density and isostasy.</div><div class="lk-domain">joshdata.me</div></div>
+    <div class="lk" data-cat="tools" data-text="shakemap simulation colab notebook example code python"><span class="lk-badge b-tools">Notebook</span><div class="lk-title"><a href="https://colab.research.google.com/drive/1nXM8Y9G5jduo0XoXNfC1siQz-x3vv2V4?usp=sharing" target="_blank">ShakeMap Simulation — Colab Notebook</a></div><div class="lk-desc">Google Colab notebook demonstrating ground motion simulation for ShakeMap generation.</div><div class="lk-domain">colab.research.google.com</div></div>
+    <div class="lk" data-cat="tools" data-text="read-o-meter reading time estimator article words per minute"><span class="lk-badge b-tools">Tool</span><div class="lk-title"><a href="http://niram.org/read/" target="_blank">Read-o-meter — Reading Time Estimator</a></div><div class="lk-desc">Estimates reading time for any text. Useful when preparing talks or evaluating abstract length.</div><div class="lk-domain">niram.org</div></div>
+    <div class="lk" data-cat="tools" data-text="time domain mt magnetotelluric inversion python mttime readthedocs"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://mttime.readthedocs.io/en/latest/index.html" target="_blank">mttime — Time Domain MT Inversion</a></div><div class="lk-desc">Python package for time-domain magnetotelluric inversion.</div><div class="lk-domain">mttime.readthedocs.io</div></div>
+    <div class="lk" data-cat="tools" data-text="mtfit bayesian source inversion focal mechanism pugh djpugh"><span class="lk-badge b-tools">Python</span><div class="lk-title"><a href="https://djpugh.github.io/MTfit/index.html" target="_blank">MTfit — Bayesian Source Inversion</a></div><div class="lk-desc">Bayesian moment tensor inversion software for seismic source mechanism determination.</div><div class="lk-domain">djpugh.github.io</div></div>
+  </div>
+</div>
+
+</div><!-- end links-inner -->
+
+<footer>© 2026 Javier Alejandro Ojeda Vargas · <a href="index.html">javierojedav.github.io</a> · Updated May 2026</footer>
+
+<script>
+// Count cards per category and show totals
+const cats = ['data','geodesy','software','ml','maps','edu','projects','tools'];
+cats.forEach(c => {
+  const n = document.querySelectorAll(`.lk[data-cat="${c}"]`).length;
+  const el = document.getElementById(`cnt-${c}`);
+  if(el) el.textContent = n + ' links';
+});
+
+const allLinks = document.querySelectorAll('.lk');
+const allSections = document.querySelectorAll('.cat-section');
+const countEl = document.getElementById('link-count');
+
+let activeCat = 'all';
+
+function filterCat(cat, btn) {
+  activeCat = cat;
+  document.querySelectorAll('.cf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function filterLinks() {
+  applyFilters();
+}
+
+function applyFilters() {
+  const q = document.getElementById('link-search').value.toLowerCase().trim();
+  let vis = 0;
+
+  allLinks.forEach(el => {
+    const catOk = activeCat === 'all' || el.dataset.cat === activeCat;
+    const textOk = !q || (el.dataset.text || '').includes(q) || el.textContent.toLowerCase().includes(q);
+    const show = catOk && textOk;
+    el.classList.toggle('hidden', !show);
+    if(show) vis++;
+  });
+
+  // hide empty sections
+  allSections.forEach(sec => {
+    const visible = sec.querySelectorAll('.lk:not(.hidden)').length;
+    sec.classList.toggle('hidden', visible === 0);
+  });
+
+  countEl.textContent = q || activeCat !== 'all' ? `${vis} links shown` : 'Browse all categories below';
+  document.getElementById('no-results').style.display = vis === 0 ? 'block' : 'none';
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(e => e.forEach(x => {
+  if(x.isIntersecting) x.target.classList.add('visible');
+}), {threshold:.04});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
 </html>

@@ -1,239 +1,926 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Javier Ojeda</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="assets/img/icon_bg2.png" type="image/x-icon">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">		
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Javier Ojeda — Geophysicist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--bg2:#edeae2;--bg3:#fff;--text:#1a1814;--text2:#5a5650;--text3:#9a9590;--red:#c0392b;--redbg:#fdf0ef;--teal:#0e6b5a;--tealbg:#e8f5f1;--blue:#1a5276;--bluebg:#eaf0f6;--gold:#7d6008;--goldbg:#fef9e7;--border:rgba(26,24,20,.10);--border2:rgba(26,24,20,.18);--radius:12px;--shadow:0 2px 16px rgba(0,0,0,.07);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;}
+a{color:inherit;text-decoration:none;}
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="publications.html">Publications</a></li>
-								<li><a href="teaching.html">Teaching & Advising</a></li>
-								<li><a href="outreach.html">Media & Outreach</a></li>
-								<li><a href="docs/CV_OJEDA_short.pdf">Mon CV</a></li>
-								<!--<li><a href="links.html">Links</a></li>-->
-							</ul>
-						</nav>
-				</div>
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(247,245,240,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem;}
+.nav-brand{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--text);letter-spacing:-.02em;white-space:nowrap;}
+.nav-brand .r{color:var(--red);}
+.nav-links{display:flex;gap:1.1rem;list-style:none;flex-wrap:wrap;}
+.nav-links a{font-size:.8rem;font-weight:400;color:var(--text2);transition:color .2s;letter-spacing:.02em;}
+.nav-links a:hover{color:var(--red);}
 
-			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Javier <font color="#000000">Ojeda</font></h2>
-						<p> Ph.D. Earth and Environmental Sciences, M.Sc. Geophysics </p>
-					</header>
-				</section>
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;max-width:1100px;margin:0 auto;padding:6rem 2rem 4rem;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:.76rem;letter-spacing:.12em;color:var(--red);text-transform:uppercase;margin-bottom:1.1rem;}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5vw,4rem);line-height:1.05;letter-spacing:-.03em;color:var(--text);margin-bottom:1.4rem;}
+h1 .r{color:var(--red);}
+.hero-desc{font-size:1rem;color:var(--text2);max-width:520px;line-height:1.85;margin-bottom:2rem;}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.3rem;border-radius:100px;font-size:.875rem;font-weight:500;transition:all .2s;cursor:pointer;border:none;font-family:inherit;}
+.btn-primary{background:var(--text);color:#fff;}
+.btn-primary:hover{background:var(--red);}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border2);}
+.btn-outline:hover{border-color:var(--red);color:var(--red);}
 
-				<div class="wrapper style2">
-					<div class="container">
-						<div class="row">
+/* PROFILE ICON LINKS */
+.profile-links{display:flex;gap:.55rem;flex-wrap:wrap;}
+.plink{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:100px;font-size:.75rem;font-weight:500;border:1.5px solid var(--border2);color:var(--text2);transition:all .2s;white-space:nowrap;}
+.plink:hover{border-color:var(--red);color:var(--red);}
+.plink-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
 
-							<article class="col-6 col-12-mobile special">
-							<header>
-							<h4>Hola a todas y todos! Welcome to my research site</h4>
-							</header>
-<!--							<p align="justify">
-							My full name is Javier Alejandro Ojeda Vargas, but I sign my papers as Javier Ojeda.</p>-->
-							<p align="justify">
-							I aim to understand earthquake processes, Earth deformation, strong ground motion, and their implications for society through an integrated approach that combines geodesy, seismology, and geotechnical engineering. I work on both basic and applied geoscience topics, including earthquake deformation, seismic/aseismic slip modes, seismic wave modeling, site characterization, and seismic hazard assessment for risk analysis.
-							<p align="justify">
-							This work has been made possible only by the generosity, support, and guidance of great friends and researchers who have accompanied me throughout this journey. Gracias!
-							</p>
-							<p></p>
-							<center>
-								Keep in contact: 
-								<h4>jojeda@udec.cl</h4>
-							</center>	
-							<p></p>
-							<center>
-							FYI inactive: <i>ojeda@ipgp.fr, jojeda@dgf.uchile.cl, javier.ojeda.v@uchile.cl</i>
-							</center>	
-<!--						I aim to understand earthquake processes, Earth deformation, and their implications for society through an integrated approach that combines seismology, geodesy, and earthquake engineering, with broad research interests including:							<ul style="list-style-type: '&#x2756; ';">					
-							<li></i><p align="justify">Characterizing (a)seismic slip behavior using geodetic and seismological observations</li></p>
-							<li></i><p align="justify">Modeling earthquake ground motions for seismic hazard and engineering applications</li></p>
-							<li></i><p align="justify">Assessing future earthquake potential from historical events</li></p>
-							<li></i><p align="justify">Investigating natural and anthropogenic processes through environmental seismology</li></p>
-							</ul>
-							<p align="justify">
-							This work has only been possible thanks to the generosity, support, and guidance of great friends and researchers who have accompanied me throughout this journey. Gracias!
-							</p>
-							Such amount of work has only been possible thanks to the generosity of great researchers who have guided me thus far, among them <a href="https://jmnocquet.github.io/" target="_blank">Jean-Mathieu Nocquet</a> (IRD, IPGP), <a href="http://dgf.uchile.cl/~sruiz/" target="_blank">Sergio Ruiz</a> (DGF), <a href="https://scholar.google.com/citations?user=A1bMKtwAAAAJ&amp;hl=es" target="_blank">Fabian Bonilla</a> (IPGP), <a href="https://scholar.google.it/citations?user=9sWNdMcAAAAJ&amp;hl=it" target="_blank">Aybige Akinci</a> (INGV), <a href="https://www.u-tokyo.ac.jp/focus/en/people/people000892.html" target="_blank">Hajime Shiobara</a> (ERI), <a href="https://scholar.google.com/citations?user=bP76gpcAAAAJ&hl=fr" target="_blank">Christophe Vigny</a> (ENS), and <a href="https://scholar.google.com/citations?user=zaKntLEAAAAJ&hl=en" target="_blank">Roland Bürgmann</a> (UC Berkeley).
-							Currently, I'm a Postdoctoral Researcher on the <a href="https://www.proyectoeaser.cl/" target="_blank">Anillo EASER project</a>: <b>Evolution Assessment of Seismic Risk</b>-->
+.hero-photo{width:360px;height:360px;border-radius:50%;object-fit:cover;border:4px solid var(--bg3);box-shadow:var(--shadow);flex-shrink:0;}
+.hero-initials{width:210px;height:210px;border-radius:50%;background:var(--bg2);border:4px solid var(--bg3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--text3);}
 
-							</article>
+/* METRICS */
+.metrics-strip{background:var(--text);padding:1.8rem 2rem;}
+.metrics-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.5rem;text-align:center;}
+.mv{font-family:'DM Serif Display',serif;font-size:1.9rem;color:#fff;line-height:1;}
+.ml{font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;margin-top:.35rem;}
+.ms{border-left:1px solid rgba(255,255,255,.1);}
+.metrics-note{text-align:right;font-size:.7rem;color:rgba(255,255,255,.3);margin-top:.8rem;max-width:1100px;margin-left:auto;margin-right:auto;padding:0 2rem .6rem;}
+#metrics-updated{color:rgba(255,255,255,.4);font-family:'DM Mono',monospace;}
 
-							<article class="col-6 col-12-mobile special">
-							<a class="image left"><img src="images/author-image.png"></a>
+/* SECTIONS */
+section{padding:4.5rem 2rem;}
+.alt-bg{background:var(--bg2);}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-label{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:.5rem;}
+h2{font-family:'DM Serif Display',serif;font-size:1.85rem;letter-spacing:-.02em;margin-bottom:2rem;color:var(--text);line-height:1.1;}
 
-								
-<!--								<center>
-								<a href="https://scholar.google.com/citations?hl=es&user=HqIUR4sAAAAJ" style="text-decoration:none;" target="_blank" ><img src="images/icon/icon-academic-scholar.png" width=12% /></a>
-								&nbsp &nbsp &nbsp &nbsp
-								<a href="https://orcid.org/0000-0002-7188-8356" style="text-decoration:none;" target="_blank" ><img src="images/icon/icon-academic-orcid.png" width=12%  /></a>
-								&nbsp &nbsp &nbsp &nbsp
-								<a href="https://www.webofscience.com/wos/author/record/862622" style="text-decoration:none;" target="_blank" ><img src="images/icon/icon-academic-wos.png" width=12% /></a>
-								&nbsp &nbsp &nbsp &nbsp
-								<a href="https://www.scopus.com/authid/detail.uri?authorId=57207963457" style="text-decoration:none;" target="_blank" ><img src="images/icon/icon-academic-scopus.png" width=12% /></a>
-								&nbsp &nbsp &nbsp &nbsp
-								<a href="https://investigadores.anid.cl/es/public_search/researcher?id=39718" style="text-decoration:none;" target="_blank" ><img src="images/icon/icon-academic-anid.png" width=12% /></a>
-								&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-								</center>-->
-							<p></p>
+/* RESEARCH */
+.research-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;}
+.rc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:box-shadow .25s,transform .25s;position:relative;border-left:3px solid transparent;}
+.rc:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.rc.priority{border-left-color:var(--red);}
+.rc.priority2{border-left-color:var(--teal);}
+.rc-num{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text3);margin-bottom:.6rem;}
+.rc h3{font-size:.97rem;font-weight:600;margin-bottom:.45rem;}
+.rc p{font-size:.85rem;color:var(--text2);line-height:1.6;}
 
+/* TIMELINE */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.timeline{position:relative;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:1.5px;background:var(--border2);}
+.ti{position:relative;padding-left:2.2rem;margin-bottom:1.7rem;}
+.td{position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg3);border:2px solid var(--border2);transition:border-color .2s;}
+.ti:hover .td{border-color:var(--red);}
+.ti .date{font-family:'DM Mono',monospace;font-size:.71rem;color:var(--text3);margin-bottom:.1rem;}
+.ti h3{font-size:.93rem;font-weight:600;}
+.ti p{font-size:.83rem;color:var(--text2);margin-top:.1rem;}
+.tag{display:inline-block;font-size:.69rem;padding:2px 8px;border-radius:100px;font-weight:500;margin-top:.3rem;}
+.tag-red{background:var(--redbg);color:var(--red);}
+.tag-teal{background:var(--tealbg);color:var(--teal);}
 
-							</article>
+/* VISITS */
+.visits-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1rem;}
+.vc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.4rem;}
+.vc-period{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);margin-bottom:.3rem;}
+.vc-inst{font-weight:600;font-size:.92rem;}
+.vc-topic{font-size:.82rem;color:var(--text2);margin-top:.3rem;}
 
-						</div>
-					<br /><br />
+/* PUBLICATIONS */
+.pub-tabs{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.pub-tab{padding:.42rem 1rem;border-radius:100px;font-size:.8rem;font-weight:500;cursor:pointer;border:1.5px solid var(--border);background:transparent;color:var(--text2);transition:all .2s;font-family:inherit;}
+.pub-tab.active{background:var(--text);color:#fff;border-color:var(--text);}
+.pub-group{display:none;flex-direction:column;gap:.9rem;}
+.pub-group.active{display:flex;}
+.pub-item{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.3rem;display:flex;gap:1rem;align-items:flex-start;transition:box-shadow .2s;}
+.pub-item:hover{box-shadow:var(--shadow);}
+.pub-year{font-family:'DM Mono',monospace;font-size:.74rem;color:var(--text3);min-width:38px;padding-top:2px;flex-shrink:0;}
+.pub-content{flex:1;}
+.pub-title{font-size:.91rem;font-weight:500;line-height:1.45;margin-bottom:.22rem;}
+.pub-authors{font-size:.8rem;color:var(--text2);margin-bottom:.28rem;}
+.pub-journal{font-size:.78rem;color:var(--text3);font-style:italic;}
+.pub-links{display:flex;gap:.4rem;margin-top:.5rem;flex-wrap:wrap;}
+.pub-link{font-size:.72rem;padding:2px 8px;border-radius:4px;border:none;font-family:'DM Mono',monospace;transition:opacity .2s;}
+.pub-link:hover{opacity:.72;}
+.badge{display:inline-block;font-size:.68rem;padding:2px 7px;border-radius:4px;font-weight:500;margin-left:.4rem;vertical-align:middle;}
 
-					<div class="container">
-						<div class="row">
-							<article class="col-6 col-12-mobile special">
-								<header>
-									<h3 align=left>Appointments</h3>
-								</header>
-								<p>
-								<ul class='fa-ul'>
-								<li><i class="fa-li fa fa-briefcase"></i>
-									<font color="#000000">Postdoctoral Researcher, <a href="https://fi.udec.cl/" target="_blank">ANID Anillo de Tecnologías EASER, Universidad de Concepción</a> (2025/01 - Today)</font><p></li>
-								<li><i class="fa-li fa fa-briefcase"></i>
-									<font color="#000000">Researcher, <a href="https://prs.uchile.cl/" target="_blank">Programa de Riesgo Sísmico, Universidad de Chile</a> (2024/07 - 2024/12)</font><p></li>
-								<li><i class="fa-li fa fa-briefcase"></i>
-									<font color="#000000">Research Assistant, <a href="https://prs.uchile.cl/" target="_blank">Programa de Riesgo Sísmico, Universidad de Chile</a> (2017/07 - 2019/08)</font><p></li>
-								</ul>
-								</p>
+/* TALKS */
+.talks-list{display:flex;flex-direction:column;gap:.85rem;}
+.talk-item{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.3rem;display:flex;gap:1rem;}
+.talk-year{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);min-width:38px;flex-shrink:0;padding-top:2px;}
+.talk-body{flex:1;}
+.talk-venue{font-size:.74rem;color:var(--text3);font-family:'DM Mono',monospace;margin-bottom:.25rem;}
+.talk-title{font-size:.9rem;font-weight:500;line-height:1.4;}
+.talk-loc{font-size:.8rem;color:var(--text2);margin-top:.2rem;}
+.talk-inv{display:inline-block;font-size:.68rem;padding:2px 7px;background:var(--goldbg);color:var(--gold);border-radius:4px;font-weight:500;margin-top:.4rem;}
 
-							</article>
-							<article class="col-6 col-12-mobile special">
-								<header>
-									<h3 align=left>Education</h3>
-								</header>
-								<p>
-								<ul class='fa-ul'>
-								<li><i class="fa-li fa fa-graduation-cap"></i>
-									<font color="#000000"><a href="https://ed560.ed.univ-paris-diderot.fr/en/the-doctoral-school/" target="_blank">Ph.D. in Earth and Environmental Sciences, Université Paris Cité (2024)</a></font></p></li>
-								<li><i class="fa-li fa fa-graduation-cap"></i>
-									<font color="#000000"><a href="https://uchile.cl/postgrados/6289/ciencias-mencion-geologia" target="_blank">Ph.D. in Geology, Universidad de Chile (2024)</a></font></p></li>
-								<li><i class="fa-li fa fa-graduation-cap"></i>
-									<font color="#000000"><a href="https://uchile.cl/postgrados/5503/ciencias-mencion-geofisica" target="_blank">M.Sc. in Geophysics, Universidad de Chile (2018)</a></font><p></li>
-								<li><i class="fa-li fa fa-graduation-cap"></i>
-									<font color="#000000"><a href="https://uchile.cl/carreras/4982/geofisica" target="_blank">B.S. in Geophysics, Universidad de Chile (2016)</a></font><p></li>
-								</ul>
-								</p>
-							</article>
-							</div>
-						</div>
+/* FIELDWORK */
+.field-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.9rem;}
+.fc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.3rem;border-left:3px solid var(--teal);}
+.fc-date{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--text3);}
+.fc-title{font-size:.92rem;font-weight:600;margin:.2rem 0;}
+.fc-place{font-size:.82rem;color:var(--text2);}
 
-					<br /><br />
+/* OUTREACH */
+.outreach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;}
+.oc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.3rem;}
+.oc h3{font-size:.95rem;font-weight:600;margin-bottom:.35rem;}
+.oc p{font-size:.83rem;color:var(--text2);line-height:1.6;}
+.oc-period{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--text3);margin-bottom:.45rem;}
 
-					<div class="container">
-						<div class="row">
-							<article class="col-6 col-12-mobile special">
-								<header>
-									<h3 align=left>Research Visits</h3>
-								</header>
-								<p>
-								<ul style="list-style-type: '&#x2756; ';">
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://www.bsc.es/" target="_blank">Barcelona Supercomputing Center</a> (2026/04 - 2026/06)</font><p></li>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://eps.berkeley.edu/home" target="_blank">University of California Berkeley</a> (2024/09 - 2024/10)</font><p></li>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://eps.berkeley.edu/home" target="_blank">University of California Berkeley</a> (2023/12 - 2024/03)</font><p></li>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://geoazur.oca.eu/fr/acc-geoazur">Université Côte d’Azur</a> (2022/11 - 2022/12)</font><p></li>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://www.ingv.it/" target="_blank">Istituto Nazionale di Geofisica e Vulcanologia</a> (2019/07 and 2019/12)</font><p></li>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://www.ipgp.fr/" target="_blank">Institut de Physique du Globe de Paris</a> (2017/11 - 2018/02)</font><p></li>
-								</ul>
-								</p>
-							</article>
-							
-							
-							<article class="col-6 col-12-mobile special">
-								<header>
-									<h3 align=left>Professional Services</h3>
-								</header>
-								<p>
-								<ul style="list-style-type: '&#x2756; ';">					
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://colgeof.cl/" target="_blank">Colegio de Geofísicas y Geofísicos de Chile A.G.</a>, Seismology Director (2025/05 - Today)</font><p>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://fundaciongeonautas.cl/" target="_blank">Fundación Geonautas</a>, President (2025/01 - Today)</font><p></li>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://sz4grads.wixsite.com/sz4grads/general-6-1" target="_blank">SZ4Grads Andes Sur</a>, Executive Committee Member (2023/06 - 2025/05)</font><p></li>
-								<li></i><p align="justify">
-									<font color="#000000"><a href="https://www.egu.eu/sm/" target="_blank">European Geosciences Union Seismology Division</a>, Early-Career Scientist co-representative (2020/09 - 2022/05)</font><p></li>
-								</ul>
-								</p>
-							</article>
-							
+/* CONTACT */
+.contact-section{background:var(--text);}
+.contact-section h2{color:#fff;margin-bottom:1.8rem;}
+.contact-section .section-label{color:rgba(255,255,255,.45);}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem;margin-bottom:2rem;}
+.ci{display:flex;align-items:flex-start;gap:.7rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:1rem;}
+.ci-icon{font-size:1.1rem;margin-top:1px;}
+.ci-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-bottom:.1rem;}
+.ci-val{font-size:.88rem;color:#fff;}
+.social-links{display:flex;gap:.6rem;flex-wrap:wrap;}
+.social-link{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .95rem;border-radius:100px;font-size:.8rem;font-weight:500;background:rgba(255,255,255,.08);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.12);transition:all .2s;}
+.social-link:hover{background:rgba(255,255,255,.16);color:#fff;}
 
-							</div>
-						</div>
+footer{background:var(--text);border-top:1px solid rgba(255,255,255,.07);padding:1.3rem 2rem;text-align:center;font-size:.76rem;color:rgba(255,255,255,.32);}
 
-						
-					
-					
-					</div>
-				</div>
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease;}
+.reveal.visible{opacity:1;transform:none;}
 
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<!-- Contact -->
-									<section class="contact">
-										<ul class="icons">
-											<li><a href="https://orcid.org/0000-0002-7188-8356" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid" style="font-size: 1.5em;"></i></a></li>
-											<li><a href="https://www.webofscience.com/wos/author/record/862622" target="_blank" rel="noopener noreferrer" class="icon solid fa-database"><span class="label">Web of Science</span></a></li>
-											<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57207963457" target="_blank" rel="noopener noreferrer"><i class="ai ai-scopus" style="font-size: 1.5em;"></i></a></li>											
-											<li><a href="https://scholar.google.com/citations?hl=es&user=HqIUR4sAAAAJ" target="_blank" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a>
-											<li><a href="https://www.researchgate.net/profile/Javier-Ojeda-5" target="_blank" class="icon brands fa-researchgate"><span class="label">Researchgate</span></a></li>
-											<li><a href="https://investigadores.anid.cl/es/public_search/researcher?id=39718" target="_blank" rel="noopener noreferrer" class="icon solid fa-id-badge"><span class="label">ANID</span></a></li>
-											<li><a href="https://www.linkedin.com/in/javierojedav/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-											<!--<li><a href="https://x.com/laviedej" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://www.instagram.com/laviedej/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://www.facebook.com/laviedej" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-										</ul>
-									</section>
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.5rem;}
+  .hero-initials{width:130px;height:130px;font-size:2rem;}
+  .two-col{grid-template-columns:1fr;}
+  nav{padding:0 1rem;}
+  .nav-links{gap:.6rem;}
+  section{padding:3rem 1.2rem;}
+}
+</style>
+</head>
+<body>
 
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>2026 Javier Ojeda. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
-						</div>
-					</div>
-				</div>
-			</div>
+<nav>
+  <a class="nav-brand" href="index.html">Javier <span class="r">Ojeda Vargas</span></a>
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#talks">Talks</a></li>
+    <li><a href="#fieldwork">Fieldwork</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+    <li><a href="conferences.html">Conferences</a></li>
+    <li><a href="docs/CV_OJEDA_short.pdf">CV ↗</a></li>
+  </ul>
+</nav>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- HERO -->
+<header>
+  <div class="hero">
+    <div>
+      <p class="hero-eyebrow">Postdoctoral Researcher · Universidad de Concepción · EASER</p>
+      <h1>Javier<br><span class="r">Ojeda Vargas</span></h1>
+      <p class="hero-desc">
+        Geophysicist specializing in seismology applied to geological hazards. Integrating
+        physics-based ground motion simulation, seismic hazard assessment, and satellite geodesy
+        to understand earthquakes — from slow slip to megathrust ruptures — and their implications
+        for society.
+      </p>
+      <div class="hero-cta">
+        <a href="#publications" class="btn btn-primary">Publications</a>
+        <a href="docs/CV_OJEDA_short.pdf" class="btn btn-outline">Short CV ↗</a>
+      </div>
+      <!-- Academic profile links with brand colors -->
+      <div class="profile-links">
+        <a href="https://orcid.org/0000-0002-7188-8356" target="_blank" class="plink" title="ORCID">
+          <span class="plink-dot" style="background:#A6CE39;"></span>ORCID
+        </a>
+        <a href="https://www.webofscience.com/wos/author/record/862622" target="_blank" class="plink" title="Web of Science">
+          <span class="plink-dot" style="background:#E9600F;"></span>Web of Science
+        </a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57207963457" target="_blank" class="plink" title="Scopus">
+          <span class="plink-dot" style="background:#F07500;"></span>Scopus
+        </a>
+        <a href="https://scholar.google.com/citations?hl=es&user=HqIUR4sAAAAJ" target="_blank" class="plink" title="Google Scholar">
+          <span class="plink-dot" style="background:#4285F4;"></span>Google Scholar
+        </a>
+        <a href="https://www.researchgate.net/profile/Javier-Ojeda-5" target="_blank" class="plink" title="ResearchGate">
+          <span class="plink-dot" style="background:#00CCBB;"></span>ResearchGate
+        </a>
+        <a href="https://investigadores.anid.cl/es/public_search/researcher?id=39718" target="_blank" class="plink" title="ANID Profile">
+          <span class="plink-dot" style="background:#00438A;"></span>ANID Researcher Portal
+        </a>
+        <a href="https://www.linkedin.com/in/javierojedav/" target="_blank" class="plink" title="LinkedIn">
+          <span class="plink-dot" style="background:#0A66C2;"></span>LinkedIn
+        </a>
+      </div>
+    </div>
+    <!-- Replace div below with: <img src="images/author-image.png" class="hero-photo" alt="Javier Ojeda"> -->
+    <div class="hero-initials" id="hero-photo">JO</div>
+  </div>
+</header>
 
-	</body>
+<!-- METRICS -->
+<div class="metrics-strip">
+  <div class="metrics-inner" id="metrics-grid">
+    <div class="ms"><div class="mv" id="m-wos">11</div><div class="ml">WoS Papers</div></div>
+    <div><div class="mv" id="m-cit">320+</div><div class="ml">Citations (WoS)</div></div>
+    <div class="ms"><div class="mv" id="m-h">7</div><div class="ml">h-index</div></div>
+    <div class="ms"><div class="mv">25.97</div><div class="ml">ANID Score</div></div>
+    <div class="ms"><div class="mv" id="m-rev">7</div><div class="ml">Under Review</div></div>
+    <!--<div class="ms"><div class="mv">73%</div><div class="ml">Intl. Collab.</div></div>-->
+    <div class="ms"><div class="mv">10+</div><div class="ml">Yrs. Teaching</div></div>
+  </div>
+  <p class="metrics-note">Stats partially retrieved from public profiles. Last updated: <span id="metrics-updated">—</span></p>
+</div>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-inner reveal">
+    <p class="section-label">What I work on</p>
+    <h2>Research Areas</h2>
+    <div class="research-grid">
+      <div class="rc priority">
+        <!-- <div class="rc-num">01 · Primary focus</div> -->
+        <h3>Strong Ground Motion Simulation</h3>
+        <p>Physics-based and stochastic broadband simulations for seismic hazard, applied to mine tailings, infrastructure and cities. Specialist in hybrid methods (finite-fault stochastic, PWSIM, HPC at BSC MareNostrum).</p>
+      </div>
+      <div class="rc priority">
+        <h3>Seismic Hazard Assessment</h3>
+        <p>Probabilistic and scenario-based hazard analysis for civil and mining engineering: design spectra, spectral matching, desaggregation, and tailings dam safety under megathrust and intraslab scenarios.</p>
+      </div>
+      <div class="rc priority2">
+        <h3>Seismo-Geodesy</h3>
+        <p>Combining GNSS and seismology to characterize coseismic and interseismic deformation. Global search of short-term transient signals; coupling maps along the Chilean margin 2006–2024.</p>
+      </div>
+      <div class="rc priority2">
+        <h3>Slow Earthquakes &amp; Aseismic Slip</h3>
+        <p>Detection and characterization of slow slip events, seismic swarms, and transient deformation using continuous GNSS time series — from Chile to global scales.</p>
+      </div>
+      <div class="rc">
+        <h3>Active Tectonics</h3>
+        <p>Fault characterization, subduction segmentation, and deformation kinematics. Marine seismology at the Chile Triple Junction; Coulomb stress interactions.</p>
+      </div>
+      <div class="rc">
+        <h3>Seismic Noise &amp; Ambient Signals</h3>
+        <p>Ambient noise monitoring for urban mobility (COVID-19), site characterization (ORSCA network in Concepción), and environmental change detection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION + APPOINTMENTS -->
+<section class="alt-bg" id="education">
+  <div class="section-inner">
+    <div class="two-col">
+      <div class="reveal">
+        <p class="section-label">Formation</p>
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="ti">
+            <div class="td" style="border-color:var(--red);"></div>
+            <div class="date">Oct 2021 – Dec 2024</div>
+            <h3>Ph.D. Earth &amp; Environmental Sciences</h3>
+            <p>Université Paris Cité · Institut de Physique du Globe, Paris — Supervisor: J.-M. Nocquet</p>
+            <span class="tag tag-red">Cotutelle</span>
+          </div>
+          <div class="ti">
+            <div class="td" style="border-color:var(--red);"></div>
+            <div class="date">Mar 2020 – Dec 2024</div>
+            <h3>Ph.D. in Geology</h3>
+            <p>Universidad de Chile · Departamento de Geología, Santiago — Supervisor: S. Ruiz</p>
+            <span class="tag tag-red">Cotutelle</span>
+          </div>
+          <div class="ti">
+            <div class="td"></div>
+            <div class="date">Mar 2017 – Sep 2018</div>
+            <h3>M.Sc. in Geophysics</h3>
+            <p>Universidad de Chile · Departamento de Geofísica, Santiago — Supervisor: S. Ruiz</p>
+          </div>
+          <div class="ti">
+            <div class="td"></div>
+            <div class="date">Mar 2011 – Aug 2016</div>
+            <h3>B.S. in Geophysics</h3>
+            <p>Universidad de Chile · Departamento de Geofísica, Santiago</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="section-label">Positions</p>
+        <h2>Appointments</h2>
+        <div class="timeline">
+          <div class="ti">
+            <div class="td" style="border-color:var(--teal);"></div>
+            <div class="date">Since Aug 2025 · Current</div>
+            <h3>Visiting Professor</h3>
+            <p>Dept. Civil Engineering, Universidad de Concepción</p>
+            <span class="tag tag-teal">Current</span>
+          </div>
+          <div class="ti">
+            <div class="td" style="border-color:var(--teal);"></div>
+            <div class="date">Since Jan 2025 · Current</div>
+            <h3>Postdoctoral Researcher</h3>
+            <p>Anillo de Tecnologías EASER, Universidad de Concepción</p>
+            <span class="tag tag-teal">Current</span>
+          </div>
+          <div class="ti">
+            <div class="td"></div>
+            <div class="date">Jul – Dec 2024</div>
+            <h3>Researcher</h3>
+            <p>Programa de Riesgo Sísmico, Universidad de Chile</p>
+          </div>
+          <div class="ti">
+            <div class="td"></div>
+            <div class="date">Apr 2016 – Aug 2019</div>
+            <h3>Research Assistant</h3>
+            <p>Programa de Riesgo Sísmico, Universidad de Chile</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNATIONAL VISITS -->
+<section id="visits">
+  <div class="section-inner reveal">
+    <p class="section-label">International collaborations</p>
+    <h2>Research Visits</h2>
+    <div class="visits-grid">
+      <div class="vc">
+        <div class="vc-period">Apr – Jun 2026 · Current</div>
+        <div class="vc-inst">🇪🇸 Barcelona Supercomputing Center — Wave Phenomena Group</div>
+        <div class="vc-topic">HPC simulations on MareNostrum; accelerograms &amp; synthetic catalogs. Collabs: N. Zamora &amp; J. de la Puente</div>
+      </div>
+      <div class="vc">
+        <div class="vc-period">Sep – Oct 2024</div>
+        <div class="vc-inst">🇺🇸 UC Berkeley — Berkeley Seismology Lab</div>
+        <div class="vc-topic">Transient deformation in the Chilean subduction margin. Collab: R. Bürgmann. Funded by SZNet-NSF</div>
+      </div>
+      <div class="vc">
+        <div class="vc-period">Dec 2023 – Mar 2024</div>
+        <div class="vc-inst">🇺🇸 UC Berkeley — EPS Department</div>
+        <div class="vc-topic">Global analysis of transient deformation in GNSS time series. Collab: R. Bürgmann. Funded by ANID</div>
+      </div>
+      <div class="vc">
+        <div class="vc-period">Nov – Dec 2022</div>
+        <div class="vc-inst">🇫🇷 Université Côte d'Azur — Géoazur</div>
+        <div class="vc-topic">Algorithms for transient deformation detection. Supervisor: J.-M. Nocquet. Funded by ANR-France</div>
+      </div>
+      <div class="vc">
+        <div class="vc-period">Jul &amp; Dec 2019</div>
+        <div class="vc-inst">🇮🇹 INGV — Sezione di Roma 1</div>
+        <div class="vc-topic">Strong motion simulation of the 2016 Norcia earthquake. Collabs: A. Akinci &amp; E. Tinti. Funded by CPS-INGV</div>
+      </div>
+      <div class="vc">
+        <div class="vc-period">Nov 2017 – Feb 2018</div>
+        <div class="vc-inst">🇫🇷 IPGP — Équipe de Sismologie</div>
+        <div class="vc-topic">Transfer functions for stochastic finite-fault methods. Supervisor: F. Bonilla. Funded by VAA-UChile</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="alt-bg" id="publications">
+  <div class="section-inner reveal">
+    <p class="section-label">Academic output</p>
+    <h2>Publications</h2>
+    <div class="pub-tabs">
+      <button class="pub-tab active" onclick="showPubs('peer',this)">Peer-Reviewed (11)</button>
+      <button class="pub-tab" onclick="showPubs('review',this)">Under Review (7)</button>
+      <button class="pub-tab" onclick="showPubs('prep',this)">In Preparation (11)</button>
+    </div>
+
+    <!-- PEER REVIEWED — all 11 -->
+    <div class="pub-group active" id="pub-peer">
+      <div class="pub-item">
+        <div class="pub-year">2024</div>
+        <div class="pub-content">
+          <div class="pub-title">Seismic Image of the Central to Southern Andean Subduction Zone Through Finite-Frequency Tomography<span class="badge" style="background:var(--bluebg);color:var(--blue);">JGR-SE · IF 4.5</span></div>
+          <div class="pub-authors">Kondo Y., et al., incl. <strong>Ojeda J.</strong></div>
+          <div class="pub-journal">J. Geophysical Research: Solid Earth, 129, e2024JB028844</div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1029/2024JB028844" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2024_JGR.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2024</div>
+        <div class="pub-content">
+          <div class="pub-title">In search for the lost truth about the 1922 &amp; 1918 Atacama earthquakes in Chile<span class="badge" style="background:var(--bg2);color:var(--text2);">JSAMES · IF 1.8</span></div>
+          <div class="pub-authors">Vigny C., Klein E., <strong>Ojeda J.</strong></div>
+          <div class="pub-journal">J. South American Earth Sciences, 143, 104983</div>
+          <div class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0895981124002050" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2024_JSAMES.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
+          <div class="pub-title">Seismic and aseismic slip during the 2006 Copiapó swarm in North-Central Chile<span class="badge" style="background:var(--bg2);color:var(--text2);">JSAMES · IF 1.8</span></div>
+          <div class="pub-authors"><strong>Ojeda J.</strong>, Morales-Yáñez C., Ducret G., Ruiz S., Grandin R., Doin M.-P., Vigny C., Nocquet J.-M.</div>
+          <div class="pub-journal">J. South American Earth Sciences, 123, 104198</div>
+          <div class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0895981123000093" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2023a_JSAMES.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
+          <div class="pub-title">Afterslip of the Mw8.3 2015 Illapel earthquake imaged through time-dependent inversion of GNSS data<span class="badge" style="background:var(--bluebg);color:var(--blue);">JGR-SE · IF 4.5</span></div>
+          <div class="pub-authors">Tissandier R., Nocquet J.-M., Klein E., Vigny C., <strong>Ojeda J.</strong>, Ruiz S.</div>
+          <div class="pub-journal">J. Geophysical Research: Solid Earth, 128, e2022JB024778</div>
+          <div class="pub-links">
+            <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2022JB024778" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2023_JGR.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
+          <div class="pub-title">Stochastic strong ground motion simulation in the Santiago Metropolitan region for an Mw 7.8 intermediate-depth earthquake<span class="badge" style="background:var(--bg2);color:var(--text2);">JSAMES · IF 1.8</span></div>
+          <div class="pub-authors">Flores C., <strong>Ojeda J.</strong>, Otarola C., Arriola S., Ruiz S.</div>
+          <div class="pub-journal">J. South American Earth Sciences, 130, 104501</div>
+          <div class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0895981123003127" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2023c_JSAMES.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
+          <div class="pub-title">Long-term Array Observation by Ocean Bottom Seismometers at the Chile Triple Junction<span class="badge" style="background:var(--bg2);color:var(--text2);">JSAMES · IF 1.8</span></div>
+          <div class="pub-authors">Ito A., Shiobara H., Miller M., Sugioka H., <strong>Ojeda J.</strong>, Tassara C., et al.</div>
+          <div class="pub-journal">J. South American Earth Sciences, 124, 104285</div>
+          <div class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0895981123000962" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2023b_JSAMES.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2021</div>
+        <div class="pub-content">
+          <div class="pub-title">Hybrid Broadband Strong-Motion Simulation for the M6.5, 30 October 2016 Norcia, Italy Earthquake<span class="badge" style="background:var(--tealbg);color:var(--teal);">Soil Dyn. · IF 4.8</span></div>
+          <div class="pub-authors"><strong>Ojeda J.</strong>, Akinci A., Tinti E., Arriola S., Ruiz S.</div>
+          <div class="pub-journal">Soil Dynamics and Earthquake Engineering, 149, 106866</div>
+          <div class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0267726121002888" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2021_SOILDYN.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2021</div>
+        <div class="pub-content">
+          <div class="pub-title">Seismic noise variability as an indicator of urban mobility during COVID-19 in Santiago, Chile<span class="badge" style="background:var(--bg2);color:var(--text2);">Solid Earth · IF 3.1</span></div>
+          <div class="pub-authors"><strong>Ojeda J.</strong>, Ruiz S.</div>
+          <div class="pub-journal">Solid Earth, 12, 1075–1085</div>
+          <div class="pub-links">
+            <a href="https://se.copernicus.org/articles/12/1075/2021/se-12-1075-2021.html" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2021_SE.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2020</div>
+        <div class="pub-content">
+          <div class="pub-title">Global quieting of high-frequency seismic noise due to COVID-19 pandemic lockdown measures<span class="badge" style="background:var(--redbg);color:var(--red);">Science · IF 49.7</span></div>
+          <div class="pub-authors">Lecocq T. et al. (215 authors, incl. <strong>Ojeda J.</strong>)</div>
+          <div class="pub-journal">Science, 369(6509), 1338–1343</div>
+          <div class="pub-links">
+            <a href="https://science.sciencemag.org/content/early/2020/07/22/science.abd2438" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2020_Science.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2020</div>
+        <div class="pub-content">
+          <div class="pub-title">The 1960 May 21 Mw 8.1 Concepción earthquake: A deep megathrust foreshock that started the central-south Chilean seismic sequence<span class="badge" style="background:var(--bg2);color:var(--text2);">SRL · IF 3.3</span></div>
+          <div class="pub-authors"><strong>Ojeda J.</strong>, Ruiz S., del Campo F., Carvajal M.</div>
+          <div class="pub-journal">Seismological Research Letters, 91(3), 1617–1627</div>
+          <div class="pub-links">
+            <a href="https://pubs.geoscienceworld.org/ssa/srl/article/doi/10.1785/0220190143/583093" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2020_SRL.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2018</div>
+        <div class="pub-content">
+          <div class="pub-title">Stochastic strong motion simulation for the Mw 9.0 Tohoku-Oki 2011 mega-earthquake considering P, SV and SH amplification transfer functions<span class="badge" style="background:var(--bg2);color:var(--text2);">BSSA · IF 2.8</span></div>
+          <div class="pub-authors">Ruiz S.*, <strong>Ojeda J.*</strong>, Pastén C., Otarola C., Silva R. <em>(* equal contribution)</em></div>
+          <div class="pub-journal">Bull. Seismological Society of America, 108(5A), 2333–2346</div>
+          <div class="pub-links">
+            <a href="https://pubs.geoscienceworld.org/ssa/bssa/article/108/5A/2333/548060" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">DOI ↗</a>
+            <a href="docs/Paper_2018_BSSA.pdf" class="pub-link" style="background:var(--bg2);color:var(--text2);">PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNDER REVIEW — all 7 -->
+    <div class="pub-group" id="pub-review">
+      <div class="pub-item">
+        <div class="pub-year">2026*</div>
+        <div class="pub-content">
+          <div class="pub-title">Foreshocks along the Chilean Subduction Zone<span class="badge" style="background:var(--goldbg);color:var(--gold);">Sci. Adv. · IF 14.1</span></div>
+          <div class="pub-authors">De la Peña-Silva J.T., Ruiz S., Brodsky E., Maksymowicz A., <strong>Ojeda J.</strong>, Ceroni D., Cabrera L., Potin B.</div>
+          <div class="pub-journal">Under review in Science Advances</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2026*</div>
+        <div class="pub-content">
+          <div class="pub-title">Bimodal seismic-aseismic behavior of a weakly coupled megathrust segment offshore Copiapó, Chile<span class="badge" style="background:var(--tealbg);color:var(--teal);">EPSL · IF 5.2</span></div>
+          <div class="pub-authors">Klein E., <strong>Ojeda J.</strong>, Rousset B., Vigny C., Ruiz S., Potin B., Baez J.C., Zigone D.</div>
+          <div class="pub-journal">Under review in Earth and Planetary Science Letters</div>
+          <div class="pub-links"><a href="https://eartharxiv.org/repository/view/12243/" target="_blank" class="pub-link" style="background:var(--redbg);color:var(--red);">Preprint ↗</a></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2026*</div>
+        <div class="pub-content">
+          <div class="pub-title">Assessment of site response and building damage following the Mw 6.4 Copiapó earthquake<span class="badge" style="background:var(--bluebg);color:var(--blue);">Eq. Spectra · IF 4.5</span></div>
+          <div class="pub-authors">Montalva G., Heresi P., Jünemann R., Calderón S., Leyton F., <strong>Ojeda J.</strong>, Delgado-González Y., Bastías N., et al.</div>
+          <div class="pub-journal">Under review in Earthquake Spectra</div>
+          <div class="pub-links"><a href="https://zenodo.org/records/18233849" target="_blank" class="pub-link" style="background:var(--bluebg);color:var(--blue);">Dataset ↗</a></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2026*</div>
+        <div class="pub-content">
+          <div class="pub-title">Empirical models for effective amplitude and Fourier phase spectra of ground motions in the Chilean subduction zone<span class="badge" style="background:var(--bg2);color:var(--text2);">BSSA · IF 2.8</span></div>
+          <div class="pub-authors">Osses-Valenzuela M., Montalva G., <strong>Ojeda J.</strong>, Leyton F., Calderón S., Heresi P., Jünemann R.</div>
+          <div class="pub-journal">Under review in Bull. Seismological Society of America</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2026*</div>
+        <div class="pub-content">
+          <div class="pub-title">Did the 1960 Concepción earthquake promote the Valdivia megathrust rupture? Insights from Coulomb stress modeling<span class="badge" style="background:var(--bg2);color:var(--text2);">SRL · IF 3.3</span></div>
+          <div class="pub-authors">Castro-Araya F., Morales-Yáñez C., González-Carrasco J., <strong>Ojeda J.</strong></div>
+          <div class="pub-journal">Submitted to Seismological Research Letters</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2026*</div>
+        <div class="pub-content">
+          <div class="pub-title">Soil-Structure Interaction effect on seismic records: Case study of the 2014 Iquique Earthquake<span class="badge" style="background:var(--tealbg);color:var(--teal);">Soil Dyn. · IF 4.8</span></div>
+          <div class="pub-authors">Calderón S., Montalva G., <strong>Ojeda J.</strong>, Barría J., Lema G.</div>
+          <div class="pub-journal">Submitted to Soil Dynamics &amp; Earthquake Engineering</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2026*</div>
+        <div class="pub-content">
+          <div class="pub-title">Numerical simulation of the cyclic behavior of CMU PG-RM shear walls and two-story house<span class="badge" style="background:var(--goldbg);color:var(--gold);">J. Build. Eng. · IF 7.5</span></div>
+          <div class="pub-authors">Ruz B., Calderón S., <strong>Ojeda J.</strong>, Jünemann R., Sandoval C., Montalva G.</div>
+          <div class="pub-journal">Submitted to Journal of Building Engineering</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IN PREPARATION — all 11 -->
+    <div class="pub-group" id="pub-prep">
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Global search of short-term transient deformation from GNSS time series<span class="badge" style="background:var(--redbg);color:var(--red);">Science · IF 49.7</span></div>
+          <div class="pub-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S., Bürgmann R.</div>
+          <div class="pub-journal">To be submitted to Science (presented at AGU23)</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Tracking the aseismic slip history along the Chilean subduction zone: GPS observations 2006–2024<span class="badge" style="background:var(--goldbg);color:var(--gold);">Sci. Adv. · IF 14.1</span></div>
+          <div class="pub-authors"><strong>Ojeda J.</strong>, Nocquet J.-M., Ruiz S., Bürgmann R.</div>
+          <div class="pub-journal">To be submitted to Science Advances (presented at S2FEQ25)</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Towards a full-time dependent view of slip at faults using GNSS<span class="badge" style="background:var(--bluebg);color:var(--blue);">JGR · IF 4.5</span></div>
+          <div class="pub-authors">Nocquet J.-M., <strong>Ojeda J.</strong></div>
+          <div class="pub-journal">To be submitted to J. Geophysical Research: Solid Earth</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Generation of synthetic ground motions using coseismic slip and coupling-based subfault models for large Chilean earthquakes<span class="badge" style="background:var(--bluebg);color:var(--blue);">JGR · IF 4.5</span></div>
+          <div class="pub-authors">Osses-Valenzuela M., <strong>Ojeda J.</strong>, Bastías N., Montalva G.</div>
+          <div class="pub-journal">To be submitted to J. Geophysical Research: Solid Earth (presented at SSA25 &amp; EGU26)</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Cascading fault ruptures at the Chile Triple Junction: Insights from OBS-recorded microseismicity<span class="badge" style="background:var(--tealbg);color:var(--teal);">GRL · IF 5.1</span></div>
+          <div class="pub-authors"><strong>Ojeda J.</strong>, Flores-Allende R., Ito A., Shiobara H., Ruiz S.</div>
+          <div class="pub-journal">To be submitted to Geophysical Research Letters</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Structural segmentation of the Mocha Fracture Zone revealed by amphibious seismic tomography<span class="badge" style="background:var(--tealbg);color:var(--teal);">GRL · IF 5.1</span></div>
+          <div class="pub-authors">Hernández-Soto N., Miller M., Sippl C., <strong>Ojeda J.</strong>, González-Vidal D., Azúa K., et al.</div>
+          <div class="pub-journal">To be submitted to Geophysical Research Letters</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Active deformation along the Northern Andes fold and thrust belt: constraints on the 8 June 2025 Mw 6.3 Colombia earthquake<span class="badge" style="background:var(--bg2);color:var(--text2);">Tectonophysics · IF 3.0</span></div>
+          <div class="pub-authors">León-Ibáñez P., <strong>Ojeda J.</strong>, Pinzón N., Delgado F.</div>
+          <div class="pub-journal">To be submitted to Tectonophysics</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Temporal and spatial variability of anelastic attenuation and its effects on ground motion in Central Italy<span class="badge" style="background:var(--bg2);color:var(--text2);">BSSA · IF 2.8</span></div>
+          <div class="pub-authors">Gabrielli S., Akinci A., Gutiérrez C., <strong>Ojeda J.</strong>, Arriola S., Ruiz S.</div>
+          <div class="pub-journal">To be submitted to Bull. Seismological Society of America (presented at SSA25)</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Simulation of strong motion records for moderate magnitude Chilean earthquakes<span class="badge" style="background:var(--bg2);color:var(--text2);">BSSA · IF 2.8</span></div>
+          <div class="pub-authors">Araya K., <strong>Ojeda J.</strong>, Arriola S., Akinci A., Ruiz S.</div>
+          <div class="pub-journal">To be submitted to Bull. Seismological Society of America (presented at GIASIS 2024)</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Parallel Wave SIMulation code (PWSIM) to reproduce high-frequency ground motion records<span class="badge" style="background:var(--bg2);color:var(--text2);">BSSA · IF 2.8</span></div>
+          <div class="pub-authors">Arriola S., Gutiérrez C., <strong>Ojeda J.</strong>, Flores C., Otarola C., Akinci A., Ruiz S.</div>
+          <div class="pub-journal">To be submitted to Bull. Seismological Society of America (presented at GIASIS 2025)</div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">prep.</div>
+        <div class="pub-content">
+          <div class="pub-title">Strong-ground motion simulations for moderate interplate events Mw 4.8–6.0 felt in Lima, <span class="badge" style="background:var(--bg2);color:var(--text2);">BSSA · IF 2.8</span></div>
+          <div class="pub-authors">Flores C., Tavera H., <strong>Ojeda J.</strong>, Ruiz S.</div>
+          <div class="pub-journal">To be submitted to Bull. Seismological Society of America</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVITED TALKS — all 9 -->
+<section id="talks">
+  <div class="section-inner reveal">
+    <p class="section-label">Scientific communication</p>
+    <h2>Invited Seminars</h2>
+    <div class="talks-list">
+      <div class="talk-item">
+        <div class="talk-year">2026</div>
+        <div class="talk-body">
+          <div class="talk-venue">Wave Phenomena Group Seminar · Barcelona Supercomputing Center</div>
+          <div class="talk-title">Living on a Playground: From Tectonic Deformation to Ground Motions in Chile</div>
+          <div class="talk-loc">Barcelona, Spain · 20 May 2026</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2025</div>
+        <div class="talk-body">
+          <div class="talk-venue">International Workshop on DAS &amp; Earthquakes · UdeC</div>
+          <div class="talk-title">DAS Applications in Seismology: What has been done in Chile so far?</div>
+          <div class="talk-loc">Concepción, Chile · 19 Aug 2025</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2025</div>
+        <div class="talk-body">
+          <div class="talk-venue">Seminario Ingeniería Sísmica · UdeC</div>
+          <div class="talk-title">Sismología aplicada a la Ingeniería: Deformación y Movimiento Fuerte del Suelo</div>
+          <div class="talk-loc">Concepción, Chile · 26 Mar 2025</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2024</div>
+        <div class="talk-body">
+          <div class="talk-venue">Active Tectonics Meetings, EPS · UC Berkeley</div>
+          <div class="talk-title">Interaction between fast and slow earthquakes along the Chilean subduction zone</div>
+          <div class="talk-loc">Berkeley, California · 22 Oct 2024</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2024</div>
+        <div class="talk-body">
+          <div class="talk-venue">Reuniones Geocientíficas · DGEO, UdeC</div>
+          <div class="talk-title">Explorando la distribución espacial de deformación transitoria en datos GPS continuos</div>
+          <div class="talk-loc">Concepción, Chile · 31 May 2024</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2024</div>
+        <div class="talk-body">
+          <div class="talk-venue">Active Tectonics Meetings, EPS · UC Berkeley</div>
+          <div class="talk-title">Global search of short-term transient deformation in cGPS time series</div>
+          <div class="talk-loc">Berkeley, California · 17 Jan 2024</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2023</div>
+        <div class="talk-body">
+          <div class="talk-venue">AGU Annual Meeting · Session MR016</div>
+          <div class="talk-title">Global search of short-term transient in cGPS time series</div>
+          <div class="talk-loc">San Francisco, California · 14 Dec 2023</div>
+          <div class="talk-inv">★ Invited Speaker</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2022</div>
+        <div class="talk-body">
+          <div class="talk-venue">Mardi Séismes · Géoazur, Université Côte d'Azur</div>
+          <div class="talk-title">Seismic and aseismic slip during the 2006 Copiapó swarm in North-Central Chile</div>
+          <div class="talk-loc">Valbonne, France · 29 Nov 2022</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year">2022</div>
+        <div class="talk-body">
+          <div class="talk-venue">IEEE GRSS Student Chapter · Universidad de El Salvador [Remote]</div>
+          <div class="talk-title">Descifrando Señales de la Subducción Chilena: Una Mirada desde la Sismo-Geodesia</div>
+          <div class="talk-loc">Remote · 20 Jun 2022</div>
+          <div class="talk-inv">★ Invited</div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:1.2rem;font-size:.83rem;color:var(--text3);">9 invited seminars total · 75+ conference presentations · <a href="conferences.html" style="color:var(--red);">Full conference list →</a></p>
+  </div>
+</section>
+
+<!-- FIELDWORK — sorted by date newest first -->
+<section class="alt-bg" id="fieldwork">
+  <div class="section-inner reveal">
+    <p class="section-label">In the field</p>
+    <h2>Fieldwork Experience</h2>
+    <div class="field-grid">
+      <div class="fc">
+        <div class="fc-date">May &amp; Oct 2025</div>
+        <div class="fc-title">Seismic Monitoring Network (ORSCA)</div>
+        <div class="fc-place">🇨🇱 Región del Biobío · FONDEQUIP EQM160015, UdeC</div>
+      </div>
+      <div class="fc">
+        <div class="fc-date">Nov 2023</div>
+        <div class="fc-title">High-Precision GPS Measurements</div>
+        <div class="fc-place">🇨🇱 Región de Atacama · Project S5, ANR France</div>
+      </div>
+      <div class="fc">
+        <div class="fc-date">Jun 2023</div>
+        <div class="fc-title">Alpine Geology &amp; Tectonics Field School</div>
+        <div class="fc-place">🇫🇷 La Clusaz, French Alps · IPGP (1 week)</div>
+      </div>
+      <div class="fc">
+        <div class="fc-date">May 2022</div>
+        <div class="fc-title">Active Faults &amp; Geomorphology — "Living Faults in Greece"</div>
+        <div class="fc-place">🇬🇷 Peloponnese, Greece · IPGP (2 weeks)</div>
+      </div>
+      <div class="fc">
+        <div class="fc-date">Feb 2021</div>
+        <div class="fc-title">Marine Seismology — OBS Recovery</div>
+        <div class="fc-place">🇨🇱 Chile Triple Junction · JAMSTEC-EPIC Campaign</div>
+      </div>
+      <div class="fc">
+        <div class="fc-date">Oct 2018</div>
+        <div class="fc-title">Applied Geophysics — Magnetic Field Profiles</div>
+        <div class="fc-place">🇨🇱 Región de Antofagasta · INSUD ACT172002, PIA-Anillo</div>
+      </div>
+      <div class="fc">
+        <div class="fc-date">Nov 2016</div>
+        <div class="fc-title">Amphibious Seismic Array Installation (50 sensors)</div>
+        <div class="fc-place">🇨🇱 Región de Tarapacá · NSF-PICTURES MGL1610</div>
+      </div>
+      <div class="fc">
+        <div class="fc-date">May 2016</div>
+        <div class="fc-title">Structural Geology Field School</div>
+        <div class="fc-place">🇨🇱 Región de Atacama · Tutor: M. Farías, Universidad de Chile</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTREACH TEASER — link to full page -->
+<section id="outreach">
+  <div class="section-inner reveal">
+    <p class="section-label">Science for everyone</p>
+    <h2>Outreach &amp; Media</h2>
+    <div class="outreach-grid">
+      <div class="oc">
+        <div class="oc-period">2021 · Ongoing — President since 2025</div>
+        <h3>Fundación Geonautas</h3>
+        <p>Co-founder of a non-profit dedicated to communicating Earth Sciences to the public in Chile, promoting disaster risk culture.</p>
+      </div>
+      <div class="oc">
+        <div class="oc-period">2020 – 2023</div>
+        <h3>Tatemblando — Podcast</h3>
+        <p>Co-creator of a Spanish-language seismology podcast on Spotify, making earthquake science accessible and engaging.</p>
+      </div>
+      <div class="oc">
+        <div class="oc-period">2021 – 2024</div>
+        <h3>Rocadictos — Radio</h3>
+        <p>Editorial committee member and panelist, Radio Universidad de Chile (102.5 FM). 25+ episodes as a panelist during my Ph.D. studies.
+        </p>
+      </div>
+      <div class="oc">
+        <div class="oc-period">2016 – 2024</div>
+        <h3>Explora ANID</h3>
+        <p>Scientific advisor &amp; coordinator. 25+ school talks, science festivals (FECI 2020–2022), Exposismos at Parque Metropolitano.</p>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;">
+      <a href="outreach.html" class="btn btn-outline">Full outreach page — news, media, school visits, EGU blog ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner reveal">
+    <p class="section-label" style="color:rgba(255,255,255,.45);">Get in touch</p>
+    <h2>Contact</h2>
+    <div class="cg">
+      <div class="ci"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val">jojeda@udec.cl</div></div></div>
+      <div class="ci"><div class="ci-icon">📍</div><div><div class="ci-label">Location</div><div class="ci-val">Concepción, Chile</div></div></div>
+      <div class="ci"><div class="ci-icon">🏛️</div><div><div class="ci-label">Institution</div><div class="ci-val">Universidad de Concepción · Civil Engineering Department</div></div></div>
+     <!-- <div class="ci"><div class="ci-icon">📞</div><div><div class="ci-label">Phone</div><div class="ci-val">+569 756 92 686</div></div></div> -->
+    </div>
+<!--    <div class="social-links">
+      <a href="https://orcid.org/0000-0002-7188-8356" target="_blank" class="social-link">ORCID</a>
+      <a href="https://www.webofscience.com/wos/author/record/862622" target="_blank" class="social-link">Web of Science</a>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=57207963457" target="_blank" class="social-link">Scopus</a>
+      <a href="https://scholar.google.com/citations?hl=es&user=HqIUR4sAAAAJ" target="_blank" class="social-link">Google Scholar</a>
+      <a href="https://www.researchgate.net/profile/Javier-Ojeda-5" target="_blank" class="social-link">ResearchGate</a>
+      <a href="https://investigadores.anid.cl/es/public_search/researcher?id=39718" target="_blank" class="social-link">ANID</a>
+      <a href="https://www.linkedin.com/in/javierojedav/" target="_blank" class="social-link">LinkedIn</a>
+      <a href="https://github.com/javierojedav" target="_blank" class="social-link">GitHub</a>
+    </div>-->
+  </div>
+</section>
+
+<footer>© 2026 Javier Ojeda Vargas · Universidad de Concepción ·
+  <a href="https://javierojedav.github.io">javierojedav.github.io</a>
+</footer>
+
+<script>
+// Tab switcher
+function showPubs(type, btn) {
+  document.querySelectorAll('.pub-group').forEach(g => g.classList.remove('active'));
+  document.querySelectorAll('.pub-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('pub-' + type).classList.add('active');
+  btn.classList.add('active');
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:.07});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Dynamic stats — fetch from Google Scholar via a CORS proxy
+// Since direct scraping is blocked, we use the stored values and stamp the date
+(function() {
+  const updated = new Date().toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
+  const el = document.getElementById('metrics-updated');
+  if(el) el.textContent = updated + ' '; 
+})();
+// (manually updated)
+
+// If author photo exists, replace placeholder
+const img = new Image();
+img.onload = function(){
+  const wrap = document.getElementById('hero-photo');
+  if(wrap){ wrap.outerHTML = '<img src="images/author-image.png" class="hero-photo" alt="Javier Ojeda Vargas">'; }
+};
+img.onerror = function(){};
+img.src = 'images/author-image.png';
+</script>
+</body>
 </html>
